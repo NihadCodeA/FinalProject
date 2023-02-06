@@ -1,0 +1,1817 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FinalProject.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\css\\theme.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\about-icons-1.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-icons-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\about-icons-2.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-icons-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\about-icons-3.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-icons-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\about-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\team-1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\team-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\team-2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\team-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\team-3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\team-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\team-4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\team-4.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\about\\team-5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\team-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\appbutton\\appstore-btn.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\appbutton\\appstore-btn.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\appbutton\\googleplay-btn.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\appbutton\\googleplay-btn.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\avatar\\avatar-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar\\avatar-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\ad-banner-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\ad-banner-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\assortment-citrus-fruits.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\assortment-citrus-fruits.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\banner-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\banner-deal.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\banner-deal.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\grocery-banner-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\grocery-banner-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\grocery-banner.png",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\grocery-banner.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\banner\\menu-banner.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\banner\\menu-banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-img-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-img-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blog-large.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-large.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\blogImage.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blogImage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\left-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\left-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\blog\\right-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\right-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\atta-rice-dal.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\atta-rice-dal.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\baby-care.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\baby-care.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\bakery-biscuits.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\bakery-biscuits.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-atta-rice-dal.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-atta-rice-dal.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-baby-care.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-baby-care.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-bakery-biscuits.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-bakery-biscuits.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-chicken-meat-fish.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-chicken-meat-fish.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-cleaning-essentials.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-cleaning-essentials.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-cold-drinks-juices.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-cold-drinks-juices.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-dairy-bread-eggs.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-dairy-bread-eggs.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-fruits-vegetables.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-fruits-vegetables.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-instant-food.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-instant-food.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-pet-care.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-pet-care.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-snack-munchies.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-snack-munchies.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\category-tea-coffee-drinks.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\category-tea-coffee-drinks.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\chicken-meat-fish.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\chicken-meat-fish.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\cleaning-essentials.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\cleaning-essentials.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\cold-drinks-juices.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\cold-drinks-juices.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\dairy-bread-eggs.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\dairy-bread-eggs.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\fruits-vegetables.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\fruits-vegetables.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\instant-food.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\instant-food.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\pet-care.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\pet-care.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\snack-munchies.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\snack-munchies.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\category\\tea-coffee-drinks.png",
+      "PackagePath": "staticwebassets\\assets\\images\\category\\tea-coffee-drinks.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\4by3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\4by3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\bootstrap.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\bootstrap.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\gulp.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\gulp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\nodejs.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\nodejs.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\placeholder-4by3.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\placeholder-4by3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\placeholder-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\placeholder-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\sass.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\docs\\sass.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\baby-food.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\baby-food.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\bakery.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\bakery.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\clock.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\clock.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\dairy.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\dairy.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\fish.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\fish.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\fruit.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\fruit.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\gift.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\gift.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\package.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\package.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\petfoods.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\petfoods.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\refresh-cw.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\refresh-cw.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\snacks.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\snacks.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\toiletries.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\toiletries.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\wine.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\icons\\wine.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\logo\\freshcart-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\freshcart-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\logo\\freshcart-white-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\freshcart-white-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\amazonpay.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\amazonpay.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\american-express.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\american-express.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\mastercard.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\mastercard.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\paypal.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\paypal.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\visa.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\visa.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\png\\girl-email.png",
+      "PackagePath": "staticwebassets\\assets\\images\\png\\girl-email.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\png\\iphone-2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\png\\iphone-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-13.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-15.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-16.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-17.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-18.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-19.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-img-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-img-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-single-img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-single-img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-single-img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-single-img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-single-img-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-single-img-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\products\\product-single-img-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\product-single-img-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\slider\\slide-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\slide-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\slider\\slider-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\slider-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\slider\\slider-image-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\slider-image-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\slider\\slider-image-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\slider-image-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\slider\\slider-image-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\slider\\slider-image-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-1.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-2.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-3.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-4.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-5.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-5.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-6.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-6.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-7.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-7.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-8.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-8.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\stores-logo\\stores-logo-9.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\stores-logo\\stores-logo-9.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\americanexpress.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\americanexpress.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\delivery-boy.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\delivery-boy.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\discover.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\discover.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\error.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\error.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\fp-g.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\fp-g.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\mastercard.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\mastercard.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\pattern.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\pattern.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\paypal.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\paypal.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\signin-g.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\signin-g.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\signup-g.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\signup-g.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\store-graphics.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\store-graphics.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\svg-graphics\\visa.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\svg-graphics\\visa.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\theme.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\theme.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\chart.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\chart.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\countdown.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\countdown.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\editor.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\editor.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\increment-value.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\increment-value.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\inputmask.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\inputmask.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\password.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\sidebarMenu.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\sidebarMenu.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\slick-slider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\slick-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\tns-slider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\tns-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\js\\vendors\\zoom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendors\\zoom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\apexcharts\\dist\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\apexcharts\\dist\\apexcharts.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\bootstrap-icons\\font\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\bootstrap-icons\\font\\bootstrap-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\bootstrap-icons\\font\\fonts\\bootstrap-iconsbf04.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\bootstrap-icons\\font\\fonts\\bootstrap-iconsbf04.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\bootstrap-icons\\font\\fonts\\bootstrap-iconsbf04.woff2",
+      "PackagePath": "staticwebassets\\assets\\libs\\bootstrap-icons\\font\\fonts\\bootstrap-iconsbf04.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\dropzone\\dist\\min\\dropzone.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\dropzone\\dist\\min\\dropzone.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\dropzone\\dist\\min\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\dropzone\\dist\\min\\dropzone.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\feather-webfont\\dist\\feather-icons.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\feather-webfont\\dist\\feather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\feather-webfont\\dist\\feather-icons5f41.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\flatpickr\\dist\\flatpickr.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\flatpickr\\dist\\flatpickr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\inputmask\\dist\\jquery.inputmask.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\inputmask\\dist\\jquery.inputmask.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\jquery-countdown\\dist\\jquery.countdown.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\jquery-countdown\\dist\\jquery.countdown.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\nouislider\\dist\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\nouislider\\dist\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\nouislider\\dist\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\nouislider\\dist\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\prismjs\\components\\prism-scss.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\prismjs\\components\\prism-scss.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\prismjs\\plugins\\copy-to-clipboard\\prism-copy-to-clipboard.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\prismjs\\plugins\\copy-to-clipboard\\prism-copy-to-clipboard.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\prismjs\\plugins\\toolbar\\prism-toolbar.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\prismjs\\plugins\\toolbar\\prism-toolbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\prismjs\\prism.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\prismjs\\prism.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\prismjs\\themes\\prism-okaidia.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\prismjs\\themes\\prism-okaidia.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\quill\\dist\\quill.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\quill\\dist\\quill.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\rater-js\\index.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\rater-js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\simplebar\\dist\\simplebar.min.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\simplebar\\dist\\simplebar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\simplebar\\dist\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\simplebar\\dist\\simplebar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\fonts\\slickd41d.eot",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\fonts\\slickd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\slick-carousel\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\slick-carousel\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\tiny-slider\\dist\\min\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\tiny-slider\\dist\\min\\tiny-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\tiny-slider\\dist\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\assets\\libs\\tiny-slider\\dist\\tiny-slider.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\libs\\wnumb\\wNumb.min.js",
+      "PackagePath": "staticwebassets\\assets\\libs\\wnumb\\wNumb.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\css\\bootstrap1.min.css",
+      "PackagePath": "staticwebassets\\manage\\css\\bootstrap1.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\css\\colors\\default.css",
+      "PackagePath": "staticwebassets\\manage\\css\\colors\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\css\\metisMenu.css",
+      "PackagePath": "staticwebassets\\manage\\css\\metisMenu.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\css\\preloader.html",
+      "PackagePath": "staticwebassets\\manage\\css\\preloader.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\css\\style1.css",
+      "PackagePath": "staticwebassets\\manage\\css\\style1.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\bak_hovers\\sad.png",
+      "PackagePath": "staticwebassets\\manage\\img\\bak_hovers\\sad.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\banner.png",
+      "PackagePath": "staticwebassets\\manage\\img\\banner.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\card\\card-2.png",
+      "PackagePath": "staticwebassets\\manage\\img\\card\\card-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\card\\card-5.png",
+      "PackagePath": "staticwebassets\\manage\\img\\card\\card-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\client_img.png",
+      "PackagePath": "staticwebassets\\manage\\img\\client_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\crm\\bg.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\crm\\bg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\crm\\businessman.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\crm\\businessman.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\crm\\customer.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\crm\\customer.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\crm\\infographic.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\crm\\infographic.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\crm\\sqr.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\crm\\sqr.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_2.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_3.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_4.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_4.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_5.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_5.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\customers\\pro_6.png",
+      "PackagePath": "staticwebassets\\manage\\img\\customers\\pro_6.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\dateBg.png",
+      "PackagePath": "staticwebassets\\manage\\img\\dateBg.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\default-skin\\default-skin.png",
+      "PackagePath": "staticwebassets\\manage\\img\\default-skin\\default-skin.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\default-skin\\default-skin.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\default-skin\\default-skin.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\1.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\2.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\3.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\4.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\5.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\5.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\6.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\6.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon2\\7.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon2\\7.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon\\bell.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon\\bell.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon\\calender_icon.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon\\calender_icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon\\icon_search.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon\\icon_search.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\icon\\msg.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\icon\\msg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\line_img.png",
+      "PackagePath": "staticwebassets\\manage\\img\\line_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\logo.png",
+      "PackagePath": "staticwebassets\\manage\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\logo_white.png",
+      "PackagePath": "staticwebassets\\manage\\img\\logo_white.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\10.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\10.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\11.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\11.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\12.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\12.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\13.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\13.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\14.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\14.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\15.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\15.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\16.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\16.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\17.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\17.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\18.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\18.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\19.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\19.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\2.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\20.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\20.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\21.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\21.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\3.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\3.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\4.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\4.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\5.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\5.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\6.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\6.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\7.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\7.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\8.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\8.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\9.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\9.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\menu-icon\\dashboard.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\menu-icon\\dashboard.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\messages\\1.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\messages\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\messages\\1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\messages\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\messages\\2.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\messages\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\messages\\3.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\messages\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\messages\\4.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\messages\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\mini_logo.png",
+      "PackagePath": "staticwebassets\\manage\\img\\mini_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\plane_thumb.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\plane_thumb.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\pro_complete.png",
+      "PackagePath": "staticwebassets\\manage\\img\\pro_complete.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\01.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\02.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\img-1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\img-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\img-2.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\img-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\img-4.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\img-4.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\products\\img-5.png",
+      "PackagePath": "staticwebassets\\manage\\img\\products\\img-5.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\1.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\2.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\3.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\7.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\8.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\profilebox\\9.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\profilebox\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\progress\\design-progress-red.html",
+      "PackagePath": "staticwebassets\\manage\\img\\progress\\design-progress-red.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\progress\\design-progress-yellow.html",
+      "PackagePath": "staticwebassets\\manage\\img\\progress\\design-progress-yellow.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\progress\\progress-bg.html",
+      "PackagePath": "staticwebassets\\manage\\img\\progress\\progress-bg.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\shape_2.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\shape_2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\staf\\1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\staf\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\staf\\2.png",
+      "PackagePath": "staticwebassets\\manage\\img\\staf\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\staf\\3.png",
+      "PackagePath": "staticwebassets\\manage\\img\\staf\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\staf\\4.png",
+      "PackagePath": "staticwebassets\\manage\\img\\staf\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\staf\\5.png",
+      "PackagePath": "staticwebassets\\manage\\img\\staf\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\table.svg",
+      "PackagePath": "staticwebassets\\manage\\img\\table.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\1.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\2.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\3.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\4.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\5.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\6.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\tilt\\7.jpg",
+      "PackagePath": "staticwebassets\\manage\\img\\tilt\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\img\\weather_1.png",
+      "PackagePath": "staticwebassets\\manage\\img\\weather_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\bootstrap1.min.js",
+      "PackagePath": "staticwebassets\\manage\\js\\bootstrap1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\chart.min.js",
+      "PackagePath": "staticwebassets\\manage\\js\\chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\ckeditor-classic.js",
+      "PackagePath": "staticwebassets\\manage\\js\\ckeditor-classic.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\custom.js",
+      "PackagePath": "staticwebassets\\manage\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\dashboard_init.js",
+      "PackagePath": "staticwebassets\\manage\\js\\dashboard_init.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\jquery1-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\manage\\js\\jquery1-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\metisMenu.js",
+      "PackagePath": "staticwebassets\\manage\\js\\metisMenu.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\js\\popper1.min.js",
+      "PackagePath": "staticwebassets\\manage\\js\\popper1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\amchart-init.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\amchart-init.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\amcharts.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\amcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\ammap.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\ammap.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\amstock.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\amstock.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\dataloader.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\dataloader.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\export.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\export.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\pie.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\pie.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\serial.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\serial.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\am_chart\\worldLow.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\am_chart\\worldLow.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\animation\\tilt\\tilt-custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\animation\\tilt\\tilt-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\animation\\tilt\\tilt.jquery.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\animation\\tilt\\tilt.jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\animation\\wow\\animate.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\animation\\wow\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\animation\\wow\\wow-init.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\animation\\wow\\wow-init.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\animation\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\animation\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\apex-chart2.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\apex-chart2.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\apex_chart_list.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\apex_chart_list.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\apex_dashboard.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\apex_dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\apexchart_lists.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\apexchart_lists.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\apexcharts.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\apex_chart\\bar_active_1.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\apex_chart\\bar_active_1.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\activation.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\activation.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\core\\main.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\core\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\core\\main.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\core\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\daygrid\\main.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\daygrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\daygrid\\main.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\daygrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\interaction\\main.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\interaction\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\list\\main.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\list\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\list\\main.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\list\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\timegrid\\main.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\timegrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\calender_js\\timegrid\\main.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\calender_js\\timegrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chart_am\\animated.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chart_am\\animated.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chart_am\\chart-custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chart_am\\chart-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chart_am\\charts.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chart_am\\charts.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chart_am\\core.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chart_am\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chart_am\\kelly.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chart_am\\kelly.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chartjs\\chartjs_init.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chartjs\\chartjs_init.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chartjs\\roundedBar.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chartjs\\roundedBar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\chartlist\\Chart.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\chartlist\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\count_up\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\count_up\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\count_up\\jquery.waypoints.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\count_up\\jquery.waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\css\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\css\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\css\\responsive.dataTables.min.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\css\\responsive.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\images\\sort_asc.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\images\\sort_asc.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\images\\sort_asc_disabled.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\images\\sort_asc_disabled.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\images\\sort_both.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\images\\sort_both.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\images\\sort_desc.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\images\\sort_desc.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\images\\sort_desc_disabled.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\images\\sort_desc_disabled.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\buttons.flash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\jszip.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\pdfmake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datatable\\js\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datatable\\js\\vfs_fonts.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datepicker\\date-picker.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datepicker\\date-picker.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datepicker\\datepicker.custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datepicker\\datepicker.custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datepicker\\datepicker.en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datepicker\\datepicker.en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\datepicker\\datepicker.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\datepicker\\datepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\drag\\dragable_sortable.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\drag\\dragable_sortable.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\drag\\jquery.ui.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\drag\\jquery.ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\drag\\sortable-custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\drag\\sortable-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400d41d.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-brands-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400d41d.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-regular-400d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900d41d.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\font_awesome\\webfonts\\fa-solid-900d41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\gijgo\\gijgo.min.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\gijgo\\gijgo.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\jquery-sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\jquery-sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\jquery-sparkline\\spactkine_init.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\jquery-sparkline\\spactkine_init.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\mapsjs-core.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\mapsjs-core.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\mapsjs-mapevents.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\mapsjs-mapevents.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\mapsjs-ui.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\mapsjs-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\mapsjs-ui.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\mapsjs-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\mapJs\\mapsjs_service.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\mapJs\\mapsjs_service.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\material_icon\\MaterialIcons-Regular.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\material_icon\\MaterialIcons-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\material_icon\\material-icons.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\material_icon\\material-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\material_icon\\material-icons.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\material_icon\\material-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\morris\\morris.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\morris\\morris.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\niceselect\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\niceselect\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\niceselect\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\niceselect\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\nvd3\\d3.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\nvd3\\d3.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\nvd3\\layers.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\nvd3\\layers.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\nvd3\\nv.d3.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\nvd3\\nv.d3.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\owl_carousel\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\owl_carousel\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\owl_carousel\\css\\owl.video.play.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\owl_carousel\\css\\owl.video.play.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\owl_carousel\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\owl_carousel\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\photoswip\\photoswipe-ui-default.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\photoswip\\photoswipe-ui-default.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\photoswip\\photoswipe.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\photoswip\\photoswipe.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\photoswip\\photoswipe.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\photoswip\\photoswipe.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\progressbar\\jquery.barfiller.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\progressbar\\jquery.barfiller.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll\\scrollable-custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll\\scrollable-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll\\scrollable.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll\\scrollable.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll_reval\\modernizr.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll_reval\\modernizr.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll_reval\\reveal-custom.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll_reval\\reveal-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\scroll_reval\\scrollreveal.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\scroll_reval\\scrollreveal.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\select2\\css\\select2.min.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\select2\\css\\select2.min.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\swiper_slider\\css\\swiper.min.html",
+      "PackagePath": "staticwebassets\\manage\\vendors\\swiper_slider\\css\\swiper.min.html"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\tagsinput\\tagsinput.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\tagsinput\\tagsinput.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\tagsinput\\tagsinput.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\tagsinput\\tagsinput.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\text_editor\\fonts\\summernote.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\text_editor\\fonts\\summernote.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\text_editor\\fonts\\summernote.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\text_editor\\fonts\\summernote.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\text_editor\\fonts\\summernote.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\text_editor\\fonts\\summernote.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\text_editor\\summernote-bs4.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\text_editor\\summernote-bs4.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\text_editor\\summernote-bs4.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\text_editor\\summernote-bs4.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.svg",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.svg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.ttf",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.woff",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\fonts\\themify9f24.woff"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\fonts\\themifyd41d.eot",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\fonts\\themifyd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\themefy_icon\\themify-icons.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\themefy_icon\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\vectormap-home\\vectormap-2.0.2.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\vectormap-home\\vectormap-2.0.2.css"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\vectormap-home\\vectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\vectormap-home\\vectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\vectormap-home\\vectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\vectormap-home\\vectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-2.0.2.min.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-2.0.2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-asia-mill.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-asia-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-au-mill.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-au-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-chicago-mill-en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-chicago-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-in-mill.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-in-mill.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-uk-mill-en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-uk-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-us-aea-en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-us-aea-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\jvectormap-world-mill-en.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\jvectormap-world-mill-en.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\map-vector.js",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\map-vector.js"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\manage\\vendors\\verctorMap\\vector-map.css",
+      "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\vector-map.css"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.FinalProject.props",
+      "PackagePath": "build\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.FinalProject.props",
+      "PackagePath": "buildMultiTargeting\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.FinalProject.props",
+      "PackagePath": "buildTransitive\\FinalProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
