@@ -8,11 +8,13 @@ namespace FinalProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly Database _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
 
-        public AccountController(UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
+        public AccountController(Database context,UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
         {
+            _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
         }
@@ -65,21 +67,19 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> StoreRegister(StoreRegisterViewModel registerVM)
         {
             if (!ModelState.IsValid) return View();
-            var store = await _userManager.FindByEmailAsync(registerVM.Email);
-            if (store != null)
+            var storeAccount = await _userManager.FindByEmailAsync(registerVM.Email);
+            if (storeAccount != null)
             {
                 ModelState.AddModelError("Email", "Email has taken!");
                 return View();
             }
-            store = new AppUser
+            storeAccount = new AppUser
             {
-                StoreName = registerVM.Storename,
                 Email = registerVM.Email,
                 UserName = registerVM.Email,
                 Address=registerVM.Address,
-                PhoneNumber1= registerVM.PhoneNumber,
             };
-            var passwordResult = await _userManager.CreateAsync(store, registerVM.Password);
+            var passwordResult = await _userManager.CreateAsync(storeAccount, registerVM.Password);
             if (!passwordResult.Succeeded)
             {
                 foreach (var err in passwordResult.Errors)
@@ -88,12 +88,20 @@ namespace FinalProject.Controllers
                     return View();
                 }
             }
-            var roleResult = await _userManager.AddToRoleAsync(store, "Store");
+            var roleResult = await _userManager.AddToRoleAsync(storeAccount, "Store");
             foreach (var err in roleResult.Errors)
             {
                 ModelState.AddModelError("", err.Description);
                 return View();
             }
+            Store store=new Store
+            {
+                StoreName = registerVM.Storename,
+                PhoneNumber1=registerVM.PhoneNumber,
+                Address= registerVM.Address,
+            };
+            _context.Stores.Add(store);
+            _context.SaveChanges();
             return RedirectToAction("Login");
         }
 

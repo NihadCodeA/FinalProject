@@ -1,0 +1,273 @@
+﻿@model PaginatedList<Product>
+@{
+    int count = 0;
+}
+<main>
+    <div class="mt-4">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-12">
+                    <!-- breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#!">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#!">Stores</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Model.StoreName
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section -->
+    <section class="mb-lg-14 mb-8 mt-8">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <div class="d-flex flex-column">
+                        <div>
+                            <!-- img -->
+                            <!-- img -->
+                            <img src="~/assets/images/stores-logo/stores-logo-1.svg"
+                                 alt=""
+                                 class="rounded-circle icon-shape icon-xxl" />
+                        </div>
+                        <!-- heading -->
+                        <div class="mt-4">
+                            <h1 class="mb-1 h4">Model.StoreName</h1>
+                            <div class="small text-muted">
+                                <span>Everyday store prices </span>
+                            </div>
+                            <div>
+                                <span>
+                                    <small><a href="#!">100% satisfaction guarantee</a></small>
+                                </span>
+                            </div>
+                            <!-- rating -->
+                            <div class="mt-2">
+                                <!-- rating -->
+                                <small class="text-warning">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </small><span class="ms-2">5.0</span>
+                                <!-- text --><span class="text-muted ms-1">(3,400 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <!-- nav -->
+                    <ul class="nav flex-column nav-pills nav-pills-dark">
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="feather-icon icon-gift me-2"></i>Deals</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="feather-icon icon-map-pin me-2"></i>Buy It Again</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="feather-icon icon-star me-2"></i>Reviews</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="product" asp-action="create"><i class="feather-icon icon-plus me-2"></i>Add product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="product" asp-action="index" ><i class="feather-icon icon-list me-2"></i>Products list</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="feather-icon icon-phone-call me-2"></i>Contact</a>
+                        </li>
+                        <!-- nav item -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="feather-icon icon-clipboard me-2"></i>Policy</a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <div>
+                        <ul class="nav flex-column nav-links">
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Produce</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Dairy & Eggs</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Beverages</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Meat & Seafood</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Snacks & Candy</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Frozen</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Bakery</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Prepared Foods</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Alcohol</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Dry Goods & Pasta</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Condiments & Sauces</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Canned Goods & Soups</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Breakfast</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Household</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Baking Essentials</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Oils, Vinegars, & Spices</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Health Care</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Personal Care</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Kitchen Supplies</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Floral</a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Party & Gift Supplies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 col-md-8">
+                    <!--========================Header========================================-->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>Add a new product</div>
+                        <div>
+                            <a asp-controller="product" asp-action="create" class="btn btn-primary px-6">
+                                <i class="feather-icon icon-plus me-2"></i> Add
+                            </a>
+                        </div>
+                    </div>
+                    <!--========================PRODUCT TABLE START================================-->
+                    <div class="row">
+                        <div class="">
+                             <div class="py-3 p-md-3">
+                                <!-- heading -->
+                                <h3 class="mb-4">Products</h3>
+                                <div class="table-responsive border-0">
+                                   <!-- Table -->
+
+                                  <table class="table mb-0 text-nowrap">
+                                      <!-- Table Head -->
+                                      <thead class="table-light">
+                                         <tr>
+                                            <th class="border-0">#</th>
+                                            <th class="border-0">Image</th>
+                                            <th class="border-0">Name</th>
+                                            <th class="border-0">Order</th>
+                                            <th class="border-0">Date</th>
+                                            <th class="border-0">Items</th>
+                                            <th class="border-0">Status</th>
+                                            <th class="border-0">Amount</th>
+                                            <th class="border-0"></th>
+                                         </tr>
+                                      </thead>
+                                      <tbody>
+                                         <!-- Table body -->
+                                           @foreach (Product product in Model)
+                                            {
+                                            count++;
+                                                <tr>
+                                                    <td class="align-middle border-top-0">
+                                                        @count
+                                                    </td>
+                                                    <td class="align-middle border-top-0 w-0">
+                                                        <a href="#"> <img src="~/uploads/products/@product.ProductImages.FirstOrDefault(x=>x.IsPoster==true)?.Image" alt="Ecommerce" class="icon-shape icon-xl"></a>
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        <a href="#" class="fw-semi-bold text-inherit">
+                                                            <h6 class="mb-0">@product.Name</h6>
+                                                        </a>
+                                                        <span><small class="text-muted"></small></span>
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        <a href="#" class="text-inherit">#14899</a>
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        March 5, 2023
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        1
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        <span class="badge bg-warning">Processing</span>
+                                                    </td>
+                                                    <td class="align-middle border-top-0">
+                                                        $15.00
+                                                    </td>
+                                                    <td class="text-muted align-middle border-top-0">
+                                                        <a href="#" class="text-inherit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View"><i class="feather-icon icon-eye"></i></a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                   </table>
+                                </div>
+                             </div>
+                          </div>
+                         </div>
+                          <!--========================PRODUCT TABLE END================================-->
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
