@@ -1,12 +1,12 @@
 ﻿@{
     Layout = null;
 }
-@model MemberRegisterViewModel
+@model LoginViewModel
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from freshcart.codescandy.com/pages/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Feb 2023 10:54:38 GMT -->
+<!-- Mirrored from freshcart.codescandy.com/pages/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Feb 2023 10:54:38 GMT -->
 <head>
 
     <title>FreshCart - eCommerce HTML Template</title>
@@ -38,15 +38,16 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" href="~/assets/css/theme.min.css">
-
     <style>
         .password-field i{
             position:absolute;
             top:0.6rem;
-            right:1rem;
+                        right:1rem;
             cursor:pointer;
         }
-    </style>
+
+                    </style>
+
 </head>
 
 <body>
@@ -59,39 +60,35 @@
                     <img src="~/assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top">
                 </a>
                 <span class="navbar-text">
-                    Already have an account? <a asp-controller="account" asp-action="login">Sign in</a>
+                    Already have an account? <a href="signin.html">Sign in</a>
                 </span>
             </div>
         </nav>
     </div>
 
+
     <main>
         <!-- section -->
-
         <section class="my-lg-14 my-8">
-            <!-- container -->
             <div class="container">
                 <!-- row -->
                 <div class="row justify-content-center align-items-center">
                     <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
                         <!-- img -->
-                        <img src="~/assets/images/svg-graphics/signup-g.svg" alt="" class="img-fluid">
+                        <img src="~/assets/images/svg-graphics/signin-g.svg" alt="" class="img-fluid">
                     </div>
                     <!-- col -->
                     <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
                         <div class="mb-lg-9 mb-5">
-                            <h1 class="mb-1 h2 fw-bold">Get Start Shopping</h1>
+                            <h1 class="mb-1 h2 fw-bold">Sign in to FreshCart</h1>
+                            <p>Welcome back to FreshCart! Enter your email to get started.</p>
                         </div>
-                        <!-- form -->
-                        <form method="post" asp-action="memberregister">
+
+                        <form method="post" asp-action="login">
                             <div class="row g-3">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <label asp-for="Fullname">Fullname</label>
-                                    <input asp-for="Fullname" class="form-control" placeholder="Fullname">
-                                    <span class="text-danger" asp-validation-for="Fullname"></span>
-                                </div>
-                                <div class="col-12">
+                                <!-- row -->
+
+                                 <div class="col-12">
                                     <label asp-for="Email">Email</label>
                                     <input asp-for="Email" class="form-control" placeholder="Email">
                                     <span class="text-danger" asp-validation-for="Email"></span>
@@ -104,38 +101,37 @@
                                     </div>
                                         <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>
-                                <div class="col-12">
-                                    <label asp-for="ConfirmPassword">ConfirmPassword</label>
-                                    <div class="password-field position-relative">
-                                        <input asp-for="ConfirmPassword" type="password" 
-                                        placeholder="Enter confirm password" id="confirmPassword" class="form-control">
-                                        <span><i id="confirmPasswordToggler" class="bi bi-eye-slash"></i></span>
+                                <div class="d-flex justify-content-between">
+                                    <!-- form check -->
+                                    <div class="form-check">
+                                        <input asp-for="RememberMe" class="form-check-input">
+                                        <!-- label --> <label asp-for="RememberMe" class="form-check-label">
+                                            Remember me
+                                        </label>
                                     </div>
-                                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                                    <div> Forgot password? <a href="forgot-password.html">Reset It</a></div>
                                 </div>
                                 <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                 <!-- btn -->
                                 <div class="col-12 d-grid">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" class="btn btn-primary">Sign In</button>
                                 </div>
-
-                                <!-- text -->
-                                <p>
-                                    <small>
-                                        By continuing, you agree to our <a href="#!"> Terms of Service</a> & <a href="#!">
-                                            Privacy
-                                            Policy
-                                        </a>
-                                    </small>
-                                </p>
+                                <!-- link -->
+                                <div>Don’t have an account? <a asp-controller="account" asp-action="memberregister"> Sign Up</a></div>
                             </div>
                         </form>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
+
+
+
     <!-- Footer -->
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="row g-4 py-4">
@@ -301,7 +297,8 @@
         </div>
     </footer>
     <!-- Javascript-->
-   <script>
+
+    <script>
         var password = document.getElementById("password"),
             passwordtoggler = document.getElementById("passwordToggler");
         showHidePassword = () => {
@@ -310,15 +307,6 @@
                 (passwordtoggler.classList.remove("bi-eye"), passwordtoggler.classList.add("bi-eye-slash"),
                     password.setAttribute("type", "password"))
         }, passwordtoggler.addEventListener("click", showHidePassword);
-
-        var confirmPassword = document.getElementById("confirmPassword"),
-            confirmPasswordtoggler = document.getElementById("confirmPasswordToggler");
-        showHideConfirmPassword = () => {
-            "password" == confirmPassword.type ? (confirmPassword.setAttribute("type", "text"),
-                confirmPasswordtoggler.classList.add("bi-eye"), confirmPasswordtoggler.classList.remove("bi-eye-slash")) :
-                (confirmPasswordtoggler.classList.remove("bi-eye"), confirmPasswordtoggler.classList.add("bi-eye-slash"),
-                    confirmPassword.setAttribute("type", "password"))
-        }, confirmPasswordtoggler.addEventListener("click", showHideConfirmPassword);
     </script>
     <!-- Libs JS -->
     <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
@@ -328,8 +316,11 @@
     <!-- Theme JS -->
     <script src="~/assets/js/theme.min.js"></script>
 
+
+
+
 </body>
 
 
-<!-- Mirrored from freshcart.codescandy.com/pages/signup.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Feb 2023 10:54:39 GMT -->
+<!-- Mirrored from freshcart.codescandy.com/pages/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Feb 2023 10:54:38 GMT -->
 </html>

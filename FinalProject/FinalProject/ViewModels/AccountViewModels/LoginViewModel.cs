@@ -10,5 +10,7 @@ namespace FinalProject.ViewModels.AccountViewModels
 
         [Required, DataType(dataType: DataType.Password)]
         public string Password { get; set; }
+
+        public bool RememberMe { get; set; }
     }
 }
