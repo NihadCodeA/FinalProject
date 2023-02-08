@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zygTjPNCi6n3IWak7EYRH2ZhuU4bnRwyx0Gu0w8YibQ=",
+  "Hash": "jX+XGJfFa5DVvAhhAfzxA+wpNx4LESqyDO5g3OrS30o=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -1647,6 +1647,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\icons\\wine.svg"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\logo\\FreshCartLogo.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/logo/FreshCartLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\logo\\FreshCartLogo.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\logo\\freshcart-logo.svg",

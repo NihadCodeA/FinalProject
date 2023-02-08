@@ -71,7 +71,7 @@
                     <ul class="nav flex-column nav-pills nav-pills-dark">
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
+                            <a class="nav-link active" aria-current="page" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Id" ><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -86,12 +86,16 @@
                             <a class="nav-link" href="#"><i class="feather-icon icon-star me-2"></i>Reviews</a>
                         </li>
                         <!-- nav item -->
+                        @if(User.Identity.IsAuthenticated){
+                            if(User.IsInRole("Store") && User.Identity.Name==Model.Email){
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="product" asp-action="create"><i class="feather-icon icon-plus me-2"></i>Add product</a>
+                            <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
-                        </li>
+                        </li>                            
+                        }
+                        }
                         <!-- nav item -->
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="feather-icon icon-phone-call me-2"></i>Contact</a>

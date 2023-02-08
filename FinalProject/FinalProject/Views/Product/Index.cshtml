@@ -1,4 +1,4 @@
-﻿@model PaginatedList<Product>
+﻿@model ProductViewModel
 @{
     int count = 0;
 }
@@ -39,7 +39,7 @@
                         </div>
                         <!-- heading -->
                         <div class="mt-4">
-                            <h1 class="mb-1 h4">Model.StoreName</h1>
+                            <h1 class="mb-1 h4">@Model.Store?.StoreName</h1>
                             <div class="small text-muted">
                                 <span>Everyday store prices </span>
                             </div>
@@ -67,7 +67,7 @@
                     <ul class="nav flex-column nav-pills nav-pills-dark">
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
+                            <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Store.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -83,10 +83,10 @@
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="product" asp-action="create"><i class="feather-icon icon-plus me-2"></i>Add product</a>
+                            <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="product" asp-action="index" ><i class="feather-icon icon-list me-2"></i>Products list</a>
+                            <a class="nav-link active" aria-current="page" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -188,15 +188,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-9 col-md-8">
-                    <!--========================Header========================================-->
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>Add a new product</div>
-                        <div>
-                            <a asp-controller="product" asp-action="create" class="btn btn-primary px-6">
-                                <i class="feather-icon icon-plus me-2"></i> Add
-                            </a>
-                        </div>
-                    </div>
+                    
                     <!--========================PRODUCT TABLE START================================-->
                     <div class="row">
                         <div class="">
@@ -223,7 +215,7 @@
                                       </thead>
                                       <tbody>
                                          <!-- Table body -->
-                                           @foreach (Product product in Model)
+                                           @foreach (Product product in Model.Products)
                                             {
                                             count++;
                                                 <tr>
@@ -231,7 +223,14 @@
                                                         @count
                                                     </td>
                                                     <td class="align-middle border-top-0 w-0">
-                                                        <a href="#"> <img src="~/uploads/products/@product.ProductImages.FirstOrDefault(x=>x.IsPoster==true)?.Image" alt="Ecommerce" class="icon-shape icon-xl"></a>
+                                                        @if (product.ProductImages.FirstOrDefault(x => x.IsPoster == true)?.Image!=null)
+                                                        {
+                                                            <a href="#"> <img src="~/uploads/products/@product.ProductImages.FirstOrDefault(x=>x.IsPoster==true)?.Image" alt="Ecommerce" class="icon-shape icon-xl"></a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a href="#"> <img src="~/assets/images/logo/FreshCartLogo.png" alt="Ecommerce" class="icon-shape icon-xl"></a>
+                                                        }
                                                     </td>
                                                     <td class="align-middle border-top-0">
                                                         <a href="#" class="fw-semi-bold text-inherit">

@@ -1,6 +1,7 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace FinalProject.Controllers
 {
@@ -13,6 +14,11 @@ namespace FinalProject.Controllers
         }
         public IActionResult Index(int storeId)
         {
+            if(_context.Stores.FirstOrDefault(s => s.Id == storeId)==null)
+            {
+                return NotFound();
+            }
+            Response.Cookies.Append("StoreId",storeId.ToString());
             Store store = _context.Stores.FirstOrDefault(s=> s.Id == storeId);
             if (store == null) return NotFound();
             return View(store);

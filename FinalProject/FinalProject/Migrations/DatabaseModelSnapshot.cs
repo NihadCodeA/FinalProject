@@ -36,26 +36,26 @@ namespace FinalProject.Migrations
                     b.Property<double>("CostPrice")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("CreatedTime")
+                    b.Property<DateTime?>("CreatedTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar(1500)");
 
                     b.Property<string>("DimensionType")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Disclaimer")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar(1500)");
 
                     b.Property<double>("DiscountPercentage")
                         .HasColumnType("float");
 
-                    b.Property<DateTime>("EndingDate")
+                    b.Property<DateTime?>("EndingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Height")
@@ -79,10 +79,6 @@ namespace FinalProject.Migrations
                     b.Property<double>("NetQuantity")
                         .HasColumnType("float");
 
-                    b.Property<string>("ProductCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("SalePrice")
                         .HasColumnType("float");
 
@@ -90,15 +86,15 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("StartingDate")
+                    b.Property<DateTime?>("StartingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("StorageTip")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar(1500)");
 
-                    b.Property<int>("StoreId")
+                    b.Property<int?>("StoreId")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
@@ -159,6 +155,10 @@ namespace FinalProject.Migrations
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LogoImage")
                         .HasColumnType("nvarchar(max)");
@@ -410,10 +410,8 @@ namespace FinalProject.Migrations
             modelBuilder.Entity("FinalProject.Models.Product", b =>
                 {
                     b.HasOne("FinalProject.Models.Store", "Store")
-                        .WithMany()
-                        .HasForeignKey("StoreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Products")
+                        .HasForeignKey("StoreId");
 
                     b.Navigation("Store");
                 });
@@ -483,6 +481,11 @@ namespace FinalProject.Migrations
             modelBuilder.Entity("FinalProject.Models.Product", b =>
                 {
                     b.Navigation("ProductImages");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Store", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -6,20 +6,19 @@ namespace FinalProject.Models
     public class Product
     {
         public int Id { get; set; } 
-        public int StoreId { get; set; }
+        public int? StoreId { get; set; }
         [StringLength(maximumLength:100)]
         public string Name { get; set; }
-        [StringLength(maximumLength:500)]
+        [StringLength(maximumLength:1500)]
         public string Description { get; set; }
-        [StringLength(maximumLength:500)]
+        [StringLength(maximumLength:1500)]
         public string StorageTip { get; set; }
-        [StringLength(maximumLength:500)]
+        [StringLength(maximumLength:1500)]
         public string Disclaimer { get; set; }
-        public DateTime CreatedTime { get; set; }
+        public DateTime? CreatedTime { get; set; }
         public double CostPrice { get; set; }
         public double SalePrice { get; set; }
         public double DiscountPercentage { get; set; }
-        public string ProductCode { get; set; }
         public bool IsAvaible { get; set; }
         public string Type { get; set; }
         public string Shipping { get; set; }
@@ -31,10 +30,10 @@ namespace FinalProject.Models
         public string? Height { get; set; }
         public string? Length { get; set; }
         public string? DimensionType { get; set; }
-        public DateTime StartingDate { get; set; }
-        public DateTime EndingDate { get; set; }
+        public DateTime? StartingDate { get; set; }
+        public DateTime? EndingDate { get; set; }
 
-        public Store Store { get; set; }
+        public Store? Store { get; set; }
 
         [NotMapped]
         public IFormFile? PosterImgFile { get; set; }

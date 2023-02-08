@@ -96,6 +96,7 @@ namespace FinalProject.Controllers
             }
             Store store=new Store
             {
+                Email=registerVM.Email,
                 StoreName = registerVM.Storename,
                 PhoneNumber1=registerVM.PhoneNumber,
                 Address= registerVM.Address,
