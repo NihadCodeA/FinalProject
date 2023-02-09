@@ -2,6 +2,7 @@
 @{
     int storeId = Int32.Parse((string)ViewData["StoreId"]);
     string storeName = (string)ViewData["StoreName"];
+    string storeEmail = (string)ViewData["StoreEmail"];
 }
 <main>
     <div class="mt-4">
@@ -83,12 +84,15 @@
                             <a class="nav-link" href="#"><i class="feather-icon icon-star me-2"></i>Reviews</a>
                         </li>
                         <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link  active" aria-current="page" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Store") && User.Identity.Name == storeEmail)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link  active" aria-current="page" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
+                            </li>
+                        }
                         <!-- nav item -->
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="feather-icon icon-phone-call me-2"></i>Contact</a>

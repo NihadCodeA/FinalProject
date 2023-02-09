@@ -18,7 +18,7 @@ namespace FinalProject.Controllers
             {
                 return NotFound();
             }
-            Response.Cookies.Append("StoreId",storeId.ToString());
+            //Response.Cookies.Append("StoreId",storeId.ToString());
             Store store = _context.Stores.FirstOrDefault(s=> s.Id == storeId);
             if (store == null) return NotFound();
             return View(store);

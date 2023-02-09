@@ -39,7 +39,7 @@
                         </div>
                         <!-- heading -->
                         <div class="mt-4">
-                            <h1 class="mb-1 h4">@Model.Store?.StoreName</h1>
+                            <h1 class="mb-1 h4">@Model?.Store?.StoreName</h1>
                             <div class="small text-muted">
                                 <span>Everyday store prices </span>
                             </div>
@@ -67,7 +67,7 @@
                     <ul class="nav flex-column nav-pills nav-pills-dark">
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Store.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
+                            <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model?.Store?.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -82,12 +82,15 @@
                             <a class="nav-link" href="#"><i class="feather-icon icon-star me-2"></i>Reviews</a>
                         </li>
                         <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Store") && User.Identity.Name == (Model.Store.Email ?? ""))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
+                            </li>
+                       }
                         <!-- nav item -->
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="feather-icon icon-phone-call me-2"></i>Contact</a>
@@ -210,6 +213,8 @@
                                             <th class="border-0">Items</th>
                                             <th class="border-0">Status</th>
                                             <th class="border-0">Amount</th>
+                                            <th class="border-0">Update</th>
+                                            <th class="border-0">Delete</th>
                                             <th class="border-0"></th>
                                          </tr>
                                       </thead>
@@ -242,7 +247,7 @@
                                                         <a href="#" class="text-inherit">#14899</a>
                                                     </td>
                                                     <td class="align-middle border-top-0">
-                                                        March 5, 2023
+                                                        @(DateTime.Parse($"{product.CreatedTime}").ToString("MM/dd/yyyy HH:mm"))
                                                     </td>
                                                     <td class="align-middle border-top-0">
                                                         1
@@ -252,6 +257,12 @@
                                                     </td>
                                                     <td class="align-middle border-top-0">
                                                         $15.00
+                                                    </td>
+                                                    <td class="text-muted align-middle border-top-0">
+                                                        <a class="btn btn-info" asp-controller="product" asp-action="update" asp-route-id="@product.Id">update</a>
+                                                    </td>
+                                                    <td class="text-muted align-middle border-top-0">
+                                                        <a class="btn btn-danger" asp-controller="product" asp-action="delete" asp-route-id="@product.Id">delete</a>
                                                     </td>
                                                     <td class="text-muted align-middle border-top-0">
                                                         <a href="#" class="text-inherit" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View"><i class="feather-icon icon-eye"></i></a>

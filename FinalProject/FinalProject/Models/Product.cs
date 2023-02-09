@@ -39,7 +39,7 @@ namespace FinalProject.Models
         public IFormFile? PosterImgFile { get; set; }
         public List<ProductImages>? ProductImages { get; set; }
         [NotMapped]
-        public List<int>? BookImageIds { get; set; }
+        public List<int>? ProductImageIds { get; set; }
         [NotMapped]
         public List<IFormFile>? ImageFiles { get; set; }
     }

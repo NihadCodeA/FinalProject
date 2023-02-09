@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jX+XGJfFa5DVvAhhAfzxA+wpNx4LESqyDO5g3OrS30o=",
+  "Hash": "CdoiDrR24WZOfOkbZXNQSM3jSwHIpJSYXpb+Eujql/I=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7682,6 +7682,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\vendors\\verctorMap\\vector-map.css"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\2aaf842c-31eb-4096-a449-21421e4dac89cold-drinks-juices.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/2aaf842c-31eb-4096-a449-21421e4dac89cold-drinks-juices.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\2aaf842c-31eb-4096-a449-21421e4dac89cold-drinks-juices.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\899e58ee-3c3d-43f1-b1ea-a10af0c5c319fruits-vegetables.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/899e58ee-3c3d-43f1-b1ea-a10af0c5c319fruits-vegetables.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\899e58ee-3c3d-43f1-b1ea-a10af0c5c319fruits-vegetables.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\c5da5da4-5399-43a5-b945-561b52d6abdcfruits-vegetables.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/c5da5da4-5399-43a5-b945-561b52d6abdcfruits-vegetables.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\c5da5da4-5399-43a5-b945-561b52d6abdcfruits-vegetables.png"
     }
   ]
 }
