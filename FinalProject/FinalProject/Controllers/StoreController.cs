@@ -1,7 +1,8 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
+using FinalProject.ViewModels.StoreViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.Controllers
 {
@@ -12,16 +13,21 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
-        public IActionResult Index(int storeId)
+        public IActionResult Index(int storeId,int page=1)
         {
             if(_context.Stores.FirstOrDefault(s => s.Id == storeId)==null)
             {
                 return NotFound();
             }
-            //Response.Cookies.Append("StoreId",storeId.ToString());
             Store store = _context.Stores.FirstOrDefault(s=> s.Id == storeId);
+            List<Product> products = _context.Products.Include(pi=>pi.ProductImages).Where(p=>p.StoreId== storeId).ToList();
             if (store == null) return NotFound();
-            return View(store);
+            StoreViewModel storeViewModel = new StoreViewModel
+            {
+                Store = store,
+                Products= products
+            };
+            return View(storeViewModel);
         }
         public IActionResult StoreList()
         {

@@ -310,17 +310,19 @@
                                 <label asp-for="ImageFiles">Upload ImageFiles</label>
                                 <input asp-for="ImageFiles" multiple type="file" accept="image/png,jpg,jpeg" class="form-control">
                                 <span asp-validation-for="ImageFiles" class="text-danger"></span>
-                                 @foreach (ProductImages productImage in Model.ProductImages.Where(x=>x.IsPoster==false))
+                                 <div class="d-flex flex-wrap">
+                                    @foreach (ProductImages productImage in Model.ProductImages.Where(x => x.IsPoster == false))
                                     {
-                                    if (@productImage?.Image!=null)
-                                    {
-                                        <div style="margin-left:40px;margin-top:16px;position:relative">
-                                            <img style="max-width:150px;max-height:140px;" src="~/uploads/products/@productImage?.Image" />
-                                            <span class="deleteBtn" style="cursor:pointer;font-weight:bold;font-size:24px;color:red;position:absolute">X</span>
-                                            <input hidden name="ProductImageIds" value="@productImage.Id" />
-                                        </div>
+                                        if (@productImage?.Image != null)
+                                        {
+                                            <div style="margin-left:40px;margin-top:16px;position:relative">
+                                                <img style="max-width:150px;max-height:140px;" src="~/uploads/products/@productImage?.Image" />
+                                                <span class="deleteBtn" style="cursor:pointer;font-weight:bold;font-size:24px;color:red;position:absolute">X</span>
+                                                <input hidden name="ProductImageIds" value="@productImage.Id" />
+                                            </div>
+                                        }
                                     }
-                                }
+                                 </div>
                             </div>
                             <!-- btn -->
                             <div class="col-12 d-grid">
@@ -367,5 +369,11 @@
             disclaimerCount.textContent = "0 characters remaining."
         }
     })
+
+    let deleteBtns = document.querySelectorAll(".deleteBtn");
+
+    deleteBtns.forEach(btn => btn.addEventListener("click", function () {
+    btn.parentElement.remove();
+    }))
 
 </script>

@@ -110,7 +110,7 @@ namespace FinalProject.Controllers
                     ProductImages productImage = new ProductImages
                     {
                         Product = product,
-                        Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products", product.PosterImgFile),
+                        Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products",imageFile),
                         IsPoster = false
                     };
                     _context.ProductImages.Add(productImage);
@@ -134,7 +134,7 @@ namespace FinalProject.Controllers
             ViewData["StoreName"] = store.StoreName ?? "";
             ViewData["StoreId"] = store.Id.ToString() ?? "1";
 
-            Product product = _context.Products.Include(x=>x.ProductImages).FirstOrDefault(x => x.Id == id);
+            Product product = _context.Products.Include(pi=>pi.ProductImages).FirstOrDefault(x => x.Id == id);
             if (product == null) return NotFound();
             return View(product);
         }
@@ -143,13 +143,19 @@ namespace FinalProject.Controllers
         {
             if (!ModelState.IsValid) return View();
 
-            Product existProduct= _context.Products.FirstOrDefault(x=>x.Id== product.Id);
+            Product existProduct= _context.Products.Include(pi=>pi.ProductImages).FirstOrDefault(x=>x.Id== product.Id);
             if (existProduct == null) return NotFound();
 
-            if (existProduct.ProductImages!=null)
+            //---------------------------------------------------------
+            if (product.ProductImageIds!=null)
             {
                 existProduct.ProductImages.RemoveAll(x => !product.ProductImageIds.Contains(x.Id) && x.IsPoster == false);
             }
+            else
+            {
+                existProduct.ProductImages.RemoveAll(x => x.IsPoster == false);
+            }
+            //-------------------------------------------------------
             if (product.PosterImgFile != null)
             {
                 if (product.PosterImgFile.ContentType != "image/png" && product.PosterImgFile.ContentType != "image/jpeg")
@@ -171,7 +177,7 @@ namespace FinalProject.Controllers
                 {
                     ProductImages productImage = new ProductImages
                     {
-                        Product = product,
+                        Product = existProduct,
                         Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products", product.PosterImgFile),
                         IsPoster = true
                     };
@@ -194,8 +200,8 @@ namespace FinalProject.Controllers
                     }
                     ProductImages productImage = new ProductImages
                     {
-                        Product = product,
-                        Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products", product.PosterImgFile),
+                        Product = existProduct,
+                        Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products", imageFile),
                         IsPoster = false
                     };
                     _context.ProductImages.Add(productImage);
