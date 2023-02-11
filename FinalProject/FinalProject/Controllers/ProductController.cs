@@ -18,13 +18,12 @@ namespace FinalProject.Controllers
         }
         public IActionResult Index(int page =1)
         {
-            //int id = Int32.Parse(Request.Cookies["StoreId"]);
-            //Store store = _context.Stores.FirstOrDefault(x => x.Id == id);
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
                 store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
             }
+            ViewData["StoreName"] = store.StoreName ?? "";
             if (store == null) return NotFound();
             var query = _context.Products.Include(s=>s.Store)
                 .Include(pi =>pi.ProductImages).Where(x=>x.StoreId==store.Id).AsQueryable();
@@ -42,9 +41,6 @@ namespace FinalProject.Controllers
         [HttpGet]
         public IActionResult AddProduct()
         {
-            //ViewData["StoreId"] = Request.Cookies["StoreId"];
-            //int id = Int32.Parse(Request.Cookies["StoreId"]);
-            //Store store = _context.Stores.FirstOrDefault(x => x.Id == id);
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
@@ -60,9 +56,6 @@ namespace FinalProject.Controllers
         public IActionResult AddProduct(Product product)
         {
             if (product == null) return NotFound();
-            //ViewData["StoreId"] = Request.Cookies["StoreId"];
-            //int id = Int32.Parse(Request.Cookies["StoreId"]);
-            //Store store = _context.Stores.FirstOrDefault(x => x.Id == id);
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {

@@ -12,10 +12,12 @@
                     <!-- breadcrumb -->
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item"><a href="#!">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#!">Stores</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Model.StoreName
+                            <li class="me-2"><a asp-controller="home" asp-action="index">Home </a></li>
+                            <li class="me-2"><i class="bi bi-chevron-right"></i></li>
+                            <li class="me-2"><a asp-controller="store" asp-action="storelist">Stores</a></li>
+                            <li class="me-2"><i class="bi bi-chevron-right"></i></li>
+                            <li class="active" aria-current="page">
+                                @ViewData["StoreName"]
                             </li>
                         </ol>
                     </nav>
@@ -67,7 +69,7 @@
                     <ul class="nav flex-column nav-pills nav-pills-dark">
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model?.Store?.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
+                            <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model?.Store?.Id" asp-route-page="1"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -93,7 +95,7 @@
                        }
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="feather-icon icon-phone-call me-2"></i>Contact</a>
+                            <a class="nav-link" asp-controller="store" asp-action="info" asp-route-storeId="@Model.Store.Id"><i class="bi bi-info-circle me-2"></i>Info</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">

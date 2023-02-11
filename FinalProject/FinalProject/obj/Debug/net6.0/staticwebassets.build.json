@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VDJeEu5u8Z5EZT9Bbgwd95M23GryLokYrYi0GF0Jjao=",
+  "Hash": "MeVqUH6Nm9agavUv199eHjSovRhaSRPZPGMTEt0vY1s=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7684,6 +7684,23 @@
       "OriginalItemSpec": "wwwroot\\manage\\vendors\\verctorMap\\vector-map.css"
     },
     {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\05417820-2502-4abb-970e-6df1ce40b4d7pet-care.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/05417820-2502-4abb-970e-6df1ce40b4d7pet-care.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\05417820-2502-4abb-970e-6df1ce40b4d7pet-care.png"
+    },
+    {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\074236f4-9f00-4818-9aa1-68894228aa23tea-coffee-drinks.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7733,6 +7750,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\24f61f62-0824-41ad-ad1f-eb1b163ca92ccleaning-essentials.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\25970118-52b0-494c-8363-1fa136ebb1c1snack-munchies.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/25970118-52b0-494c-8363-1fa136ebb1c1snack-munchies.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\25970118-52b0-494c-8363-1fa136ebb1c1snack-munchies.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\2aaf842c-31eb-4096-a449-21421e4dac89cold-drinks-juices.png",
@@ -7854,6 +7888,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\79442ade-14ec-4cda-b47b-211639c2d7c6snack-munchies.png"
     },
     {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\7fdc41d0-b800-4bc4-a045-dad573e02c46cleaning-essentials.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/7fdc41d0-b800-4bc4-a045-dad573e02c46cleaning-essentials.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\7fdc41d0-b800-4bc4-a045-dad573e02c46cleaning-essentials.png"
+    },
+    {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\8016598a-412e-4c19-9f86-4d8ecb8f3c42chicken-meat-fish.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7886,6 +7937,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\899e58ee-3c3d-43f1-b1ea-a10af0c5c319fruits-vegetables.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\ab4b4545-84fd-490e-9acf-7146167e0173cold-drinks-juices.png",
@@ -7988,6 +8056,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\d7e9013a-a00d-4793-a7ad-b359d70f41bfsnack-munchies.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\d8ab77b5-a527-4ab4-8b9e-a670ddb7a2a0snack-munchies.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/d8ab77b5-a527-4ab4-8b9e-a670ddb7a2a0snack-munchies.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\d8ab77b5-a527-4ab4-8b9e-a670ddb7a2a0snack-munchies.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\daf83d34-0b54-4dd7-9be4-b1e65d32ab9ftea-coffee-drinks.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/daf83d34-0b54-4dd7-9be4-b1e65d32ab9ftea-coffee-drinks.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\daf83d34-0b54-4dd7-9be4-b1e65d32ab9ftea-coffee-drinks.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png"
     }
   ]
 }

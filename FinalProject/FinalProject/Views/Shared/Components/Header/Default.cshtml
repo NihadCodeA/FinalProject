@@ -462,7 +462,7 @@
                             {
                                 if (User.IsInRole("Store"))
                                 {
-                                    <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Id">
+                                    <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Id" asp-route-page="1">
                                        Dashboard
                                     </a>
                                 }

@@ -1,4 +1,5 @@
 ﻿using FinalProject.DAL;
+using FinalProject.Helpers;
 using FinalProject.Models;
 using FinalProject.ViewModels.StoreViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -20,12 +21,14 @@ namespace FinalProject.Controllers
                 return NotFound();
             }
             Store store = _context.Stores.FirstOrDefault(s=> s.Id == storeId);
-            List<Product> products = _context.Products.Include(pi=>pi.ProductImages).Where(p=>p.StoreId== storeId).ToList();
+            var query = _context.Products.Include(pi=>pi.ProductImages).Where(p=>p.StoreId== storeId).AsQueryable();
+            var pagenatedProducts = PaginatedList<Product>.Create(query, 12, page);
+            ViewData["ProductsCount"] = query.Count();
             if (store == null) return NotFound();
             StoreViewModel storeViewModel = new StoreViewModel
             {
                 Store = store,
-                Products= products
+                Products= pagenatedProducts
             };
             return View(storeViewModel);
         }
@@ -33,6 +36,41 @@ namespace FinalProject.Controllers
         {
             List<Store> stores = _context.Stores.ToList();
             return View(stores);
+        }
+
+        public IActionResult Info(int storeId)
+        {
+            if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
+            {
+                return NotFound();
+            }
+            Store store = _context.Stores.FirstOrDefault(s => s.Id == storeId);
+            return View(store);
+        }
+        [HttpGet]
+        public IActionResult UpdateInfo(int storeId)
+        {
+            if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
+            {
+                return NotFound();
+            }
+            Store store = new Store();
+            if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
+            {
+                store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
+            }
+            if (store == null) return NotFound();
+            return View(store);
+        }
+        [HttpPost]
+        public IActionResult UpdateInfo(Store store)
+        {
+            if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
+            {
+                store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
+            }
+            if (store == null) return NotFound();
+            return RedirectToAction(nameof(Info));
         }
     }
 }
