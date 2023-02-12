@@ -204,11 +204,60 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-9 col-md-8">
-                   <form>
-                       <label asp-for="@Model.StoreName">Store name</label>
-                       <input asp-for="@Model.StoreName"/>
-
-                       <button class="btn btn-primary" type="submit">Submit</button>
+                    <form method="post" asp-action="UpdateInfo" enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label asp-for="StoreName">StoreName <sup class="text-danger">*</sup></label>
+                                <input asp-for="StoreName" class="form-control" placeholder="StoreName">
+                                <span class="text-danger" asp-validation-for="StoreName"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="Address">Address <sup class="text-danger">*</sup></label>
+                                <input asp-for="Address" class="form-control" placeholder="Address">
+                                <span class="text-danger" asp-validation-for="Address"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="PhoneNumber1">PhoneNumber1 <sup class="text-danger">*</sup></label>
+                                <input asp-for="PhoneNumber1" class="form-control" placeholder="PhoneNumber1">
+                                <span class="text-danger" asp-validation-for="PhoneNumber1"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="PhoneNumber2">PhoneNumber2 </label>
+                                <input asp-for="PhoneNumber2" class="form-control" placeholder="PhoneNumber2">
+                                <span class="text-danger" asp-validation-for="PhoneNumber2"></span>
+                            </div> 
+                            <div class="col-12 col-md-6">
+                                <label asp-for="PhoneNumber3">PhoneNumber3 </label>
+                                <input asp-for="PhoneNumber3" class="form-control" placeholder="PhoneNumber3">
+                                <span class="text-danger" asp-validation-for="PhoneNumber3"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="PhoneNumber4">PhoneNumber4 </label>
+                                <input asp-for="PhoneNumber4" class="form-control" placeholder="PhoneNumber4">
+                                <span class="text-danger" asp-validation-for="PhoneNumber4"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="LogoImageFile">Update logo image </label>
+                                <input asp-for="LogoImageFile" class="form-control" placeholder="LogoImageFile">
+                                <span class="text-danger" asp-validation-for="LogoImageFile"></span>
+                                @if (Model.LogoImage != null)
+                                {
+                                    <div style="margin-left:40px;margin-top:16px;position:relative">
+                                        <img style="max-width:150px;max-height:140px;" src="~/uploads/stores/@Model.LogoImage"  />
+                                        <span class="deleteBtn" style="cursor:pointer;font-weight:bold;font-size:24px;color:red;position:absolute">X</span>
+                                        <input hidden name="LogoImageId" value="@Model.Id" />
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="Description">Description (<span class="descriptionCount">1000 characters remaining.</span>)</label>
+                                <textarea style="min-height:100px;" asp-for="Description" class="form-control descriptionText" placeholder="Description"></textarea>
+                                <span class="text-danger" asp-validation-for="Description"></span>
+                            </div>
+                        </div>
+                        <div class="col-12 d-grid mt-2">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
                    </form>
                 </div>
             </div>
@@ -408,3 +457,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    let descriptionCount = document.getElementsByClassName("descriptionCount")[0];
+    let descriptionText = document.getElementsByClassName("descriptionText")[0];
+    
+    descriptionText.addEventListener("keyup", () => {
+        if (1000 - descriptionText.value.length <= 1000 && 1000 - descriptionText.value.length > 0) {
+            descriptionCount.textContent = 1000 - descriptionText.value.length + " characters remaining.";
+        }
+        else {
+            descriptionCount.textContent = "0 characters remaining."
+        }
+    })
+
+    let deleteBtn = document.querySelectorAll(".deleteBtn");
+
+    deleteBtn.addEventListener("click", function () {
+        deleteBtn.parentElement.remove();
+    })
+</script>

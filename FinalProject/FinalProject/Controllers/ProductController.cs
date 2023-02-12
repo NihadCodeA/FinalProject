@@ -248,5 +248,14 @@ namespace FinalProject.Controllers
 
             return RedirectToAction("Index","Product");
         }
+
+        public IActionResult Detail(int productId)
+        {
+            if(productId==null) return NotFound();
+            Product product = _context.Products.Include(s=>s.Store)
+                .Include(pi=>pi.ProductImages).FirstOrDefault(p=>p.Id == productId);
+            if (product == null) return NotFound();
+            return View(product);
+        }
     }
 }

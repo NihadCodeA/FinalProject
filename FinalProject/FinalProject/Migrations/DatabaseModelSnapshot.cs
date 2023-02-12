@@ -79,6 +79,9 @@ namespace FinalProject.Migrations
                     b.Property<double>("NetQuantity")
                         .HasColumnType("float");
 
+                    b.Property<int?>("ProductView")
+                        .HasColumnType("int");
+
                     b.Property<double>("SalePrice")
                         .HasColumnType("float");
 
@@ -149,15 +152,11 @@ namespace FinalProject.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BackgroundImage")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LogoImage")
@@ -183,6 +182,9 @@ namespace FinalProject.Migrations
                     b.Property<string>("StoreName")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("StoreView")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

@@ -7,6 +7,9 @@ namespace FinalProject.Models
     {
         public int Id { get; set; } 
         public int? StoreId { get; set; }
+
+        public int? ProductView { get; set; }
+
         [StringLength(maximumLength:100)]
         public string Name { get; set; }
         [StringLength(maximumLength:1500)]

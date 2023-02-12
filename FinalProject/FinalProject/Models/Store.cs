@@ -6,7 +6,8 @@ namespace FinalProject.Models
     public class Store
     {
         public int Id { get; set; }
-        public string Email { get; set; }
+        public int? StoreView { get; set; }
+        public string? Email { get; set; }
         public string? Address { get; set; }
         [StringLength(maximumLength: 100)]
         public string? StoreName { get; set; }
@@ -18,14 +19,13 @@ namespace FinalProject.Models
         public string? PhoneNumber3 { get; set; }
         [StringLength(maximumLength: 25)]
         public string? PhoneNumber4 { get; set; }
-        [StringLength(maximumLength: 500)]
+        [StringLength(maximumLength: 1000)]
         public string? Description { get; set; }
         public string? LogoImage { get; set; }
         [NotMapped]
-        public IFormFile? LogoImageFile { get; set; }
-        public string? BackgroundImage { get; set; }
+        public int? LogoImageId { get; set; }
         [NotMapped]
-        public IFormFile? BackgroundImageFile { get; set; }
+        public IFormFile? LogoImageFile { get; set; }
 
         public List<Product>? Products { get; set; }
     }
