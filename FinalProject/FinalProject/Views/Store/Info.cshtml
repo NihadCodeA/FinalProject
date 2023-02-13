@@ -106,7 +106,7 @@
                         }
                         <!-- nav item -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="store" asp-action="info" asp-route-storeId="@Model.Id"><i class="bi bi-info-circle me-2"></i>Info</a>
+                            <a class="nav-link active" aria-current="page" asp-controller="store" asp-action="info" asp-route-id="@Model.Id"><i class="bi bi-info-circle me-2"></i>Info</a>
                         </li>
                         <!-- nav item -->
                         <li class="nav-item">
@@ -214,7 +214,7 @@
                                 </div>
                                 <div class="d-flex justify-content-md-between align-items-center">
                                     <a class="btn btn-primary" asp-controller="store"
-                               asp-action="updateinfo" asp-route-storeId="@Model.Id">
+                               asp-action="updateinfo" asp-route-id="@Model.Id">
                                         update
                                     </a>
                                 </div>

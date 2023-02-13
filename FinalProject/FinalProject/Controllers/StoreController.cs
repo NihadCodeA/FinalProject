@@ -43,24 +43,24 @@ namespace FinalProject.Controllers
             return View(stores);
         }
 
-        public IActionResult Info(int storeId)
+        public IActionResult Info(int id)
         {
-            if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
+            if (_context.Stores.FirstOrDefault(s => s.Id == id) == null)
             {
                 return NotFound();
             }
-            Store store = _context.Stores.FirstOrDefault(s => s.Id == storeId);
+            Store store = _context.Stores.FirstOrDefault(s => s.Id == id);
             return View(store);
         }
         [HttpGet]
-        public IActionResult UpdateInfo(int storeId)
+        public IActionResult UpdateInfo(int id)
         {
-            if (storeId == null) return NotFound();
-            if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
+            if (id == null) return NotFound();
+            if (_context.Stores.FirstOrDefault(s => s.Id == id) == null)
             {
                 return NotFound();
             }
-            Store store = _context.Stores.FirstOrDefault(s => s.Id == storeId);
+            Store store = _context.Stores.FirstOrDefault(s => s.Id == id);
             if (!(User.Identity.IsAuthenticated && User.IsInRole("Store") && store.Email == User.Identity.Name))
             {
                 return NotFound();
@@ -123,7 +123,8 @@ namespace FinalProject.Controllers
             existStore.Address = store.Address;
             existStore.Description = store.Description;
             _context.SaveChanges();
-            return RedirectToAction("Info");
+            return RedirectToAction("info", "store", new { id = existStore.Id });
+
         }
     }
 }

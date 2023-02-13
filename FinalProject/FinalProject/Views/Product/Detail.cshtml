@@ -1107,15 +1107,15 @@
 
         <div class="col-md-6">
           <!-- img slide -->
-                        @*@foreach(ProductImages productImages in Model.ProductImages)
-                        {*@
-                            <div class="product" id="product">
+          <div class="product" id="product">
+                        @foreach(ProductImages productImages in Model.ProductImages)
+                        {
                                 <div class="zoom" onmousemove="zoom(event)"
-                                 style="background-image: url(../uploads/products/@Model.ProductImages.FirstOrDefault(x=>x.IsPoster==true)?.Image)">
-                                  <img src="~/uploads/products/@Model.ProductImages.FirstOrDefault(x=>x.IsPoster==true)?.Image" alt="">
+                                 style="background-image: url(../uploads/products/@productImages.Image)">
+                                  <img src="~/uploads/products/@productImages.Image" alt="">
                                 </div>
-                            </div>
-                        @*}*@
+                        }
+          </div>
                         <!-- product tools -->
           <div class="product-tools">
             <div class="thumbnails row g-3" id="productThumbnails">
