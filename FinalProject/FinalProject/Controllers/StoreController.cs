@@ -76,13 +76,13 @@ namespace FinalProject.Controllers
             if (existStore == null) return NotFound();
 
             //---------------------------------------------------------
-            if (store.LogoImageId!= null)
+            if (store.LogoImageId== null && existStore.LogoImage!=null)
             {
-                existStore.LogoImage = null;
                 FileManager.DeleteFile(_env.WebRootPath, "uploads/stores",existStore.LogoImage);
+                existStore.LogoImage = null;
             }
             //-------------------------------------------------------
-            if (store.LogoImage != null)
+            if (store.LogoImageFile != null)
             {
                 if (store.LogoImageFile.ContentType != "image/png" && store.LogoImageFile.ContentType != "image/jpeg")
                 {

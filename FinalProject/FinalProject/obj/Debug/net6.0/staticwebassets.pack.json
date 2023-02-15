@@ -329,6 +329,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\favicon\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\flags\\British-flag-england.png",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\British-flag-england.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\flags\\Flag_of_Azerbaijan.svg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\Flag_of_Azerbaijan.svg.png"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\baby-food.svg",
       "PackagePath": "staticwebassets\\assets\\images\\icons\\baby-food.svg"
     },
@@ -1899,6 +1907,10 @@
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png",
       "PackagePath": "staticwebassets\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",

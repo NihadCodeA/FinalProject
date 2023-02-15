@@ -68,8 +68,19 @@
                         <div class="card flex-row p-8 card-product ">
                             <div>
                                 <!-- img -->
-                                <img src="~/assets/images/stores-logo/stores-logo-1.svg" alt=""
-                                 class="rounded-circle icon-shape icon-xl">
+                                @if (store.LogoImage == null)
+                                {
+                                    <img src="~/assets/images/stores-logo/stores-logo-2.svg"
+                                 alt=""
+                                 class="rounded-circle icon-shape icon-xl" />
+                                }
+                                else
+                                {
+                                    <img src="~/uploads/stores/@store.LogoImage"
+                                 alt=""
+                                 class="rounded-circle icon-shape icon-xl" />
+
+                                }
                             </div>
                             <!-- content -->
                             <div class="ms-6">

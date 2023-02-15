@@ -1,19 +1,21 @@
-﻿using FinalProject.DAL;
+﻿using FinalProject.Controllers;
+using FinalProject.DAL;
 using FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 
 namespace FinalProject.ViewComponents
 {
     public class HeaderViewComponent : ViewComponent
     {
-        private readonly UserManager<AppUser> _userManager;
         private readonly Database _context;
-        public HeaderViewComponent(Database context,UserManager<AppUser> userManager)
+        private readonly IStringLocalizer<SharedResource> _localizer;
+        public HeaderViewComponent(Database context, IStringLocalizer<SharedResource> localizer)
         {
             _context = context;
-            _userManager = userManager;
+            _localizer= localizer;
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
@@ -22,7 +24,25 @@ namespace FinalProject.ViewComponents
             {
                 store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
             }
-
+            ViewData["Dashboard"] = _localizer["Navbar_Dashboard"];
+            //----------------------------------------
+            string cookieName = ".AspNetCore.Culture";
+            if (Request.Cookies.TryGetValue(cookieName, out string value))
+            {
+                if (value.Contains("az"))
+                {
+                ViewData["Culture"]= "az";
+                }
+                else
+                {
+                ViewData["Culture"]= "en";
+                }
+            }
+            else
+            {
+                ViewData["Culture"]="az";
+            }
+            //---------------------------------------- 
             return View(await Task.FromResult(store));
         }
     }

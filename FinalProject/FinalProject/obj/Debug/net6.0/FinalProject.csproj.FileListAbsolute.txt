@@ -550,3 +550,10 @@ C:\Users\Nihad\Desktop\New folder\FinalProject\FinalProject\FinalProject\obj\Deb
 C:\Users\Nihad\Desktop\New folder\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.csproj.CopyComplete
 C:\Users\Nihad\Desktop\New folder\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.genruntimeconfig.cache
 C:\Users\Nihad\Desktop\New folder\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\ref\FinalProject.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\en-US\FinalProject.resources.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.csproj.GenerateResource.cache
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\en-US\FinalProject.resources.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\az-Latn-AZ\FinalProject.resources.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\az-Latn-AZ\FinalProject.resources.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedResource.az-Latn-AZ.resources
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedResource.en-US.resources

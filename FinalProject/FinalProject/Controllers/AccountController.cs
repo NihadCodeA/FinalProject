@@ -73,6 +73,12 @@ namespace FinalProject.Controllers
                 ModelState.AddModelError("Email", "Email has taken!");
                 return View();
             }
+            var existStoreName = _context.Stores.FirstOrDefault(sn => sn.StoreName == registerVM.Storename); 
+            if (existStoreName != null)
+            {
+                ModelState.AddModelError("Storename", "Storename has taken!");
+                return View();
+            }
             storeAccount = new AppUser
             {
                 Email = registerVM.Email,

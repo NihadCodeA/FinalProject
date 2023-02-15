@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MeVqUH6Nm9agavUv199eHjSovRhaSRPZPGMTEt0vY1s=",
+  "Hash": "G4iI1+UH2E9nhTSpCncP4MJ97rmBC0iezJcwXlODR7w=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -1426,6 +1426,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\favicon\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\flags\\British-flag-england.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/flags/British-flag-england.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\flags\\British-flag-england.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\flags\\Flag_of_Azerbaijan.svg.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "assets/images/flags/Flag_of_Azerbaijan.svg.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\flags\\Flag_of_Azerbaijan.svg.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\icons\\baby-food.svg",
@@ -8107,6 +8141,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/stores/dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg"
     }
   ]
 }

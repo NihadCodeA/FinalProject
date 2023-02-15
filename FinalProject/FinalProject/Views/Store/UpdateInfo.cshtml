@@ -33,7 +33,7 @@
                     <div class="d-flex flex-column">
                         <div>
                             <!-- img -->
-                            @if (Model.LogoImage == null)
+                            @if (Model.LogoImage==null)
                             {
                                         <img src="~/assets/images/stores-logo/stores-logo-2.svg"
                                  alt=""
@@ -471,7 +471,7 @@
         }
     })
 
-    let deleteBtn = document.querySelectorAll(".deleteBtn");
+    let deleteBtn = document.querySelector(".deleteBtn");
 
     deleteBtn.addEventListener("click", function () {
         deleteBtn.parentElement.remove();

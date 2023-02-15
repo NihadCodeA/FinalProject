@@ -16,6 +16,14 @@
         },
         "runtime": {
           "FinalProject.dll": {}
+        },
+        "resources": {
+          "az-Latn-AZ/FinalProject.resources.dll": {
+            "locale": "az-Latn-AZ"
+          },
+          "en-US/FinalProject.resources.dll": {
+            "locale": "en-US"
+          }
         }
       },
       "Humanizer.Core/2.8.26": {
