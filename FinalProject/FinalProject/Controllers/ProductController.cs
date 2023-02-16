@@ -1,9 +1,12 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Helpers;
 using FinalProject.Models;
+using FinalProject.ViewModels.HeaderViewModels;
 using FinalProject.ViewModels.ProductViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace FinalProject.Controllers
 {
@@ -11,10 +14,12 @@ namespace FinalProject.Controllers
     {
         public readonly Database _context;
         public readonly IWebHostEnvironment _env;
-        public ProductController(Database context,IWebHostEnvironment env)
+        private readonly IStringLocalizer<SharedResource> _localizer;
+        public ProductController(Database context,IWebHostEnvironment env, IStringLocalizer<SharedResource> localizer)
         {
             _context = context;
             _env= env;
+            _localizer = localizer;
         }
         public IActionResult Index(int page =1)
         {
@@ -255,7 +260,35 @@ namespace FinalProject.Controllers
             Product product = _context.Products.Include(s=>s.Store)
                 .Include(pi=>pi.ProductImages).FirstOrDefault(p=>p.Id == productId);
             if (product == null) return NotFound();
-            return View(product);
+            Store store = _context.Stores.FirstOrDefault(s=>s.Id==product.StoreId);
+            //---------------------------------------- 
+            string cookieName = ".AspNetCore.Culture";
+            string language = "az";
+            if (Request.Cookies.TryGetValue(cookieName, out string value))
+            {
+                if (value.Contains("az"))
+                {
+                    language = "az";
+                }
+                else
+                {
+                    language = "en";
+                }
+            }
+            else
+            {
+                language = "az";
+            }
+            //---------------------------------------- 
+
+            HeaderViewModel headerVM = new HeaderViewModel
+            {
+                Store = store,
+                Product = product,
+                Language = language,
+                Localizer = _localizer,
+            };
+            return View(headerVM);
         }
     }
 }

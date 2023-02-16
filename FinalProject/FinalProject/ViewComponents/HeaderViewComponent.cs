@@ -1,9 +1,8 @@
-﻿using FinalProject.Controllers;
-using FinalProject.DAL;
+﻿using FinalProject.DAL;
 using FinalProject.Models;
-using Microsoft.AspNetCore.Identity;
+using FinalProject.ViewModels.HeaderViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Localization;
 
 namespace FinalProject.ViewComponents
@@ -24,26 +23,33 @@ namespace FinalProject.ViewComponents
             {
                 store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
             }
-            ViewData["Dashboard"] = _localizer["Navbar_Dashboard"];
             //----------------------------------------
             string cookieName = ".AspNetCore.Culture";
+            string language = "az";
             if (Request.Cookies.TryGetValue(cookieName, out string value))
             {
                 if (value.Contains("az"))
                 {
-                ViewData["Culture"]= "az";
+                    language = "az";
                 }
                 else
                 {
-                ViewData["Culture"]= "en";
+                    language = "en";
                 }
             }
             else
             {
-                ViewData["Culture"]="az";
+                language = "az";
             }
             //---------------------------------------- 
-            return View(await Task.FromResult(store));
+
+            HeaderViewModel headerVM= new HeaderViewModel
+            {
+                Store = store,
+                Language= language,
+                Localizer=_localizer,
+            };
+            return View(await Task.FromResult(headerVM));
         }
     }
 }

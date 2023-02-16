@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G4iI1+UH2E9nhTSpCncP4MJ97rmBC0iezJcwXlODR7w=",
+  "Hash": "t7x6GvAslEVy+LXzslLBs3SkzSRkEnIpCp8PHWhKi2I=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -8143,12 +8143,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png"
     },
     {
-      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg",
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
-      "RelativePath": "uploads/stores/dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg",
+      "RelativePath": "uploads/stores/d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -8157,7 +8157,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\stores\\dc9fed61-25b9-4548-ad6f-b3122d98ad71avatar-6.jpg"
+      "OriginalItemSpec": "wwwroot\\uploads\\stores\\d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg"
     }
   ]
 }

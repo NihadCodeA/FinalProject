@@ -117,7 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Account_DontHaveAnyAccount" xml:space="preserve">
+    <value>Don’t have an account?</value>
+  </data>
+  <data name="Account_EnterPassword" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="Account_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Account_MemberRegister" xml:space="preserve">
+    <value>Register for members</value>
+  </data>
+  <data name="Account_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Account_Register" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="Account_RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Account_StoreRegister" xml:space="preserve">
+    <value>Register for stores</value>
+  </data>
+  <data name="Accout_LogOut" xml:space="preserve">
+    <value>Log out</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Dashboard</value>
+  </data>
+  <data name="Navbar_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Navbar_MyStore" xml:space="preserve">
+    <value>My store</value>
+  </data>
+  <data name="Navbar_Stores" xml:space="preserve">
+    <value>Stores</value>
   </data>
 </root>

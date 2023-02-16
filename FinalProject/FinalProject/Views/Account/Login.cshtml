@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    var localizer = ViewData["Localizer"] as IStringLocalizer;
 }
 @model LoginViewModel
 <!DOCTYPE html>
@@ -56,12 +57,9 @@
     <div class="border-bottom shadow-sm">
         <nav class="navbar navbar-light py-2">
             <div class="container justify-content-center justify-content-lg-between">
-                <a class="navbar-brand" href="../index-2.html">
+                <a class="navbar-brand" asp-controller="home" asp-action="index">
                     <img src="~/assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top">
                 </a>
-                <span class="navbar-text">
-                    Already have an account? <a href="signin.html">Sign in</a>
-                </span>
             </div>
         </nav>
     </div>
@@ -79,9 +77,8 @@
                     </div>
                     <!-- col -->
                     <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
-                        <div class="mb-lg-9 mb-5">
-                            <h1 class="mb-1 h2 fw-bold">Sign in to FreshCart</h1>
-                            <p>Welcome back to FreshCart! Enter your email to get started.</p>
+                        <div class="mb-lg-4 mb-2">
+                            <h1 class="mb-1 h2 fw-bold">@localizer["Account_Login"] </h1>
                         </div>
 
                         <form method="post" asp-action="login">
@@ -94,9 +91,9 @@
                                     <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                                 <div class="col-12">
-                                    <label asp-for="Password">Password</label>
+                                    <label asp-for="Password">@localizer["Account_Password"]</label>
                                     <div class="password-field position-relative">
-                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Enter password">
+                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="@localizer["Account_EnterPassword"]">
                                         <span><i id="passwordToggler" class="bi bi-eye-slash"></i></span>
                                     </div>
                                         <span class="text-danger" asp-validation-for="Password"></span>
@@ -106,18 +103,17 @@
                                     <div class="form-check">
                                         <input asp-for="RememberMe" class="form-check-input">
                                         <!-- label --> <label asp-for="RememberMe" class="form-check-label">
-                                            Remember me
+                                            @localizer["Account_RememberMe"]
                                         </label>
                                     </div>
-                                    <div> Forgot password? <a href="forgot-password.html">Reset It</a></div>
                                 </div>
                                 <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                 <!-- btn -->
                                 <div class="col-12 d-grid">
-                                    <button type="submit" class="btn btn-primary">Sign In</button>
+                                    <button type="submit" class="btn btn-primary">@localizer["Account_Login"]</button>
                                 </div>
                                 <!-- link -->
-                                <div>Don’t have an account? <a asp-controller="account" asp-action="memberregister"> Sign Up</a></div>
+                                <div>@localizer["Account_DontHaveAnyAccount"]<a asp-controller="account" asp-action="memberregister"> @localizer["Account_Register"]</a></div>
                             </div>
                         </form>
                     </div>

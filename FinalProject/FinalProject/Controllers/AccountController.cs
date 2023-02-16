@@ -3,6 +3,7 @@ using FinalProject.Models;
 using FinalProject.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 
 namespace FinalProject.Controllers
 {
@@ -11,17 +12,21 @@ namespace FinalProject.Controllers
         private readonly Database _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-
-        public AccountController(Database context,UserManager<AppUser> userManager,SignInManager<AppUser> signInManager)
+        private readonly IStringLocalizer<SharedResource> _localizer;
+        public AccountController(Database context,UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager,IStringLocalizer<SharedResource> localizer)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _localizer=localizer;
         }
+
         //register for members
         [HttpGet]
         public async Task<IActionResult> MemberRegister()
         {
+            ViewData["Localizer"] = _localizer;
             return View();
         }
         [HttpPost]
@@ -61,6 +66,7 @@ namespace FinalProject.Controllers
         [HttpGet]
         public async Task<IActionResult> StoreRegister()
         {
+            ViewData["Localizer"] = _localizer;
             return View();
         }
         [HttpPost]
@@ -115,6 +121,7 @@ namespace FinalProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Login()
         {
+            ViewData["Localizer"] = _localizer;
             return View();
         }
 

@@ -2,10 +2,10 @@ using FinalProject.DAL;
 using FinalProject.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Globalization;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +33,7 @@ builder.Services.AddLocalization(opt =>
 {
     opt.ResourcesPath = "Resources";
 });
+builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
 //builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization(
 //    opt =>
 //    {
@@ -61,6 +62,10 @@ builder.Services.Configure<RequestLocalizationOptions>(opt =>
         new CookieRequestCultureProvider(),
         new AcceptLanguageHeaderRequestCultureProvider(),
     };
+    opt.AddInitialRequestCultureProvider(new CustomRequestCultureProvider(async context =>
+    {
+        return await Task.FromResult(new ProviderCultureResult("az"));
+    }));
 });
 
 var app = builder.Build();
@@ -79,7 +84,6 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
 var options = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
 app.UseRequestLocalization(options.Value);
 
@@ -90,6 +94,7 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{culture=az-Latn-AZ}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
 
 app.Run();

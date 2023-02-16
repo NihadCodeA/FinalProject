@@ -117,7 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>Hesab</value>
+  </data>
+  <data name="Account_DontHaveAnyAccount" xml:space="preserve">
+    <value>Hesabınız yoxdur ?</value>
+  </data>
+  <data name="Account_EnterPassword" xml:space="preserve">
+    <value>Şifrəni daxil edin</value>
+  </data>
+  <data name="Account_Login" xml:space="preserve">
+    <value>Daxil ol</value>
+  </data>
+  <data name="Account_MemberRegister" xml:space="preserve">
+    <value>Istifadəçi hesabı aç</value>
+  </data>
+  <data name="Account_Password" xml:space="preserve">
+    <value>Şifrə</value>
+  </data>
+  <data name="Account_Register" xml:space="preserve">
+    <value>Qeydiyyatdan keç</value>
+  </data>
+  <data name="Account_RememberMe" xml:space="preserve">
+    <value>Məni xatırla</value>
+  </data>
+  <data name="Account_StoreRegister" xml:space="preserve">
+    <value>Mağaza hesabı aç</value>
+  </data>
+  <data name="Accout_LogOut" xml:space="preserve">
+    <value>Hesabdan çıxış</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Admin panel</value>
+  </data>
+  <data name="Navbar_Home" xml:space="preserve">
+    <value>Ev</value>
+  </data>
+  <data name="Navbar_MyStore" xml:space="preserve">
+    <value>Mağazam</value>
+  </data>
+  <data name="Navbar_Stores" xml:space="preserve">
+    <value>Mağazalar</value>
   </data>
 </root>
