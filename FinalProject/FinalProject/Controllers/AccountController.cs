@@ -32,6 +32,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> MemberRegister(MemberRegisterViewModel registerVM)
         {
+            ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
             var user = await _userManager.FindByEmailAsync(registerVM.Email);
             if(user != null)
@@ -72,6 +73,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> StoreRegister(StoreRegisterViewModel registerVM)
         {
+            ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
             var storeAccount = await _userManager.FindByEmailAsync(registerVM.Email);
             if (storeAccount != null)
@@ -128,6 +130,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
         {
+            ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
             var user = await _userManager.FindByEmailAsync(loginVM.Email);
             if(user == null)

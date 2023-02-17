@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    var localizer = ViewData["Localizer"] as IStringLocalizer;
 }
 @model MemberRegisterViewModel
 <!DOCTYPE html>
@@ -55,11 +56,11 @@
     <div class="border-bottom shadow-sm">
         <nav class="navbar navbar-light py-2">
             <div class="container justify-content-center justify-content-lg-between">
-                <a class="navbar-brand" href="../index-2.html">
+                <a class="navbar-brand" asp-controller="home" asp-action="index">
                     <img src="~/assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top">
                 </a>
                 <span class="navbar-text">
-                    Already have an account? <a asp-controller="account" asp-action="login">Sign in</a>
+                    @localizer["Account_HaveAnAccount"] <a asp-controller="account" asp-action="login">@localizer["Account_Login"]</a>
                 </span>
             </div>
         </nav>
@@ -80,15 +81,15 @@
                     <!-- col -->
                     <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
                         <div class="mb-lg-9 mb-5">
-                            <h1 class="mb-1 h2 fw-bold">Get Start Shopping</h1>
+                            <h1 class="mb-1 h2 fw-bold">@localizer["Account_Register"]</h1>
                         </div>
                         <!-- form -->
                         <form method="post" asp-action="memberregister">
                             <div class="row g-3">
                                 <!-- col -->
                                 <div class="col-12">
-                                    <label asp-for="Fullname">Fullname</label>
-                                    <input asp-for="Fullname" class="form-control" placeholder="Fullname">
+                                    <label asp-for="Fullname">@localizer["Account_Fullname"]</label>
+                                    <input asp-for="Fullname" class="form-control" placeholder="@localizer["Account_Fullname"]">
                                     <span class="text-danger" asp-validation-for="Fullname"></span>
                                 </div>
                                 <div class="col-12">
@@ -97,18 +98,18 @@
                                     <span class="text-danger" asp-validation-for="Email"></span>
                                 </div>
                                 <div class="col-12">
-                                    <label asp-for="Password">Password</label>
+                                    <label asp-for="Password">@localizer["Account_Password"]</label>
                                     <div class="password-field position-relative">
-                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Enter password">
+                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="@localizer["Account_EnterPassword"]">
                                         <span><i id="passwordToggler" class="bi bi-eye-slash"></i></span>
                                     </div>
                                         <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>
                                 <div class="col-12">
-                                    <label asp-for="ConfirmPassword">ConfirmPassword</label>
+                                    <label asp-for="ConfirmPassword">@localizer["Account_ConfirmPassword"]</label>
                                     <div class="password-field position-relative">
-                                        <input asp-for="ConfirmPassword" type="password" 
-                                        placeholder="Enter confirm password" id="confirmPassword" class="form-control">
+                                        <input asp-for="ConfirmPassword" type="password"
+                                               placeholder="@localizer["Account_EnterPasswordAgain"]" id="confirmPassword" class="form-control">
                                         <span><i id="confirmPasswordToggler" class="bi bi-eye-slash"></i></span>
                                     </div>
                                         <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
@@ -116,18 +117,25 @@
                                 <div class="text-danger" asp-validation-summary="ModelOnly"></div>
                                 <!-- btn -->
                                 <div class="col-12 d-grid">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" class="btn btn-primary">@localizer["Account_Register"]</button>
                                 </div>
-
-                                <!-- text -->
                                 <p>
+                                    <small>
+                                        @localizer["Account_HaveStore"] 
+                                        <a asp-controller="account" asp-action="storeregister">
+                                            @localizer["Account_StoreRegister"]
+                                        </a>
+                                    </small>
+                                </p>
+                                <!-- text -->
+                                @*<p>
                                     <small>
                                         By continuing, you agree to our <a href="#!"> Terms of Service</a> & <a href="#!">
                                             Privacy
                                             Policy
                                         </a>
                                     </small>
-                                </p>
+                                </p>*@
                             </div>
                         </form>
                 </div>

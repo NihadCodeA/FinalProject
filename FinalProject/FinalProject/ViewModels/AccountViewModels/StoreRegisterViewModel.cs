@@ -10,7 +10,7 @@ namespace FinalProject.ViewModels.AccountViewModels
         [Required, StringLength(maximumLength: 100), DataType(dataType: DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required,DataType(dataType: DataType.PhoneNumber)]
+        [Required,StringLength(maximumLength:25), DataType(dataType: DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
         [Required]

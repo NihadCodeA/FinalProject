@@ -120,29 +120,53 @@
   <data name="Account" xml:space="preserve">
     <value>Hesab</value>
   </data>
+  <data name="Account_Address" xml:space="preserve">
+    <value>Ünvan</value>
+  </data>
+  <data name="Account_ConfirmPassword" xml:space="preserve">
+    <value>Şifrəni təsdiqləyin</value>
+  </data>
   <data name="Account_DontHaveAnyAccount" xml:space="preserve">
     <value>Hesabınız yoxdur ?</value>
   </data>
   <data name="Account_EnterPassword" xml:space="preserve">
     <value>Şifrəni daxil edin</value>
   </data>
+  <data name="Account_EnterPasswordAgain" xml:space="preserve">
+    <value>Şifrəni təkrar daxil edin</value>
+  </data>
+  <data name="Account_Fullname" xml:space="preserve">
+    <value>Tam ad</value>
+  </data>
+  <data name="Account_HaveAnAccount" xml:space="preserve">
+    <value>Hesabınınız var?</value>
+  </data>
+  <data name="Account_HaveStore" xml:space="preserve">
+    <value>Mağazanız var?</value>
+  </data>
   <data name="Account_Login" xml:space="preserve">
-    <value>Daxil ol</value>
+    <value>Daxil olun</value>
   </data>
   <data name="Account_MemberRegister" xml:space="preserve">
-    <value>Istifadəçi hesabı aç</value>
+    <value>Istifadəçi hesabı açın</value>
   </data>
   <data name="Account_Password" xml:space="preserve">
     <value>Şifrə</value>
   </data>
+  <data name="Account_Phonenumber" xml:space="preserve">
+    <value>Əlaqə nömrəsi</value>
+  </data>
   <data name="Account_Register" xml:space="preserve">
-    <value>Qeydiyyatdan keç</value>
+    <value>Qeydiyyatdan keçin</value>
   </data>
   <data name="Account_RememberMe" xml:space="preserve">
     <value>Məni xatırla</value>
   </data>
+  <data name="Account_Storename" xml:space="preserve">
+    <value>Mağaza adı</value>
+  </data>
   <data name="Account_StoreRegister" xml:space="preserve">
-    <value>Mağaza hesabı aç</value>
+    <value>Mağaza hesabı açın</value>
   </data>
   <data name="Accout_LogOut" xml:space="preserve">
     <value>Hesabdan çıxış</value>
