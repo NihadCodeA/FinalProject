@@ -3,6 +3,7 @@ using FinalProject.Helpers;
 using FinalProject.Models;
 using FinalProject.ViewModels.HeaderViewModels;
 using FinalProject.ViewModels.ProductViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -12,11 +13,13 @@ namespace FinalProject.Controllers
 {
     public class ProductController : Controller
     {
+        private readonly UserManager<AppUser> _userManager;
         public readonly Database _context;
         public readonly IWebHostEnvironment _env;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public ProductController(Database context,IWebHostEnvironment env, IStringLocalizer<SharedResource> localizer)
+        public ProductController(UserManager<AppUser> userManager, Database context,IWebHostEnvironment env, IStringLocalizer<SharedResource> localizer)
         {
+            _userManager = userManager;
             _context = context;
             _env= env;
             _localizer = localizer;
@@ -254,7 +257,7 @@ namespace FinalProject.Controllers
             return RedirectToAction("Index","Product");
         }
 
-        public IActionResult Detail(int productId)
+        public async Task<IActionResult> Detail(int productId)
         {
             if(productId==null) return NotFound();
             Product product = _context.Products.Include(s=>s.Store)
@@ -280,11 +283,16 @@ namespace FinalProject.Controllers
                 language = "az";
             }
             //---------------------------------------- 
-
+            AppUser appUser = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
             HeaderViewModel headerVM = new HeaderViewModel
             {
                 Store = store,
                 Product = product,
+                User=appUser,
                 Language = language,
                 Localizer = _localizer,
             };

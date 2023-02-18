@@ -297,34 +297,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\category\\tea-coffee-drinks.png"
     },
     {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\4by3.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\4by3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\bootstrap.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\bootstrap.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\gulp.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\gulp.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\nodejs.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\nodejs.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\placeholder-4by3.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\placeholder-4by3.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\placeholder-img.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\placeholder-img.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\docs\\sass.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\docs\\sass.jpg"
-    },
-    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\favicon\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\images\\favicon\\favicon.ico"
     },
@@ -399,26 +371,6 @@
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\logo\\freshcart-white-logo.svg",
       "PackagePath": "staticwebassets\\assets\\images\\logo\\freshcart-white-logo.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\amazonpay.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\payment\\amazonpay.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\american-express.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\payment\\american-express.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\mastercard.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\payment\\mastercard.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\paypal.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\payment\\paypal.svg"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\payment\\visa.svg",
-      "PackagePath": "staticwebassets\\assets\\images\\payment\\visa.svg"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\assets\\images\\png\\girl-email.png",

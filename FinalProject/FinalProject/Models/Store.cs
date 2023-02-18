@@ -28,5 +28,6 @@ namespace FinalProject.Models
         public IFormFile? LogoImageFile { get; set; }
 
         public List<Product>? Products { get; set; }
+
     }
 }

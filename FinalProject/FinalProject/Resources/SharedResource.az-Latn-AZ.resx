@@ -123,6 +123,9 @@
   <data name="Account_Address" xml:space="preserve">
     <value>Ünvan</value>
   </data>
+  <data name="Account_Back" xml:space="preserve">
+    <value>Geri qayıt</value>
+  </data>
   <data name="Account_ConfirmPassword" xml:space="preserve">
     <value>Şifrəni təsdiqləyin</value>
   </data>
@@ -134,6 +137,12 @@
   </data>
   <data name="Account_EnterPasswordAgain" xml:space="preserve">
     <value>Şifrəni təkrar daxil edin</value>
+  </data>
+  <data name="Account_ForgotPassword" xml:space="preserve">
+    <value>Şifrəni unutdum</value>
+  </data>
+  <data name="Account_ForgotYourPassword" xml:space="preserve">
+    <value>Şifrəni unutmusuz?</value>
   </data>
   <data name="Account_Fullname" xml:space="preserve">
     <value>Tam ad</value>
@@ -161,6 +170,12 @@
   </data>
   <data name="Account_RememberMe" xml:space="preserve">
     <value>Məni xatırla</value>
+  </data>
+  <data name="Account_ResetPassword" xml:space="preserve">
+    <value>Şifrəni yeniləyin</value>
+  </data>
+  <data name="Account_ResetPasswordText" xml:space="preserve">
+    <value>Zəhmət olmasa hesabınızla əlaqəli e-mail ünvanını daxil edin və biz sizə şifrənizi yeniləmək üçün bir link göndərəcəyik.</value>
   </data>
   <data name="Account_Storename" xml:space="preserve">
     <value>Mağaza adı</value>

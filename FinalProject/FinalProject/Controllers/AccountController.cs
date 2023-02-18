@@ -155,5 +155,51 @@ namespace FinalProject.Controllers
             return RedirectToAction("Login","Account");
         }
 
+        public IActionResult ForgotPassword()
+        {
+            ViewData["Localizer"] = _localizer;
+            return View();  
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model); 
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user is null)
+            {
+                ModelState.AddModelError("Email","User is not found!");
+                return View(model);
+            }
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            string link = Url.Action("ResetPassword","Account",new {userId=user.Id,token=token},HttpContext.Request.Scheme);
+
+            return Json(link);
+        }
+
+        public async Task<IActionResult> ResetPassword(string userId,string token)
+        {
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
+            var user= await _userManager.FindByIdAsync(userId);
+            if (user is null) return NotFound();
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model,string userId, string token)
+        {
+            if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user is null) return NotFound();
+
+            var identityUser = await _userManager.ResetPasswordAsync(user, token,model.ConfirmPassword);
+
+            return RedirectToAction(nameof(Login));
+        }
     }
 }

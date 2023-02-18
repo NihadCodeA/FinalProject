@@ -7,6 +7,7 @@ namespace FinalProject.ViewModels.HeaderViewModels
     {
         public Store? Store { get; set; }
         public Product? Product { get; set; }
+        public AppUser? User { get; set; }
         public string Language { get; set; }
         public IStringLocalizer Localizer { get; set; }
 
