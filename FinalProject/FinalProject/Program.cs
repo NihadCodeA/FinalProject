@@ -1,10 +1,13 @@
+using FinalProject.Abstractions.MailService;
 using FinalProject.DAL;
 using FinalProject.Models;
+using FinalProject.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using System.Configuration;
 using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,8 +28,11 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireUppercase= true;
     opt.Password.RequiredLength = 8;
     opt.User.RequireUniqueEmail= true;
-}).AddEntityFrameworkStores<Database>().AddDefaultTokenProviders();
 
+    opt.SignIn.RequireConfirmedEmail = true;
+}).AddEntityFrameworkStores<Database>().AddDefaultTokenProviders();
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IMailService, MailService>();
 //localization
 
 builder.Services.AddLocalization(opt =>

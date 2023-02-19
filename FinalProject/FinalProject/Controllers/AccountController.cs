@@ -1,4 +1,5 @@
-﻿using FinalProject.DAL;
+﻿using FinalProject.Abstractions.MailService;
+using FinalProject.DAL;
 using FinalProject.Models;
 using FinalProject.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Identity;
@@ -12,13 +13,16 @@ namespace FinalProject.Controllers
         private readonly Database _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IMailService _mailService;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public AccountController(Database context,UserManager<AppUser> userManager,
-            SignInManager<AppUser> signInManager,IStringLocalizer<SharedResource> localizer)
+        public AccountController(Database context,UserManager<AppUser> userManager, 
+            SignInManager<AppUser> signInManager,IMailService mailService ,
+            IStringLocalizer<SharedResource> localizer)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _mailService = mailService;
             _localizer=localizer;
         }
 
@@ -54,13 +58,22 @@ namespace FinalProject.Controllers
                     return View();
                 }
             }
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { token, email = user.Email }, HttpContext.Request.Scheme);
+            await _mailService.SendEmailAsync(
+                new MailRequestViewModel { 
+                    ToEmail=user.Email,
+                    Subject="Confirm Email",
+                    Body = $"<a href='{confirmationLink}'>{confirmationLink}</a>"}
+                );
+
             var roleResult = await _userManager.AddToRoleAsync(user, "Member");
             foreach (var err in roleResult.Errors)
              {
                   ModelState.AddModelError("", err.Description);
                   return View();
             }
-            return RedirectToAction("Login");
+            return RedirectToAction(nameof(CheckEmail));
         }
 
         //register for stores
@@ -148,6 +161,7 @@ namespace FinalProject.Controllers
         }
         public async Task<IActionResult> LogOut()
         {
+            ViewData["Localizer"] = _localizer;
             if (User.Identity.IsAuthenticated)
             {
                 await _signInManager.SignOutAsync();
@@ -165,6 +179,7 @@ namespace FinalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
         {
+            ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View(model); 
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user is null)
@@ -177,11 +192,14 @@ namespace FinalProject.Controllers
 
             string link = Url.Action("ResetPassword","Account",new {userId=user.Id,token=token},HttpContext.Request.Scheme);
 
-            return Json(link);
+            await _mailService.SendEmailAsync(new MailRequestViewModel {ToEmail=model.Email,Subject="ResetPassword",Body=$"<a href='{link}'>Reset password</a>"});
+
+            return RedirectToAction(nameof(Login));
         }
 
         public async Task<IActionResult> ResetPassword(string userId,string token)
         {
+            ViewData["Localizer"] = _localizer;
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
             var user= await _userManager.FindByIdAsync(userId);
             if (user is null) return NotFound();
@@ -193,6 +211,7 @@ namespace FinalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model,string userId, string token)
         {
+            ViewData["Localizer"] = _localizer;
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
             var user = await _userManager.FindByIdAsync(userId);
             if (user is null) return NotFound();
@@ -200,6 +219,22 @@ namespace FinalProject.Controllers
             var identityUser = await _userManager.ResetPasswordAsync(user, token,model.ConfirmPassword);
 
             return RedirectToAction(nameof(Login));
+        }
+
+        public IActionResult CheckEmail()
+        {
+            ViewData["Localizer"] = _localizer;
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            ViewData["Localizer"] = _localizer;
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null) NotFound();
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            return View(result.Succeeded ? nameof(ConfirmEmail) : NotFound());
         }
     }
 }

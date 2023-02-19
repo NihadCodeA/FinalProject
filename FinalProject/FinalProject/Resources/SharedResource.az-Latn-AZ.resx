@@ -126,6 +126,12 @@
   <data name="Account_Back" xml:space="preserve">
     <value>Geri qayıt</value>
   </data>
+  <data name="Account_CheckEmail" xml:space="preserve">
+    <value>E-mail ünvanınıza link göndərildi , növbəti addımda həmin linkə keçid etməlisiniz! Əgər e-mail görsənmirsə spam hissəsin yoxlamağı unutmayın! (hər hansısa bir problemlə rastlaşsanız bizimlə bu e-mail vasitəsilə əlaqəyə keçə bilərsiz : freshcartcompany@gmail.com)</value>
+  </data>
+  <data name="Account_ConfirmEmail" xml:space="preserve">
+    <value>Qediyyat uğurla tamamlandı! Daxil ol səhifəsinə keçid edərək e-mail və şifrənizi yazıb hesabınıza giriş bilərsiniz.</value>
+  </data>
   <data name="Account_ConfirmPassword" xml:space="preserve">
     <value>Şifrəni təsdiqləyin</value>
   </data>
@@ -197,5 +203,8 @@
   </data>
   <data name="Navbar_Stores" xml:space="preserve">
     <value>Mağazalar</value>
+  </data>
+  <data name="User_Account_Details" xml:space="preserve">
+    <value>Hesab məlumatları</value>
   </data>
 </root>

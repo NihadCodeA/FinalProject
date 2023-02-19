@@ -126,6 +126,12 @@
   <data name="Account_Back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="Account_CheckEmail" xml:space="preserve">
+    <value>A link has been sent to your e-mail address, in the next step you need to link to that link! If you don't see the mail, don't forget to check the spam section! (if you encounter any problem, you can contact us through this e-mail: freshcartcompany@gmail.com)</value>
+  </data>
+  <data name="Account_ConfirmEmail" xml:space="preserve">
+    <value>Registration completed successfully! You can access your account by entering your e-mail and password by going to the Login page.</value>
+  </data>
   <data name="Account_ConfirmPassword" xml:space="preserve">
     <value>Confirm password</value>
   </data>
@@ -197,5 +203,8 @@
   </data>
   <data name="Navbar_Stores" xml:space="preserve">
     <value>Stores</value>
+  </data>
+  <data name="User_Account_Details" xml:space="preserve">
+    <value>Account details</value>
   </data>
 </root>

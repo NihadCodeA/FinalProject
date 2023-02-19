@@ -557,3 +557,6 @@ C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\a
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\az-Latn-AZ\FinalProject.resources.dll
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedResource.az-Latn-AZ.resources
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedResource.en-US.resources
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\MailKit.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\BouncyCastle.Crypto.dll
