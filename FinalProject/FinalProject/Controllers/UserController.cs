@@ -37,9 +37,9 @@ namespace FinalProject.Controllers
                 }
             }
             else return NotFound();
+            ViewData["User"] = user;
             AccountDetailsViewModel accountVM = new AccountDetailsViewModel
             {
-                User = user,
                 Fullname= user.UserName,
                 PhoneNumber= user.PhoneNumber,
             };
@@ -49,25 +49,28 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> Update(AccountDetailsViewModel model)
         {
             ViewData["Localizer"] = _localizer;
-            if(!ModelState.IsValid) return View(model);
-            AppUser user = await _userManager.FindByIdAsync(model.User.Id);
+            AppUser user = new AppUser();
             if (User.Identity.IsAuthenticated)
             {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
                 if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
                 {
                     return NotFound();
                 }
             }
             else return NotFound();
+            ViewData["User"] = user;
+            if(!ModelState.IsValid) return View(model);
             if (model.Fullname == null)
             {
                 ModelState.AddModelError("Fullname","This field is required!");
-                return View();
+                return View(model);
             }
             user.FullName=model.Fullname;
             user.PhoneNumber=model.PhoneNumber;
             _context.SaveChanges();
             return RedirectToAction("update","user", new { id = user.Id });
         }
+        
     }
 }

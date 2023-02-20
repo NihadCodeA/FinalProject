@@ -207,4 +207,7 @@
   <data name="User_Account_Details" xml:space="preserve">
     <value>Account details</value>
   </data>
+  <data name="User_YourOrders" xml:space="preserve">
+    <value>Your orders</value>
+  </data>
 </root>

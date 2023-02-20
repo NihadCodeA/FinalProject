@@ -1,6 +1,7 @@
 ﻿@model AccountDetailsViewModel
 @{
     var localizer = ViewData["Localizer"] as IStringLocalizer;
+    var user = ViewData["User"] as AppUser;
 }
 <main>
     <!-- section -->
@@ -33,20 +34,8 @@
                             </li>
                             <!-- nav item -->
                             <li class="nav-item">
-                                <a class="nav-link active" asp-controller="user" asp-action="update" asp-route-Id="@Model.User.Id">
+                                <a class="nav-link active" asp-controller="user" asp-action="update" asp-route-Id="@user.Id">
                                     <i class="feather-icon icon-settings me-2"></i>@localizer["User_Account_Details"]
-                                </a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="account-address.html">
-                                    <i class="feather-icon icon-map-pin me-2"></i>Address
-                                </a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="account-payment-method.html">
-                                    <i class="feather-icon icon-credit-card me-2"></i>Payment Method
                                 </a>
                             </li>
                             <!-- nav item -->
@@ -77,17 +66,19 @@
                                     <form method="post" asp-action="update">
                                         <!-- input -->
                                         <div class="mb-3">
-                                            <label class="form-label">Email : @Model.User.Email</label>
+                                            <label class="form-label">Email : @user.Email</label>
                                         </div>
                                         <!-- input -->
                                         <div class="mb-3">
                                             <label asp-for="Fullname" class="form-label">Full name</label>
-                                            <input asp-for="Fullname" class="form-control" placeholder="@Model.User.FullName">
+                                            <input asp-for="Fullname" class="form-control" value="@user?.FullName" placeholder="full name">
+                                            <span class="text-danger" asp-validation-for="Fullname"></span>
                                         </div>
                                         <!-- input -->
                                         <div class="mb-5">
                                             <label asp-for="PhoneNumber" class="form-label">Phone</label>
-                                            <input asp-for="PhoneNumber" class="form-control" placeholder="@(Model.User.PhoneNumber ?? "phone number")">
+                                            <input asp-for="PhoneNumber" class="form-control" value="@user?.PhoneNumber" placeholder="phone number">
+                                            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
                                         </div>
                                         <!-- button -->
                                         <div class="mb-3">
