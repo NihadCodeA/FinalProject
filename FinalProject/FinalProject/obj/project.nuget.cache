@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ni72C+J8eij6RBR2gXg3L2XFH/gYLDz41sYP6XQIiiUenj+ythI1hPSk5NfB90C9yDPPZPaN+M6ugonsEtfgVQ==",
+  "dgSpecHash": "gRNxfKLUEYxJ9iIytFOJtAXYHi4eG1OZ8zkZ5Xol3hJH5K4k7acxOfk0kbsmuOFFA31f8uopV5RK//UaIwkH9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
@@ -87,6 +87,7 @@
     "C:\\Users\\Nihad\\.nuget\\packages\\nuget.protocol\\6.3.1\\nuget.protocol.6.3.1.nupkg.sha512",
     "C:\\Users\\Nihad\\.nuget\\packages\\nuget.versioning\\6.3.1\\nuget.versioning.6.3.1.nupkg.sha512",
     "C:\\Users\\Nihad\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\Nihad\\.nuget\\packages\\qrcoder\\1.4.1\\qrcoder.1.4.1.nupkg.sha512",
     "C:\\Users\\Nihad\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Nihad\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Nihad\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

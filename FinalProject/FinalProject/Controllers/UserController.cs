@@ -12,11 +12,13 @@ namespace FinalProject.Controllers
         private readonly Database _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly IStringLocalizer<SharedResource> _localizer;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public UserController(Database context,UserManager<AppUser> userManager, IStringLocalizer<SharedResource> localizer)
+        public UserController(Database context,UserManager<AppUser> userManager,SignInManager<AppUser> signInManager, IStringLocalizer<SharedResource> localizer)
         {
             _context = context;
             _userManager = userManager;
+            _signInManager= signInManager;
             _localizer = localizer;
         }
         public IActionResult Index()
@@ -71,6 +73,53 @@ namespace FinalProject.Controllers
             _context.SaveChanges();
             return RedirectToAction("update","user", new { id = user.Id });
         }
-        
+
+        [HttpGet]
+        public async Task<IActionResult> ChangePassword(string Id)
+        {
+            ViewData["Localizer"] = _localizer;
+            AppUser user = await _userManager.FindByIdAsync(Id);
+            if (User.Identity.IsAuthenticated)
+            {
+                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                {
+                    return NotFound();
+                }
+            }
+            else return NotFound();
+            ViewData["User"] = user;
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(NewPasswordViewModel passwordVM) 
+        {
+            ViewData["Localizer"] = _localizer;
+            AppUser user = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                {
+                    return NotFound();
+                }
+            }
+            else return NotFound();
+            ViewData["User"] = user;
+            if (!ModelState.IsValid) return View();
+            var changePasswordResult = await _userManager.ChangePasswordAsync(user,passwordVM.OldPassword, passwordVM.NewPassword);
+            if (!changePasswordResult.Succeeded)
+            {
+                foreach (var error in changePasswordResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                    return View();
+                }
+            TempData["ChangePasswordResult"] = "false";
+            }
+            TempData["ChangePasswordResult"] = "true";
+
+            await _signInManager.RefreshSignInAsync(user);
+            return RedirectToAction("changepassword", "user", new { id = user.Id });
+        }
     }
 }

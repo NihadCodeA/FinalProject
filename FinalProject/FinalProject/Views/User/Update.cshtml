@@ -38,6 +38,11 @@
                                     <i class="feather-icon icon-settings me-2"></i>@localizer["User_Account_Details"]
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="user" asp-action="changepassword" asp-route-Id="@user.Id">
+                                    <i class="feather-icon icon-settings me-2"></i>Change password
+                                </a>
+                            </li>
                             <!-- nav item -->
                             <li class="nav-item">
                                 <a class="nav-link" href="account-notification.html">

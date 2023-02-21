@@ -1,4 +1,5 @@
 ﻿@model StoreViewModel
+
 <!-- section-->
 <main>
     <div class="mt-4">
@@ -30,19 +31,25 @@
             <div class="row">
                 <div class="col-12 col-lg-3 col-md-4 mb-4 mb-md-0">
                     <div class="d-flex flex-column">
-                        <div>
+                        <div class="d-flex justify-content-between align-items-center">
                             <!-- img -->
                            @if(Model.Store.LogoImage==null){
                                 <img src="~/assets/images/stores-logo/stores-logo-2.svg"
                                  alt=""
-                                 class="rounded-circle icon-shape icon-xxl" />
+                                 class="rounded-circle icon-shape icon-xxxl" />
                            }
                            else{
                              <img src="~/uploads/stores/@Model.Store.LogoImage"
                                  alt=""
-                                 class="rounded-circle icon-shape icon-xxl" />
+                                 class="rounded-circle icon-shape icon-xxxl" />
 
                            }
+                            <a href="@ViewBag.QRCodeImage"
+                               target='_blank'
+                               download='@(Model.Store.StoreName +"-QRCode")'
+                               rel='noopener noreferrer'>
+                               <img src="@ViewBag.QRCodeImage" class="icon-shape icon-xxxl" />
+                           </a>
                         </div>
                         <!-- heading -->
                         <div class="mt-4">

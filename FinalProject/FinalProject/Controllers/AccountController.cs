@@ -194,7 +194,7 @@ namespace FinalProject.Controllers
 
             await _mailService.SendEmailAsync(new MailRequestViewModel {ToEmail=model.Email,Subject="ResetPassword",Body=$"<a href='{link}'>Reset password</a>"});
 
-            return RedirectToAction(nameof(Login));
+            return RedirectToAction(nameof(CheckEmail));
         }
 
         public async Task<IActionResult> ResetPassword(string userId,string token)

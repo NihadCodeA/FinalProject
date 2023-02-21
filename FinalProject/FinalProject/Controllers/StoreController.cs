@@ -2,11 +2,10 @@
 using FinalProject.Helpers;
 using FinalProject.Models;
 using FinalProject.ViewModels.StoreViewModels;
-using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-
+using QRCoder;
+using System.Drawing;
 namespace FinalProject.Controllers
 {
     public class StoreController : Controller
@@ -20,6 +19,7 @@ namespace FinalProject.Controllers
             _httpContextAccessor = httpContextAccessor;
             _env = env;
         }
+
         public IActionResult Index(int storeId, int page = 1)
         {
             if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
@@ -31,12 +31,36 @@ namespace FinalProject.Controllers
             var pagenatedProducts = PaginatedList<Product>.Create(query, 12, page);
             ViewData["ProductsCount"] = query.Count();
             if (store == null) return NotFound();
+
+            //===========QR code generate ===============
+            string QRtext = HttpContext.Request.Scheme + "://" + HttpContext.Request.Host.Value + HttpContext.Request.Path.Value + HttpContext.Request.QueryString.Value;
+            QRCodeGenerator QRGen = new QRCodeGenerator();
+            QRCodeData Qrinfo = QRGen.CreateQrCode(QRtext, QRCodeGenerator.ECCLevel.Q);
+            QRCode qRCoder = new QRCode(Qrinfo);
+
+            Bitmap QRbitmap = qRCoder.GetGraphic(50);
+
+            // Color 
+            //Bitmap QRbitmap = qRCoder.GetGraphic(50, Color.Blue, Color.Gray, true);
+
+            byte[] bitmapArray = BitmapToBytes(QRbitmap);
+            var Qrcodeimage = string.Format("data:image/png;base64,{0}", Convert.ToBase64String(bitmapArray));
+            ViewBag.QRCodeImage = Qrcodeimage;
+            //===========================================
             StoreViewModel storeViewModel = new StoreViewModel
             {
                 Store = store,
                 Products = pagenatedProducts,
             };
             return View(storeViewModel);
+        }
+        private static byte[] BitmapToBytes(Bitmap img)
+        {
+            using (MemoryStream stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                return stream.ToArray();
+            }
         }
         public IActionResult StoreList()
         {

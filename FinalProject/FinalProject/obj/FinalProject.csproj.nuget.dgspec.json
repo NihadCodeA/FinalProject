@@ -69,6 +69,10 @@
             "MimeKit": {
               "target": "Package",
               "version": "[3.5.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
             }
           },
           "imports": [
