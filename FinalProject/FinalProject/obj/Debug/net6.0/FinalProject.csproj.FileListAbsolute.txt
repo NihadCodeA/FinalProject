@@ -561,3 +561,4 @@ C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\M
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\MimeKit.dll
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\QRCoder.dll
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\scopedcss\Areas\StoreManage\Views\Shared\_Layout.cshtml.rz.scp.css

@@ -1,0 +1,174 @@
+﻿@model Product
+@{
+    int storeId = Int32.Parse((string)ViewData["StoreId"]);
+    string storeName = (string)ViewData["StoreName"];
+    string storeEmail = (string)ViewData["StoreEmail"];
+}
+<main>
+    <section class="mb-lg-14 mb-8 mt-8">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-12 mt-10">
+                    <form method="post" asp-action="addproduct" enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Name">Product name <sup class="text-danger">*</sup></label>
+                                <input asp-for="Name" class="form-control" placeholder="Product name">
+                                <span class="text-danger" asp-validation-for="Name"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="IngredientType">IngredientType <sup class="text-danger">*</sup></label>
+                                <input asp-for="IngredientType" class="form-control" placeholder="IngredientType">
+                                <span class="text-danger" asp-validation-for="IngredientType"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Type">Product type <sup class="text-danger">*</sup></label>
+                                <input asp-for="Type" class="form-control" placeholder="product type">
+                                <span class="text-danger" asp-validation-for="Type"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="CostPrice">CostPrice <sup class="text-danger">*</sup></label>
+                                <input asp-for="CostPrice" class="form-control" placeholder="CostPrice">
+                                <span class="text-danger" asp-validation-for="CostPrice"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="SalePrice">SalePrice <sup class="text-danger">*</sup></label>
+                                <input asp-for="SalePrice" class="form-control" placeholder="SalePrice">
+                                <span class="text-danger" asp-validation-for="SalePrice"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="DiscountPercentage">DiscountPercentage <sup class="text-danger">*</sup></label>
+                                <input asp-for="DiscountPercentage" class="form-control" placeholder="DiscountPercentage">
+                                <span class="text-danger" asp-validation-for="DiscountPercentage"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="form-check">
+                                        <input asp-for="IsAvaible" class="form-check-input">
+                                    <label asp-for="IsAvaible" class="form-check-label">
+                                            IsAvaible
+                                        </label>
+                                    </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Shipping">Shipping <sup class="text-danger">*</sup></label>
+                                <input asp-for="Shipping" class="form-control" placeholder="Shipping">
+                                <span class="text-danger" asp-validation-for="Shipping"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Weight">Weight <sup class="text-danger">*</sup></label>
+                                <input asp-for="Weight" class="form-control" placeholder="Weight">
+                                <span class="text-danger" asp-validation-for="Weight"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="NetQuantity">NetQuantity <sup class="text-danger">*</sup></label>
+                                <input asp-for="NetQuantity" class="form-control" placeholder="NetQuantity">
+                                <span class="text-danger" asp-validation-for="NetQuantity"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Brand">Brand</label>
+                                <input asp-for="Brand" class="form-control" placeholder="Brand">
+                                <span class="text-danger" asp-validation-for="Brand"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Width">Width</label>
+                                <input asp-for="Width" class="form-control" placeholder="Width">
+                                <span class="text-danger" asp-validation-for="Width"></span>
+                            </div> 
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Height">Height</label>
+                                <input asp-for="Height" class="form-control" placeholder="Height">
+                                <span class="text-danger" asp-validation-for="Height"></span>
+                            </div> 
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="Length">Length</label>
+                                <input asp-for="Length" class="form-control" placeholder="Length">
+                                <span class="text-danger" asp-validation-for="Length"></span>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <label asp-for="DimensionType">DimensionType</label>
+                                <input asp-for="DimensionType" class="form-control" placeholder="DimensionType">
+                                <span class="text-danger" asp-validation-for="DimensionType"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="StartingDate">StartingDate</label>
+                                <input asp-for="StartingDate" class="form-control" placeholder="StartingDate">
+                                <span class="text-danger" asp-validation-for="StartingDate"></span>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label asp-for="EndingDate">EndingDate</label>
+                                <input asp-for="EndingDate" class="form-control" placeholder="EndingDate">
+                                <span class="text-danger" asp-validation-for="EndingDate"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="Description">Description(<span class="descriptionCount">1500 characters remaining.</span>) <sup class="text-danger">*</sup></label>
+                                <textarea asp-for="Description" class="form-control descriptionText" placeholder="Description"></textarea>
+                                <span class="text-danger" asp-validation-for="Description"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="StorageTip">StorageTip(<span class="storageTipCount">1500 characters remaining.</span>)<sup class="text-danger">*</sup></label>
+                                <textarea asp-for="StorageTip" class="form-control storageTipText" placeholder="StorageTip"></textarea>
+                                <span class="text-danger" asp-validation-for="StorageTip"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="Disclaimer">Disclaimer(<span class="disclaimerCount">1500 characters remaining.</span>) <sup class="text-danger">*</sup></label>
+                                <textarea asp-for="Disclaimer" class="form-control disclaimerText" placeholder="Disclaimer"></textarea>
+                                <span class="text-danger" asp-validation-for="Disclaimer"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-6">
+                                <label asp-for="PosterImgFile">Upload PosterImg <sup class="text-danger">*</sup></label>
+                                <input asp-for="PosterImgFile" type="file" accept="image/png,jpg,jpeg" class="form-control">
+                                <span asp-validation-for="PosterImgFile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-12 col-md-6">
+                                <label asp-for="ImageFiles">Upload ImageFiles</label>
+                                <input asp-for="ImageFiles" multiple type="file" accept="image/png,jpg,jpeg" class="form-control">
+                                <span asp-validation-for="ImageFiles" class="text-danger"></span>
+                            </div>
+                            <!-- btn -->
+                            <div class="col-12 d-grid">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+
+    let descriptionCount = document.getElementsByClassName("descriptionCount")[0];
+    let storageTipCount = document.getElementsByClassName("storageTipCount")[0];
+    let disclaimerCount = document.getElementsByClassName("disclaimerCount")[0];
+    let descriptionText = document.getElementsByClassName("descriptionText")[0];
+    let storageTipText = document.getElementsByClassName("storageTipText")[0];
+    let disclaimerText = document.getElementsByClassName("disclaimerText")[0];
+
+    descriptionText.addEventListener("keyup", () => {
+        if (1500 - descriptionText.value.length<=1500 && 1500 - descriptionText.value.length>0) {
+            descriptionCount.textContent = 1500 - descriptionText.value.length + " characters remaining.";
+        }
+        else{
+            descriptionCount.textContent = "0 characters remaining."
+        }
+    }) 
+    storageTipText.addEventListener("keyup",()=>{
+        if (1500 - storageTipText.value.length <= 1500 && 1500 - storageTipText.value.length > 0) {
+            storageTipCount.textContent = 1500 - storageTipText.value.length + " characters remaining.";
+        }
+        else{
+            storageTipCount.textContent = "0 characters remaining."
+        }
+    }) 
+    disclaimerText.addEventListener("keyup",()=>{
+        if (1500 - disclaimerText.value.length<=1500 && 1500 - disclaimerText.value.length>0) {
+            disclaimerCount.textContent = 1500 - disclaimerText.value.length + " characters remaining.";
+        }
+        else{
+            disclaimerCount.textContent = "0 characters remaining."
+        }
+    })
+
+</script>

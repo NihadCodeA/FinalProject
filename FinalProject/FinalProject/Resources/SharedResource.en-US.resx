@@ -207,6 +207,18 @@
   <data name="User_Account_Details" xml:space="preserve">
     <value>Account details</value>
   </data>
+  <data name="User_ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="User_NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="User_OldPassword" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="User_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
   <data name="User_YourOrders" xml:space="preserve">
     <value>Your orders</value>
   </data>

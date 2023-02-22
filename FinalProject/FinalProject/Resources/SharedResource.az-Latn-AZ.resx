@@ -207,6 +207,18 @@
   <data name="User_Account_Details" xml:space="preserve">
     <value>Hesab məlumatları</value>
   </data>
+  <data name="User_ChangePassword" xml:space="preserve">
+    <value>Şifrəni dəyişin</value>
+  </data>
+  <data name="User_NewPassword" xml:space="preserve">
+    <value>Yeni şifrə</value>
+  </data>
+  <data name="User_OldPassword" xml:space="preserve">
+    <value>Əvvəlki şifrə</value>
+  </data>
+  <data name="User_Save" xml:space="preserve">
+    <value>Təsdiqləyin</value>
+  </data>
   <data name="User_YourOrders" xml:space="preserve">
     <value>Sifarişləriniz</value>
   </data>

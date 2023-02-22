@@ -105,18 +105,23 @@ namespace FinalProject.Controllers
             }
             else return NotFound();
             ViewData["User"] = user;
-            if (!ModelState.IsValid) return View();
+            if (!ModelState.IsValid)
+            {
+
+                TempData["ChangePasswordResult"] = "false";
+                return View();
+            }
             var changePasswordResult = await _userManager.ChangePasswordAsync(user,passwordVM.OldPassword, passwordVM.NewPassword);
             if (!changePasswordResult.Succeeded)
             {
                 foreach (var error in changePasswordResult.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
+                    TempData["ChangePasswordResult"] = "false";
                     return View();
                 }
-            TempData["ChangePasswordResult"] = "false";
             }
-            TempData["ChangePasswordResult"] = "true";
+            else TempData["ChangePasswordResult"] = "true";
 
             await _signInManager.RefreshSignInAsync(user);
             return RedirectToAction("changepassword", "user", new { id = user.Id });

@@ -73,19 +73,6 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@storeId" asp-route-page="1"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
-                        <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="feather-icon icon-gift me-2"></i>Deals</a>
-                        </li>
-                        <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="feather-icon icon-map-pin me-2"></i>Buy It Again</a>
-                        </li>
-                        <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="feather-icon icon-star me-2"></i>Reviews</a>
-                        </li>
-                        <!-- nav item -->
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Store") && User.Identity.Name == storeEmail)
                         {
                             <li class="nav-item">
@@ -99,100 +86,7 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="store" asp-action="info" asp-route-id="@storeId"><i class="bi bi-info-circle me-2"></i>Info</a>
                         </li>
-                        <!-- nav item -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="feather-icon icon-clipboard me-2"></i>Policy</a>
-                        </li>
                     </ul>
-                    <hr />
-                    <div>
-                        <ul class="nav flex-column nav-links">
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Produce</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Dairy & Eggs</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Beverages</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Meat & Seafood</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Snacks & Candy</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Frozen</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Bakery</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Prepared Foods</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Alcohol</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Dry Goods & Pasta</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Condiments & Sauces</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Canned Goods & Soups</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Breakfast</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Household</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Baking Essentials</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Oils, Vinegars, & Spices</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Health Care</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Personal Care</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Kitchen Supplies</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Floral</a>
-                            </li>
-                            <!-- nav item -->
-                            <li class="nav-item">
-                                <a href="#!" class="nav-link">Party & Gift Supplies</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="col-12 col-lg-9 col-md-8">
                     <form method="post" asp-action="addproduct" enctype="multipart/form-data">

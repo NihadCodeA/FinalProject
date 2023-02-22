@@ -437,7 +437,7 @@
                             {
                                 if (User.IsInRole("Store"))
                                 {
-                                    <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Store.Id" asp-route-page="1">
+                                    <a class="nav-link" asp-area="storemanage" asp-controller="home" asp-action="index" asp-route-storeId="@Model.Store.Id">
                                         @Model.Localizer["Navbar_Dashboard"]
                                     </a>
                                 }

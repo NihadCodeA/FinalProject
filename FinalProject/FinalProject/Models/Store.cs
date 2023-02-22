@@ -6,7 +6,6 @@ namespace FinalProject.Models
     public class Store
     {
         public int Id { get; set; }
-        public int? StoreView { get; set; }
         public string? Email { get; set; }
         public string? Address { get; set; }
         [StringLength(maximumLength: 100)]
@@ -28,6 +27,10 @@ namespace FinalProject.Models
         public IFormFile? LogoImageFile { get; set; }
 
         public List<Product>? Products { get; set; }
+
+        public int? ViewCount { get; set; }
+        public bool IsActive { get; set; } = false;
+        public bool IsBanned { get; set; } = false;
 
     }
 }
