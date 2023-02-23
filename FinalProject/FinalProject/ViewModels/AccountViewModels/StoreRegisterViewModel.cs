@@ -4,22 +4,22 @@ namespace FinalProject.ViewModels.AccountViewModels
 {
     public class StoreRegisterViewModel
     {
-        [Required, StringLength(maximumLength: 60)]
+        [Required(ErrorMessage = "Text_Required"), StringLength(maximumLength: 60)]
         public string Storename { get; set; }
 
-        [Required, StringLength(maximumLength: 100), DataType(dataType: DataType.EmailAddress)]
+        [Required(ErrorMessage = "Text_Required"), StringLength(maximumLength: 100), DataType(dataType: DataType.EmailAddress)]
         public string Email { get; set; }
 
-        [Required,StringLength(maximumLength:25), DataType(dataType: DataType.PhoneNumber)]
+        [Required(ErrorMessage = "Text_Required"), StringLength(maximumLength:25), DataType(dataType: DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Text_Required")]
         public string Address { get; set; }
 
-        [Required, DataType(dataType: DataType.Password)]
+        [Required(ErrorMessage = "Text_Required"), DataType(dataType: DataType.Password)]
         public string Password { get; set; }
 
-        [Required, DataType(dataType: DataType.Password)]
+        [Required(ErrorMessage = "Text_Required"), DataType(dataType: DataType.Password)]
         [Compare(nameof(Password))]
         public string ConfirmPassword { get; set; }
     }

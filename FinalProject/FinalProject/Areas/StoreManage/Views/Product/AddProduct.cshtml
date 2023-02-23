@@ -4,7 +4,204 @@
     string storeName = (string)ViewData["StoreName"];
     string storeEmail = (string)ViewData["StoreEmail"];
 }
-<main>
+<main class="main-content-wrapper">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row mb-8">
+            <div class="col-md-12">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <!-- page header -->
+                    <div>
+                        <h2>Add New Product</h2>
+                        <!-- breacrumb -->
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="#" class="text-inherit">Dashboard</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-inherit">Products</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Add New Product</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <!-- button -->
+                    <div>
+                        <a href="products.html" class="btn btn-light">Back to Product</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- row -->
+            <form method="post" asp-action="addproduct" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-lg-8 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6 ">
+                        <h4 class="mb-4 h5">Product Information</h4>
+                        <div class="row">
+                            <!-- input -->
+                            <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="Name">Product name <sup class="text-danger">*</sup></label>
+                                    <input asp-for="Name" class="form-control" placeholder="Product name">
+                                    <span class="text-danger" asp-validation-for="Name"></span>
+                            </div>
+                            <!-- input -->
+                            <div class="mb-3 col-lg-6">
+                                <label class="form-label">Product Category</label>
+                                <select class="form-select">
+                                    <option selected>Product Category</option>
+                                    <option value="Dairy, Bread & Eggs">Dairy, Bread & Eggs</option>
+                                    <option value="Snacks & Munchies">Snacks & Munchies</option>
+                                    <option value="Fruits & Vegetables">Fruits & Vegetables</option>
+                                </select>
+                            </div>
+                            <!-- input -->
+                            <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="IngredientType">IngredientType <sup class="text-danger">*</sup></label>
+                                    <input asp-for="IngredientType" class="form-control" placeholder="IngredientType">
+                                    <span class="text-danger" asp-validation-for="IngredientType"></span>
+                            </div>
+                            <!-- input -->
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="Weight">Weight <sup class="text-danger">*</sup></label>
+                                    <input asp-for="Weight" class="form-control" placeholder="Weight">
+                                    <span class="text-danger" asp-validation-for="Weight"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="NetQuantity">NetQuantity <sup class="text-danger">*</sup></label>
+                                    <input asp-for="NetQuantity" class="form-control" placeholder="NetQuantity">
+                                    <span class="text-danger" asp-validation-for="NetQuantity"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="Width">Width</label>
+                                    <input asp-for="Width" class="form-control" placeholder="Width">
+                                    <span class="text-danger" asp-validation-for="Width"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="Height">Height</label>
+                                    <input asp-for="Height" class="form-control" placeholder="Height">
+                                    <span class="text-danger" asp-validation-for="Height"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="Length">Length</label>
+                                    <input asp-for="Length" class="form-control" placeholder="Length">
+                                    <span class="text-danger" asp-validation-for="Length"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="DimensionType">DimensionType</label>
+                                    <input asp-for="DimensionType" class="form-control" placeholder="DimensionType">
+                                    <span class="text-danger" asp-validation-for="DimensionType"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="StartingDate">StartingDate</label>
+                                    <input asp-for="StartingDate" class="form-control" placeholder="StartingDate">
+                                    <span class="text-danger" asp-validation-for="StartingDate"></span>
+                                </div>
+                                <div class="mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="EndingDate">EndingDate</label>
+                                    <input asp-for="EndingDate" class="form-control" placeholder="EndingDate">
+                                    <span class="text-danger" asp-validation-for="EndingDate"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Shipping">Shipping <sup class="text-danger">*</sup></label>
+                                    <input asp-for="Shipping" class="form-control" placeholder="Shipping">
+                                    <span class="text-danger" asp-validation-for="Shipping"></span>
+                                </div>
+                                <div class="form-group col-lg-12">
+                                    <label class="form-label" asp-for="PosterImgFile">Upload PosterImg <sup class="text-danger">*</sup></label>
+                                    <input asp-for="PosterImgFile" type="file" accept="image/png,jpg,jpeg" class="form-control">
+                                    <span asp-validation-for="PosterImgFile" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-lg-12 mt-3">
+                                    <label class="form-label" asp-for="ImageFiles">Upload ImageFiles</label>
+                                    <input asp-for="ImageFiles" multiple type="file" accept="image/png,jpg,jpeg" class="form-control">
+                                    <span asp-validation-for="ImageFiles" class="text-danger"></span>
+                                </div>
+                            <!-- input -->
+                            <div class="mb-3 col-lg-12 mt-5">
+                                    <label class="form-label" asp-for="Description">Description(<span class="descriptionCount">1500 characters remaining.</span>) <sup class="text-danger">*</sup></label>
+                                    <textarea asp-for="Description" class="form-control descriptionText" placeholder="Description"></textarea>
+                                    <span class="text-danger" asp-validation-for="Description"></span>
+                            </div>
+                            <div class="mb-3 col-lg-12 mt-5">
+                                    <label asp-for="StorageTip">StorageTip(<span class="storageTipCount">1500 characters remaining.</span>)<sup class="text-danger">*</sup></label>
+                                    <textarea asp-for="StorageTip" class="form-control storageTipText" placeholder="StorageTip"></textarea>
+                                    <span class="text-danger" asp-validation-for="StorageTip"></span>
+                            </div>
+                            <div class="mb-3 col-lg-12 mt-5">
+                                   <label asp-for="Disclaimer">Disclaimer(<span class="disclaimerCount">1500 characters remaining.</span>) <sup class="text-danger">*</sup></label>
+                                   <textarea asp-for="Disclaimer" class="form-control disclaimerText" placeholder="Disclaimer"></textarea>
+                                   <span class="text-danger" asp-validation-for="Disclaimer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6">
+                        <!-- input -->
+                        <div class="form-check form-switch mb-4">
+                                <input asp-for="IsAvaible" class="form-check-input" type="checkbox" role="switch" id="flexSwitchStock" checked>
+                                <label asp-for="IsAvaible" class="form-check-label" for="flexSwitchStock">In Stock</label>
+                        </div>
+                        <!-- input -->
+                        <div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="ProductCode">Product code <sup class="text-danger">*</sup></label>
+                                <input asp-for="ProductCode" class="form-control" placeholder="Product code">
+                                <span class="text-danger" asp-validation-for="ProductCode"></span>
+                            </div>
+                            <!-- input -->
+                                <div class="mb-3">
+                                <label class="form-label" asp-for="Brand">Brand</label>
+                                <input asp-for="Brand" class="form-control" placeholder="Brand">
+                                <span class="text-danger" asp-validation-for="Brand"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6">
+                        <h4 class="mb-4 h5">Product Price</h4>
+                        <!-- input -->
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="CostPrice">CostPrice <sup class="text-danger">*</sup></label>
+                                <input asp-for="CostPrice" type="number" class="form-control" placeholder="CostPrice">
+                                <span class="text-danger" asp-validation-for="CostPrice"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="SalePrice">SalePrice <sup class="text-danger">*</sup></label>
+                                <input asp-for="SalePrice" type="number" class="form-control" placeholder="SalePrice">
+                                <span class="text-danger" asp-validation-for="SalePrice"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" asp-for="DiscountPercentage">DiscountPercentage <sup class="text-danger">*</sup></label>
+                                <input asp-for="DiscountPercentage" type="number" class="form-control" placeholder="DiscountPercentage">
+                                <span class="text-danger" asp-validation-for="DiscountPercentage"></span>
+                            </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">
+                        Create Product
+                    </button>
+                </div>
+            </div>
+        </div>
+            </form>
+    </div>
+</main>
+
+@*<main>
     <section class="mb-lg-14 mb-8 mt-8">
         <div class="container">
             <!-- row -->
@@ -136,7 +333,7 @@
         </div>
     </section>
 </main>
-
+*@
 <script>
 
     let descriptionCount = document.getElementsByClassName("descriptionCount")[0];

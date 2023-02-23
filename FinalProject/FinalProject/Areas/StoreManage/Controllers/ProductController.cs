@@ -218,7 +218,6 @@ namespace FinalProject.Areas.StoreManage.Controllers
             existProduct.SalePrice = product.SalePrice;
             existProduct.DiscountPercentage = product.DiscountPercentage;
             existProduct.IsAvaible = product.IsAvaible;
-            existProduct.Type = product.Type;
             existProduct.Shipping = product.Shipping;
             existProduct.Weight = product.Weight;
             existProduct.NetQuantity = product.NetQuantity;

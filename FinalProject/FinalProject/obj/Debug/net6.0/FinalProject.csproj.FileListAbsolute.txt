@@ -562,3 +562,5 @@ C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\M
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\bin\Debug\net6.0\QRCoder.dll
 C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\scopedcss\Areas\StoreManage\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedModelResource.az-Latn-AZ.resources
+C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject\obj\Debug\net6.0\FinalProject.Resources.SharedModelResource.en-US.resources

@@ -5,16 +5,16 @@ namespace FinalProject.ViewModels.AccountViewModels
 {
     public class MemberRegisterViewModel
     {
-        [Required,StringLength(maximumLength:60)]
+        [Required(ErrorMessage = "Text_Required"), StringLength(maximumLength:60)]
         public string Fullname { get; set; } 
         
-        [Required,StringLength(maximumLength:100),DataType(dataType:DataType.EmailAddress)]
+        [Required(ErrorMessage = "Text_Required"), StringLength(maximumLength:100),DataType(dataType:DataType.EmailAddress)]
         public string Email { get; set; }
         
-        [Required, DataType(dataType: DataType.Password)]
+        [Required(ErrorMessage = "Text_Required"), DataType(dataType: DataType.Password)]
         public string Password { get; set; }
         
-        [Required, DataType(dataType: DataType.Password)]
+        [Required(ErrorMessage = "Text_Required"), DataType(dataType: DataType.Password)]
         [Compare(nameof(Password))]
         public string ConfirmPassword { get; set; }
     }

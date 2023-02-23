@@ -1,11 +1,12 @@
 ﻿using FinalProject.DAL;
+using FinalProject.Helpers;
 using FinalProject.Models;
 using FinalProject.ViewModels.HeaderViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Localization;
-
 namespace FinalProject.ViewComponents
 {
     public class HeaderViewComponent : ViewComponent
@@ -13,11 +14,14 @@ namespace FinalProject.ViewComponents
         private readonly UserManager<AppUser> _userManager;
         private readonly Database _context;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public HeaderViewComponent(UserManager<AppUser> userManager,Database context, IStringLocalizer<SharedResource> localizer)
+        private readonly HttpContext _httpContext;
+        public HeaderViewComponent(UserManager<AppUser> userManager,Database context, 
+            IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
-            _userManager=userManager;
+            _userManager = userManager;
             _context = context;
-            _localizer= localizer;
+            _localizer = localizer;
+            _httpContext = httpContextAccessor.HttpContext;
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
@@ -26,25 +30,6 @@ namespace FinalProject.ViewComponents
             {
                 store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
             }
-            //----------------------------------------
-            string cookieName = ".AspNetCore.Culture";
-            string language = "az";
-            if (Request.Cookies.TryGetValue(cookieName, out string value))
-            {
-                if (value.Contains("az"))
-                {
-                    language = "az";
-                }
-                else
-                {
-                    language = "en";
-                }
-            }
-            else
-            {
-                language = "az";
-            }
-            //---------------------------------------- 
             AppUser appUser = new AppUser();
             if (User.Identity.IsAuthenticated)
             {
@@ -54,7 +39,7 @@ namespace FinalProject.ViewComponents
             {
                 Store = store,
                 User=appUser,
-                Language= language,
+                Language= GetCurrentLanguage.CurrentLanguage(_httpContext),
                 Localizer=_localizer,
             };
             return View(await Task.FromResult(headerVM));

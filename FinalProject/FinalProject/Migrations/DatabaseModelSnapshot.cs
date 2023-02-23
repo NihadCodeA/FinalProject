@@ -96,6 +96,11 @@ namespace FinalProject.Migrations
                     b.Property<double>("NetQuantity")
                         .HasColumnType("float");
 
+                    b.Property<string>("ProductCode")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
                     b.Property<int?>("ProductView")
                         .HasColumnType("int");
 
@@ -116,10 +121,6 @@ namespace FinalProject.Migrations
 
                     b.Property<int?>("StoreId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Weight")
                         .HasColumnType("float");

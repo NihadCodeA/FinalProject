@@ -1,6 +1,7 @@
 using FinalProject.Abstractions.MailService;
 using FinalProject.DAL;
 using FinalProject.Models;
+using FinalProject.Resources;
 using FinalProject.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Configuration;
 using System.Globalization;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,16 +42,16 @@ builder.Services.AddLocalization(opt =>
     opt.ResourcesPath = "Resources";
 });
 builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
-//builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization(
-//    opt =>
-//    {
-//        opt.DataAnnotationLocalizerProvider = (type, factory) =>
-//        {
-//            var assemblyName = new AssemblyName(typeof(SharedResource).Assembly.FullName);
-//            return factory.Create(nameof(SharedResource), assemblyName.Name);
-//        };
-//    }
-//    );
+builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization(
+    opt =>
+    {
+        opt.DataAnnotationLocalizerProvider = (type, factory) =>
+        {
+            var assemblyName = new AssemblyName(typeof(SharedModelResource).Assembly.FullName);
+            return factory.Create(nameof(SharedModelResource), assemblyName.Name);
+        };
+    }
+    );
 builder.Services.Configure<RequestLocalizationOptions>(opt =>
 {
     var supportedCultures = new List<CultureInfo>

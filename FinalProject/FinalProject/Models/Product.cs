@@ -7,26 +7,33 @@ namespace FinalProject.Models
     {
         public int Id { get; set; } 
         public int? StoreId { get; set; }
-
+        [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:15)]
+        public string ProductCode { get; set; }
         public int? ProductView { get; set; }
-
-        [StringLength(maximumLength:100)]
+        
+        [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:100)]
         public string Name { get; set; }
-        [StringLength(maximumLength:1500)]
+        [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:1500)]
         public string Description { get; set; }
-        [StringLength(maximumLength:1500)]
+        [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:1500)]
         public string StorageTip { get; set; }
-        [StringLength(maximumLength:1500)]
+        [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:1500)]
         public string Disclaimer { get; set; }
         public DateTime? CreatedTime { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public double CostPrice { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public double SalePrice { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public double DiscountPercentage { get; set; }
         public bool IsAvaible { get; set; }
-        public string Type { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public string Shipping { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public double Weight { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public double NetQuantity { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
         public string IngredientType { get; set; }
         public string? Brand { get; set; }
         public string? Width { get; set; }

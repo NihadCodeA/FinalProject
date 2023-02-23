@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
-using static System.Formats.Asn1.AsnWriter;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http;
 
 namespace FinalProject.Controllers
 {
@@ -17,12 +18,15 @@ namespace FinalProject.Controllers
         public readonly Database _context;
         public readonly IWebHostEnvironment _env;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public ProductController(UserManager<AppUser> userManager, Database context,IWebHostEnvironment env, IStringLocalizer<SharedResource> localizer)
+        private readonly HttpContext _httpContext;
+        public ProductController(UserManager<AppUser> userManager, Database context,IWebHostEnvironment env,
+            IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _context = context;
             _env= env;
             _localizer = localizer;
+            _httpContext = httpContextAccessor.HttpContext;
         }
         public IActionResult Index(int page =1)
         {
@@ -216,7 +220,6 @@ namespace FinalProject.Controllers
             existProduct.SalePrice= product.SalePrice;
             existProduct.DiscountPercentage= product.DiscountPercentage;
             existProduct.IsAvaible= product.IsAvaible;
-            existProduct.Type = product.Type;
             existProduct.Shipping = product.Shipping;
             existProduct.Weight = product.Weight;
             existProduct.NetQuantity = product.NetQuantity;
@@ -264,25 +267,7 @@ namespace FinalProject.Controllers
                 .Include(pi=>pi.ProductImages).FirstOrDefault(p=>p.Id == productId);
             if (product == null) return NotFound();
             Store store = _context.Stores.FirstOrDefault(s=>s.Id==product.StoreId);
-            //---------------------------------------- 
-            string cookieName = ".AspNetCore.Culture";
-            string language = "az";
-            if (Request.Cookies.TryGetValue(cookieName, out string value))
-            {
-                if (value.Contains("az"))
-                {
-                    language = "az";
-                }
-                else
-                {
-                    language = "en";
-                }
-            }
-            else
-            {
-                language = "az";
-            }
-            //---------------------------------------- 
+            
             AppUser appUser = new AppUser();
             if (User.Identity.IsAuthenticated)
             {
@@ -293,7 +278,7 @@ namespace FinalProject.Controllers
                 Store = store,
                 Product = product,
                 User=appUser,
-                Language = language,
+                Language = GetCurrentLanguage.CurrentLanguage(_httpContext),
                 Localizer = _localizer,
             };
             return View(headerVM);

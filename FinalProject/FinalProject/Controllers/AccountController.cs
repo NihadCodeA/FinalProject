@@ -1,11 +1,12 @@
 ﻿using FinalProject.Abstractions.MailService;
 using FinalProject.DAL;
+using FinalProject.Helpers;
 using FinalProject.Models;
 using FinalProject.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-
+using Microsoft.AspNetCore.Http;
 namespace FinalProject.Controllers
 {
     public class AccountController : Controller
@@ -15,15 +16,17 @@ namespace FinalProject.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IMailService _mailService;
         private readonly IStringLocalizer<SharedResource> _localizer;
+        private readonly HttpContext _httpContext;
         public AccountController(Database context,UserManager<AppUser> userManager, 
             SignInManager<AppUser> signInManager,IMailService mailService ,
-            IStringLocalizer<SharedResource> localizer)
+            IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
             _mailService = mailService;
             _localizer=localizer;
+            _httpContext = httpContextAccessor.HttpContext;
         }
 
         //register for members
@@ -39,9 +42,21 @@ namespace FinalProject.Controllers
             ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
             var user = await _userManager.FindByEmailAsync(registerVM.Email);
+            //--------------------------------------------------------------
+            string lang = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            string emailErrMessage = "";
+            if (lang == "az")
+            {
+                emailErrMessage = "Eyni email adresini başqa bir hesap istifadə eliyir.";
+            }
+            else
+            {
+                emailErrMessage = "Another account is using the same email.";
+            }
+            //--------------------------------------------------------------
             if(user != null)
             {
-                ModelState.AddModelError("Email","Email has taken!");
+                ModelState.AddModelError("Email",emailErrMessage);
                 return View();
             }
             user= new AppUser 
@@ -50,6 +65,27 @@ namespace FinalProject.Controllers
                 Email = registerVM.Email,
                 UserName=registerVM.Email
             };
+            //---------------------------------------------------------------------------
+            string requireDigitErrorMessage = "";
+            string requireLowercaseErrorMessage = "";
+            string requireUppercaseErrorMessage = "";
+            string requiredLengthErrorMessage = "";
+            if (lang == "az")
+            {
+                requireDigitErrorMessage = "Şifrədə minimum 1 rəqəm olmalıdır!";
+                requireLowercaseErrorMessage = "Şifrədə minimum 1 kiçik hərf olmalıdır!";
+                requireUppercaseErrorMessage = "Şifrədə minimum 1 böyük hərf olmalıdır!";
+                requiredLengthErrorMessage = "Şifrə minimum 8 simvoldan ibarət olmalıdır!";
+            }
+            else
+            {
+                requireDigitErrorMessage = "The password must contain at least 1 digit!";
+                requireLowercaseErrorMessage = "The password must have at least 1 lowercase letter!";
+                requireUppercaseErrorMessage = "The password must have at least 1 capital letter!";
+                requiredLengthErrorMessage = "The password must contain at least 8 characters!";
+            }
+            //---------------------------------------------------------------------------
+
             var passwordResult = await _userManager.CreateAsync(user, registerVM.Password);
             if (!passwordResult.Succeeded) {
             foreach(var err in passwordResult.Errors)
