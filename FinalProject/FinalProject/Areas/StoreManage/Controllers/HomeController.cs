@@ -25,6 +25,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
         }
         public IActionResult Index(int storeId)
         {
+            ViewData["PageName"] = "Dashboard";
             if (_context.Stores.FirstOrDefault(s => s.Id == storeId) == null)
             {
                 return NotFound();

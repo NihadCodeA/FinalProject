@@ -19,15 +19,20 @@ namespace FinalProject.Areas.StoreManage.Controllers
         public readonly Database _context;
         public readonly IWebHostEnvironment _env;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public ProductController(UserManager<AppUser> userManager, Database context, IWebHostEnvironment env, IStringLocalizer<SharedResource> localizer)
+        private readonly HttpContext _httpContext;
+        public ProductController(UserManager<AppUser> userManager, Database context, IWebHostEnvironment env, 
+            IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
             _context = context;
             _env = env;
             _localizer = localizer;
+            _httpContext = httpContextAccessor.HttpContext;
         }
         public IActionResult Index(int page = 1)
         {
+            ViewData["PageName"] = "Products";
+            ViewData["Localizer"] = _localizer;
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
@@ -39,18 +44,13 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 .Include(pi => pi.ProductImages).Where(x => x.StoreId == store.Id).AsQueryable();
             var pagenatedProducts = PaginatedList<Product>.Create(query, 15, page);
 
-            ProductViewModel productVM = new ProductViewModel
-            {
-                Store = store,
-                Products = pagenatedProducts,
-            };
-
-            return View(productVM);
+            return View(pagenatedProducts);
         }
 
         [HttpGet]
         public IActionResult AddProduct()
         {
+            ViewData["Localizer"] = _localizer;
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
@@ -65,6 +65,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
+            ViewData["Localizer"] = _localizer;
             if (product == null) return NotFound();
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
@@ -76,16 +77,138 @@ namespace FinalProject.Areas.StoreManage.Controllers
             if (!ModelState.IsValid) return View();
             product.StoreId = store.Id;
             product.CreatedTime = DateTime.Now;
+            //-----------Error messages for languages----------------------------------------
+            string lang = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            string ErrMessage = "";
+            string zeroErrMessage = "";
+            string StartingDateErrMessage1 = "";
+            string StartingDateErrMessage2 = "";
+            string StartingDateErrMessage3 = "";
+            string EndingDateErrMessage1 = "";
+            string EndingDateErrMessage2 = "";
+            string DateErrMessage1 = "";
+            string DateErrMessage2 = "";
+            string posterImgFileErrMessage = "";
+            string imageUploadErrMessage = "";
+            string imageSizeErrMessage = "";
+            if (lang=="az")
+            {
+                ErrMessage = "1-dən kiçik ədəd daxil edə bilmərsiz!";
+                zeroErrMessage = "0-dan kiçik ədəd daxil edə bilmərsiz!";
+                StartingDateErrMessage1 = "Son tarixi varsa, başlanğıc tarixidə olmalıdı!";
+                StartingDateErrMessage2 = "Başlanğıc tarixi son tarixdən böyük ola bilməz!";
+                StartingDateErrMessage3 = "Başlanğıc tarixi indiki tarixdən əvvəldə ola bilməz!";
+                EndingDateErrMessage1 = "Başlanğıc tarixi varsa, son tarixdə olmalıdı!";
+                EndingDateErrMessage2 = "Son tarix indiki tarixdən əvvəldə ola bilməz!";
+                DateErrMessage1 = "Endirim faizi 0-dan böyük deyilsə endirim tarixlərin qeyd edə bilmərsiz!";
+                DateErrMessage2 = "Endirim faizi 0-dan böyükdürsə endirim tarixlərin qeyd etməlisiniz!";
+                posterImgFileErrMessage = "Məhsulun plakat(poster) şəkilin yüklənməsi məcburidir!";
+                imageUploadErrMessage = "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!";
+                imageSizeErrMessage = "Şəklin ölçüsü 3mb-dən çox ola bilməz!";
+            }
+            else
+            {
+                ErrMessage = "You cannot enter a number less than 1!";
+                zeroErrMessage = "You cannot enter a number less than 0!";
+                StartingDateErrMessage1 = "If there is an end date, it should be on the start date!"; 
+                StartingDateErrMessage2 = "The start date cannot be greater than the end date!";
+                StartingDateErrMessage3 = "The start date cannot be earlier than the current date!";
+                EndingDateErrMessage1 = "If there is a start date, it should be on the end date!";
+                EndingDateErrMessage2 = "The last date cannot be earlier than the current date!";
+                DateErrMessage1 = "If the percentage of the discount is not greater than 0, you cannot record the discount dates!";
+                DateErrMessage2 = "If the discount percentage is greater than 0, you should note the discount dates!";
+                posterImgFileErrMessage = "It is required to upload a poster image of the product!";
+                imageUploadErrMessage = "You can only upload images in PNG or JPEG (JPG) format!";
+                imageSizeErrMessage = "The size of the image cannot be more than 3mb.";
+            }
+            //-------------------------------------------------------------------------
+            if (product.Weight <= 0)
+            {
+                ModelState.AddModelError("Weight", ErrMessage);
+                return View();
+            }
+            if (product.NetQuantity <= 0)
+            {
+                ModelState.AddModelError("NetQuantity", ErrMessage);
+                return View();
+            }
+            
+            if (product.SalePrice <= 0)
+            {
+                ModelState.AddModelError("SalePrice", ErrMessage);
+                return View();
+            }
+            if (product.CostPrice <= 0)
+            {
+                ModelState.AddModelError("SalePrice", ErrMessage);
+                return View();
+            }
+            if (product.DiscountPercentage < 0)
+            {
+                ModelState.AddModelError("SalePrice", zeroErrMessage);
+                return View();
+            }
+            if (product.DiscountPercentage > 0)
+            {
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate != null )
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage1);
+                }
+                if (product.DiscountStartingDate != null && product.DiscountEndingDate == null )
+                {
+                    ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage1);
+                }
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate == null )
+                {
+                    ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                    ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                }
+                if (product.DiscountStartingDate!=null && product.DiscountEndingDate!=null && product.DiscountStartingDate >= product.DiscountEndingDate)
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage2);
+                }
+                if (product.DiscountStartingDate != null && product.DiscountStartingDate < DateTime.Now)
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage3);
+                }
+                if (product.DiscountEndingDate != null && product.DiscountEndingDate < DateTime.Now)
+                {
+                    ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage2);
+                }
+                return View();
+            }
+            else if (product.DiscountPercentage==0 && (product.DiscountStartingDate!=null || product.DiscountEndingDate != null)) 
+            {
+                ModelState.AddModelError("DiscountStartingDate", DateErrMessage1);
+                ModelState.AddModelError("DiscountEndingDate", DateErrMessage1);
+                return View();
+            }
+
+            //--------PRODUCT DATE---------------------------------
+            if (product.StartingDate == null && product.EndingDate != null)
+            {
+                ModelState.AddModelError("StartingDate", StartingDateErrMessage1);
+            }
+            if (product.StartingDate != null && product.EndingDate == null)
+            {
+                ModelState.AddModelError("EndingDate", EndingDateErrMessage1);
+            }
+            if (product.StartingDate != null && product.EndingDate != null && product.StartingDate >= product.EndingDate)
+            {
+                ModelState.AddModelError("StartingDate", StartingDateErrMessage2);
+            }
+            //------------------------------------------
+
             if (product.PosterImgFile != null)
             {
                 if (product.PosterImgFile.ContentType != "image/png" && product.PosterImgFile.ContentType != "image/jpeg")
                 {
-                    ModelState.AddModelError("ImageFiles", "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!");
+                    ModelState.AddModelError("PosterImgFile", imageUploadErrMessage);
                     return View();
                 }
                 if (product.PosterImgFile.Length > 3145728)
                 {
-                    ModelState.AddModelError("ImageFiles", "Seklin olcusu 3mb-den cox ola bilmez!");
+                    ModelState.AddModelError("PosterImgFile", imageSizeErrMessage);
                     return View();
                 }
                 ProductImages productImage = new ProductImages
@@ -96,18 +219,24 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 };
                 _context.ProductImages.Add(productImage);
             }
+            else
+            {
+                ModelState.AddModelError("PosterImgFile", posterImgFileErrMessage);
+                return View();
+            }
+
             if (product.ImageFiles != null)
             {
                 foreach (IFormFile imageFile in product.ImageFiles)
                 {
                     if (imageFile.ContentType != "image/png" && imageFile.ContentType != "image/jpeg")
                     {
-                        ModelState.AddModelError("ImageFiles", "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!");
+                        ModelState.AddModelError("ImageFiles", imageUploadErrMessage);
                         return View();
                     }
                     if (imageFile.Length > 3145728)
                     {
-                        ModelState.AddModelError("ImageFiles", "Seklin olcusu 3mb-den cox ola bilmez!");
+                        ModelState.AddModelError("ImageFiles", imageSizeErrMessage);
                         return View();
                     }
                     ProductImages productImage = new ProductImages
@@ -121,12 +250,13 @@ namespace FinalProject.Areas.StoreManage.Controllers
             }
             _context.Products.Add(product);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }
 
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewData["Localizer"] = _localizer;
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
@@ -144,11 +274,17 @@ namespace FinalProject.Areas.StoreManage.Controllers
         [HttpPost]
         public IActionResult Update(Product product)
         {
+            ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
 
             Product existProduct = _context.Products.Include(pi => pi.ProductImages).FirstOrDefault(x => x.Id == product.Id);
             if (existProduct == null) return NotFound();
-
+            Store store = new Store();
+            if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
+            {
+                store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
+            }
+            if (store == null) return NotFound();
             //---------------------------------------------------------
             if (product.ProductImageIds != null)
             {
@@ -159,19 +295,130 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 existProduct.ProductImages.RemoveAll(x => x.IsPoster == false);
             }
             //-------------------------------------------------------
+            //-----------Error messages for languages----------------------------------------
+            string lang = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            string ErrMessage = "";
+            string zeroErrMessage = "";
+            string StartingDateErrMessage1 = "";
+            string StartingDateErrMessage2 = "";
+            string StartingDateErrMessage3 = "";
+            string EndingDateErrMessage1 = "";
+            string EndingDateErrMessage2 = "";
+            string DateErrMessage1 = "";
+            string DateErrMessage2 = "";
+            string posterImgFileErrMessage = "";
+            string imageUploadErrMessage = "";
+            string imageSizeErrMessage = "";
+            if (lang == "az")
+            {
+                ErrMessage = "1-dan kiçik ədəd daxil edə bilmərsiz!";
+                zeroErrMessage = "0-dan kiçik ədəd daxil edə bilmərsiz!";
+                StartingDateErrMessage1 = "Son tarixi varsa, başlanğıc tarixidə olmalıdı!";
+                StartingDateErrMessage2 = "Başlanğıc tarixi son tarixdən böyük ola bilməz!";
+                StartingDateErrMessage3 = "Başlanğıc tarixi indiki tarixdən əvvəldə ola bilməz!";
+                EndingDateErrMessage1 = "Başlanğıc tarixi varsa, son tarixdə olmalıdı!";
+                EndingDateErrMessage2 = "Son tarix indiki tarixdən əvvəldə ola bilməz!";
+                DateErrMessage1 = "Endirim faizi 0-dan böyük deyilsə endirim tarixlərin qeyd edə bilmərsiz!";
+                DateErrMessage2 = "Endirim faizi 0-dan böyükdürsə endirim tarixlərin qeyd etməlisiniz!";
+                posterImgFileErrMessage = "Məhsulun plakat(poster) şəkilin yüklənməsi məcburidir!";
+                imageUploadErrMessage = "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!";
+                imageSizeErrMessage = "Şəklin ölçüsü 3mb-dən çox ola bilməz!";
+            }
+            else
+            {
+                ErrMessage = "You cannot enter a number less than 1!";
+                zeroErrMessage = "You cannot enter a number less than 0!";
+                StartingDateErrMessage1 = "If there is an end date, it should be on the start date!";
+                StartingDateErrMessage2 = "The start date cannot be greater than the end date!";
+                StartingDateErrMessage3 = "The start date cannot be earlier than the current date!";
+                EndingDateErrMessage1 = "If there is a start date, it should be on the end date!";
+                EndingDateErrMessage2 = "The last date cannot be earlier than the current date!";
+                DateErrMessage1 = "If the percentage of the discount is not greater than 0, you cannot record the discount dates!";
+                DateErrMessage2 = "If the discount percentage is greater than 0, you should note the discount dates!";
+                posterImgFileErrMessage = "It is required to upload a poster image of the product!";
+                imageUploadErrMessage = "You can only upload images in PNG or JPEG (JPG) format!";
+                imageSizeErrMessage = "The size of the image cannot be more than 3mb.";
+            }
+            //-------------------------------------------------------------------------
+            if (product.SalePrice <= 0)
+            {
+                ModelState.AddModelError("SalePrice", ErrMessage);
+                return View();
+            }
+            if (product.CostPrice <= 0)
+            {
+                ModelState.AddModelError("SalePrice", ErrMessage);
+                return View();
+            }
+            if (product.DiscountPercentage < 0)
+            {
+                ModelState.AddModelError("SalePrice", zeroErrMessage);
+                return View();
+            }
+            if (product.DiscountPercentage > 0)
+            {
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate != null)
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage1);
+                }
+                if (product.DiscountStartingDate != null && product.DiscountEndingDate == null)
+                {
+                    ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage1);
+                }
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate == null)
+                {
+                    ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                    ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                }
+                if (product.DiscountStartingDate != null && product.DiscountEndingDate != null && product.DiscountStartingDate >= product.DiscountEndingDate)
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage2);
+                }
+                if (product.DiscountStartingDate != null && product.DiscountStartingDate < DateTime.Now)
+                {
+                    ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage3);
+                }
+                if (product.DiscountEndingDate != null && product.DiscountEndingDate < DateTime.Now)
+                {
+                    ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage2);
+                }
+                return View();
+            }
+            else if (product.DiscountPercentage == 0 && (product.DiscountStartingDate != null || product.DiscountEndingDate != null))
+            {
+                ModelState.AddModelError("DiscountStartingDate", DateErrMessage1);
+                ModelState.AddModelError("DiscountEndingDate", DateErrMessage1);
+                return View();
+            }
+            //--------------------------------------------------------------------------
+            //--------PRODUCT DATE---------------------------------
+            if (product.StartingDate == null && product.EndingDate != null)
+            {
+                ModelState.AddModelError("StartingDate", StartingDateErrMessage1);
+            }
+            if (product.StartingDate != null && product.EndingDate == null)
+            {
+                ModelState.AddModelError("EndingDate", EndingDateErrMessage1);
+            }
+            if (product.StartingDate != null && product.EndingDate != null && product.StartingDate >= product.EndingDate)
+            {
+                ModelState.AddModelError("StartingDate", StartingDateErrMessage2);
+            }
+            
+            //------------------------------------------
             if (product.PosterImgFile != null)
             {
                 if (product.PosterImgFile.ContentType != "image/png" && product.PosterImgFile.ContentType != "image/jpeg")
                 {
-                    ModelState.AddModelError("ImageFiles", "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!");
+                    ModelState.AddModelError("PosterImgFile", imageUploadErrMessage);
                     return View();
                 }
                 if (product.PosterImgFile.Length > 3145728)
                 {
-                    ModelState.AddModelError("ImageFiles", "Seklin olcusu 3mb-den cox ola bilmez!");
+                    ModelState.AddModelError("PosterImgFile", imageSizeErrMessage);
                     return View();
                 }
-                if (existProduct.ProductImages != null)
+                if (existProduct.ProductImages.FirstOrDefault(x => x.IsPoster == true).Image != null)
                 {
                     FileManager.DeleteFile(_env.WebRootPath, "uploads/products", existProduct.ProductImages.FirstOrDefault(x => x.IsPoster == true).Image);
                     existProduct.ProductImages.FirstOrDefault(x => x.IsPoster == true).Image = FileManager.SaveFile(_env.WebRootPath, "uploads/products", product.PosterImgFile);
@@ -193,12 +440,12 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 {
                     if (imageFile.ContentType != "image/png" && imageFile.ContentType != "image/jpeg")
                     {
-                        ModelState.AddModelError("ImageFiles", "Ancaq png ve ya jpeg (jpg) formatinda olan sekilleri yukleye bilersiniz!");
+                        ModelState.AddModelError("ImageFiles", imageUploadErrMessage);
                         return View();
                     }
                     if (imageFile.Length > 3145728)
                     {
-                        ModelState.AddModelError("ImageFiles", "Seklin olcusu 3mb-den cox ola bilmez!");
+                        ModelState.AddModelError("ImageFiles", imageSizeErrMessage);
                         return View();
                     }
                     ProductImages productImage = new ProductImages
@@ -221,7 +468,6 @@ namespace FinalProject.Areas.StoreManage.Controllers
             existProduct.Shipping = product.Shipping;
             existProduct.Weight = product.Weight;
             existProduct.NetQuantity = product.NetQuantity;
-            existProduct.IngredientType = product.IngredientType;
             existProduct.Brand = product.Brand;
             existProduct.Width = product.Width;
             existProduct.Height = product.Height;
@@ -229,8 +475,12 @@ namespace FinalProject.Areas.StoreManage.Controllers
             existProduct.DimensionType = product.DimensionType;
             existProduct.StartingDate = product.StartingDate;
             existProduct.EndingDate = product.EndingDate;
+            existProduct.DiscountStartingDate=product.DiscountStartingDate;
+            existProduct.DiscountEndingDate=product.DiscountEndingDate;
+            existProduct.ProductCount= product.ProductCount;
+            existProduct.ProductCode=product.ProductCode;
             _context.SaveChanges();
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }
 
         public IActionResult Delete(int id)
@@ -255,49 +505,8 @@ namespace FinalProject.Areas.StoreManage.Controllers
             _context.Products.Remove(product);
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Product");
+            return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }
 
-        public async Task<IActionResult> Detail(int productId)
-        {
-            if (productId == null) return NotFound();
-            Product product = _context.Products.Include(s => s.Store)
-                .Include(pi => pi.ProductImages).FirstOrDefault(p => p.Id == productId);
-            if (product == null) return NotFound();
-            Store store = _context.Stores.FirstOrDefault(s => s.Id == product.StoreId);
-            //---------------------------------------- 
-            string cookieName = ".AspNetCore.Culture";
-            string language = "az";
-            if (Request.Cookies.TryGetValue(cookieName, out string value))
-            {
-                if (value.Contains("az"))
-                {
-                    language = "az";
-                }
-                else
-                {
-                    language = "en";
-                }
-            }
-            else
-            {
-                language = "az";
-            }
-            //---------------------------------------- 
-            AppUser appUser = new AppUser();
-            if (User.Identity.IsAuthenticated)
-            {
-                appUser = await _userManager.FindByNameAsync(User.Identity.Name);
-            }
-            HeaderViewModel headerVM = new HeaderViewModel
-            {
-                Store = store,
-                Product = product,
-                User = appUser,
-                Language = language,
-                Localizer = _localizer,
-            };
-            return View(headerVM);
-        }
     }
 }

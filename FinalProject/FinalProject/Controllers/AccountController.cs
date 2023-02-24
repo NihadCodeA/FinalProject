@@ -17,15 +17,15 @@ namespace FinalProject.Controllers
         private readonly IMailService _mailService;
         private readonly IStringLocalizer<SharedResource> _localizer;
         private readonly HttpContext _httpContext;
-        public AccountController(Database context,UserManager<AppUser> userManager, 
-            SignInManager<AppUser> signInManager,IMailService mailService ,
+        public AccountController(Database context, UserManager<AppUser> userManager,
+            SignInManager<AppUser> signInManager, IMailService mailService,
             IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
             _mailService = mailService;
-            _localizer=localizer;
+            _localizer = localizer;
             _httpContext = httpContextAccessor.HttpContext;
         }
 
@@ -40,38 +40,16 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> MemberRegister(MemberRegisterViewModel registerVM)
         {
             ViewData["Localizer"] = _localizer;
-            if (!ModelState.IsValid) return View();
-            var user = await _userManager.FindByEmailAsync(registerVM.Email);
             //--------------------------------------------------------------
             string lang = GetCurrentLanguage.CurrentLanguage(_httpContext);
             string emailErrMessage = "";
-            if (lang == "az")
-            {
-                emailErrMessage = "Eyni email adresini başqa bir hesap istifadə eliyir.";
-            }
-            else
-            {
-                emailErrMessage = "Another account is using the same email.";
-            }
-            //--------------------------------------------------------------
-            if(user != null)
-            {
-                ModelState.AddModelError("Email",emailErrMessage);
-                return View();
-            }
-            user= new AppUser 
-            { 
-                FullName=registerVM.Fullname,
-                Email = registerVM.Email,
-                UserName=registerVM.Email
-            };
-            //---------------------------------------------------------------------------
             string requireDigitErrorMessage = "";
             string requireLowercaseErrorMessage = "";
             string requireUppercaseErrorMessage = "";
             string requiredLengthErrorMessage = "";
             if (lang == "az")
             {
+                emailErrMessage = "Eyni email adresini başqa bir hesap istifadə eliyir.";
                 requireDigitErrorMessage = "Şifrədə minimum 1 rəqəm olmalıdır!";
                 requireLowercaseErrorMessage = "Şifrədə minimum 1 kiçik hərf olmalıdır!";
                 requireUppercaseErrorMessage = "Şifrədə minimum 1 böyük hərf olmalıdır!";
@@ -79,35 +57,65 @@ namespace FinalProject.Controllers
             }
             else
             {
+                emailErrMessage = "Another account is using the same email.";
                 requireDigitErrorMessage = "The password must contain at least 1 digit!";
                 requireLowercaseErrorMessage = "The password must have at least 1 lowercase letter!";
                 requireUppercaseErrorMessage = "The password must have at least 1 capital letter!";
                 requiredLengthErrorMessage = "The password must contain at least 8 characters!";
             }
-            //---------------------------------------------------------------------------
+            //--------------------------------------------------------------
+            if (!ModelState.IsValid) return View();
+            var user = await _userManager.FindByEmailAsync(registerVM.Email);
+            if (user != null)
+            {
+                ModelState.AddModelError("Email", emailErrMessage);
+                return View();
+            }
+            user = new AppUser
+            {
+                FullName = registerVM.Fullname,
+                Email = registerVM.Email,
+                UserName = registerVM.Email
+            };
 
             var passwordResult = await _userManager.CreateAsync(user, registerVM.Password);
-            if (!passwordResult.Succeeded) {
-            foreach(var err in passwordResult.Errors)
+            if (!passwordResult.Succeeded)
+            {
+                if (registerVM.Password.Length < 8)
                 {
-                    ModelState.AddModelError("", err.Description);
-                    return View();
+                    ModelState.AddModelError("", requiredLengthErrorMessage);
                 }
+                if (!registerVM.Password.Any(char.IsUpper))
+                {
+                    ModelState.AddModelError("", requireUppercaseErrorMessage);
+                }
+                if (!registerVM.Password.Any(char.IsLower))
+                {
+                    ModelState.AddModelError("", requireLowercaseErrorMessage);
+                }
+                if (!registerVM.Password.Any(char.IsDigit))
+                {
+                    ModelState.AddModelError("", requireDigitErrorMessage);
+                }
+                return View();
             }
+
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { token, email = user.Email }, HttpContext.Request.Scheme);
             await _mailService.SendEmailAsync(
-                new MailRequestViewModel { 
-                    ToEmail=user.Email,
-                    Subject="Confirm Email",
-                    Body = $"<a href='{confirmationLink}'>{confirmationLink}</a>"}
+                new MailRequestViewModel
+                {
+                    ToEmail = user.Email,
+                    Subject = "Confirm Email",
+                    Body = $"<a href='{confirmationLink}'>{confirmationLink}</a>"
+                }
                 );
 
             var roleResult = await _userManager.AddToRoleAsync(user, "Member");
             foreach (var err in roleResult.Errors)
-             {
-                  ModelState.AddModelError("", err.Description);
-                  return View();
+            {
+                ModelState.AddModelError("", err.Description);
+                return View();
             }
             return RedirectToAction(nameof(CheckEmail));
         }
@@ -130,7 +138,7 @@ namespace FinalProject.Controllers
                 ModelState.AddModelError("Email", "Email has taken!");
                 return View();
             }
-            var existStoreName = _context.Stores.FirstOrDefault(sn => sn.StoreName == registerVM.Storename); 
+            var existStoreName = _context.Stores.FirstOrDefault(sn => sn.StoreName == registerVM.Storename);
             if (existStoreName != null)
             {
                 ModelState.AddModelError("Storename", "Storename has taken!");
@@ -140,7 +148,7 @@ namespace FinalProject.Controllers
             {
                 Email = registerVM.Email,
                 UserName = registerVM.Email,
-                Address=registerVM.Address,
+                Address = registerVM.Address,
             };
             var passwordResult = await _userManager.CreateAsync(storeAccount, registerVM.Password);
             if (!passwordResult.Succeeded)
@@ -157,12 +165,12 @@ namespace FinalProject.Controllers
                 ModelState.AddModelError("", err.Description);
                 return View();
             }
-            Store store=new Store
+            Store store = new Store
             {
-                Email=registerVM.Email,
+                Email = registerVM.Email,
                 StoreName = registerVM.Storename,
-                PhoneNumber1=registerVM.PhoneNumber,
-                Address= registerVM.Address,
+                PhoneNumber1 = registerVM.PhoneNumber,
+                Address = registerVM.Address,
             };
             _context.Stores.Add(store);
             _context.SaveChanges();
@@ -182,18 +190,18 @@ namespace FinalProject.Controllers
             ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
             var user = await _userManager.FindByEmailAsync(loginVM.Email);
-            if(user == null)
+            if (user == null)
             {
-                ModelState.AddModelError("","Email or password incorrect!");
+                ModelState.AddModelError("", "Email or password incorrect!");
                 return View();
             }
-            var password = await _signInManager.PasswordSignInAsync(user, loginVM.Password,loginVM.RememberMe,false);
+            var password = await _signInManager.PasswordSignInAsync(user, loginVM.Password, loginVM.RememberMe, false);
             if (!password.Succeeded)
             {
                 ModelState.AddModelError("", "Email or password incorrect!");
                 return View();
             }
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
         public async Task<IActionResult> LogOut()
         {
@@ -202,13 +210,13 @@ namespace FinalProject.Controllers
             {
                 await _signInManager.SignOutAsync();
             }
-            return RedirectToAction("Login","Account");
+            return RedirectToAction("Login", "Account");
         }
 
         public IActionResult ForgotPassword()
         {
             ViewData["Localizer"] = _localizer;
-            return View();  
+            return View();
         }
 
         [HttpPost]
@@ -216,28 +224,28 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
         {
             ViewData["Localizer"] = _localizer;
-            if (!ModelState.IsValid) return View(model); 
+            if (!ModelState.IsValid) return View(model);
             var user = await _userManager.FindByEmailAsync(model.Email);
             if (user is null)
             {
-                ModelState.AddModelError("Email","User is not found!");
+                ModelState.AddModelError("Email", "User is not found!");
                 return View(model);
             }
 
             string token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            string link = Url.Action("ResetPassword","Account",new {userId=user.Id,token=token},HttpContext.Request.Scheme);
+            string link = Url.Action("ResetPassword", "Account", new { userId = user.Id, token = token }, HttpContext.Request.Scheme);
 
-            await _mailService.SendEmailAsync(new MailRequestViewModel {ToEmail=model.Email,Subject="ResetPassword",Body=$"<a href='{link}'>Reset password</a>"});
+            await _mailService.SendEmailAsync(new MailRequestViewModel { ToEmail = model.Email, Subject = "ResetPassword", Body = $"<a href='{link}'>Reset password</a>" });
 
             return RedirectToAction(nameof(CheckEmail));
         }
 
-        public async Task<IActionResult> ResetPassword(string userId,string token)
+        public async Task<IActionResult> ResetPassword(string userId, string token)
         {
             ViewData["Localizer"] = _localizer;
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
-            var user= await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId);
             if (user is null) return NotFound();
 
             return View();
@@ -245,14 +253,14 @@ namespace FinalProject.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model,string userId, string token)
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model, string userId, string token)
         {
             ViewData["Localizer"] = _localizer;
             if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(token)) return BadRequest();
             var user = await _userManager.FindByIdAsync(userId);
             if (user is null) return NotFound();
 
-            var identityUser = await _userManager.ResetPasswordAsync(user, token,model.ConfirmPassword);
+            var identityUser = await _userManager.ResetPasswordAsync(user, token, model.ConfirmPassword);
 
             return RedirectToAction(nameof(Login));
         }

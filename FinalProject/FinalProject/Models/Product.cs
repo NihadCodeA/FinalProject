@@ -9,6 +9,8 @@ namespace FinalProject.Models
         public int? StoreId { get; set; }
         [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:15)]
         public string ProductCode { get; set; }
+        [Required(ErrorMessage = "Text_Required")]
+        public int ProductCount { get; set; }
         public int? ProductView { get; set; }
         
         [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:100)]
@@ -33,8 +35,6 @@ namespace FinalProject.Models
         public double Weight { get; set; }
         [Required(ErrorMessage = "Text_Required")]
         public double NetQuantity { get; set; }
-        [Required(ErrorMessage = "Text_Required")]
-        public string IngredientType { get; set; }
         public string? Brand { get; set; }
         public string? Width { get; set; }
         public string? Height { get; set; }
@@ -42,6 +42,8 @@ namespace FinalProject.Models
         public string? DimensionType { get; set; }
         public DateTime? StartingDate { get; set; }
         public DateTime? EndingDate { get; set; }
+        public DateTime? DiscountStartingDate { get; set; }
+        public DateTime? DiscountEndingDate { get; set; }
 
         public Store? Store { get; set; }
 

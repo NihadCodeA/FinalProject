@@ -4,7 +4,6 @@ using FinalProject.Models;
 using FinalProject.ViewModels.HeaderViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Localization;
 namespace FinalProject.ViewComponents
@@ -15,7 +14,7 @@ namespace FinalProject.ViewComponents
         private readonly Database _context;
         private readonly IStringLocalizer<SharedResource> _localizer;
         private readonly HttpContext _httpContext;
-        public HeaderViewComponent(UserManager<AppUser> userManager,Database context, 
+        public HeaderViewComponent(UserManager<AppUser> userManager, Database context,
             IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
@@ -35,12 +34,12 @@ namespace FinalProject.ViewComponents
             {
                 appUser = await _userManager.FindByNameAsync(User.Identity.Name);
             }
-            HeaderViewModel headerVM= new HeaderViewModel
+            HeaderViewModel headerVM = new HeaderViewModel
             {
                 Store = store,
-                User=appUser,
-                Language= GetCurrentLanguage.CurrentLanguage(_httpContext),
-                Localizer=_localizer,
+                User = appUser,
+                Language = GetCurrentLanguage.CurrentLanguage(_httpContext),
+                Localizer = _localizer,
             };
             return View(await Task.FromResult(headerVM));
         }

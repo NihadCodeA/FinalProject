@@ -223,7 +223,6 @@ namespace FinalProject.Controllers
             existProduct.Shipping = product.Shipping;
             existProduct.Weight = product.Weight;
             existProduct.NetQuantity = product.NetQuantity;
-            existProduct.IngredientType = product.IngredientType;
             existProduct.Brand = product.Brand;
             existProduct.Width = product.Width;
             existProduct.Height = product.Height;

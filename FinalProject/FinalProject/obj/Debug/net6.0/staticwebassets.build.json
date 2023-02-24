@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5/hhHP4C9x4ovtO8YAjx3x8fvWH9GkqeUi9/s4IoWlM=",
+  "Hash": "nOpWUfQISDhcTzZTlbPKBcuEjZr0lv3g4lYxC8mNoYw=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7784,6 +7784,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\9ce3492c-839d-4cde-88d5-0fe78e789ec8FreshCartLogo.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/products/9ce3492c-839d-4cde-88d5-0fe78e789ec8FreshCartLogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\products\\9ce3492c-839d-4cde-88d5-0fe78e789ec8FreshCartLogo.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\ab4b4545-84fd-490e-9acf-7146167e0173cold-drinks-juices.png",

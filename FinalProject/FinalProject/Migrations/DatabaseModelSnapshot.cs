@@ -69,17 +69,19 @@ namespace FinalProject.Migrations
                         .HasMaxLength(1500)
                         .HasColumnType("nvarchar(1500)");
 
+                    b.Property<DateTime?>("DiscountEndingDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<double>("DiscountPercentage")
                         .HasColumnType("float");
+
+                    b.Property<DateTime?>("DiscountStartingDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("EndingDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Height")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IngredientType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsAvaible")
@@ -100,6 +102,9 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
 
                     b.Property<int?>("ProductView")
                         .HasColumnType("int");
