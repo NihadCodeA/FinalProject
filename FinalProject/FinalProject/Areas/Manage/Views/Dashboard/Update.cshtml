@@ -1,0 +1,39 @@
+﻿@model AccountDetailsViewModel
+@{
+    var user = ViewData["User"] as AppUser;
+}
+<!-- section-->
+<main class="main-content-wrapper">
+    <!-- section -->
+    <section class="mb-lg-14 mb-8 mt-8">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-12">
+                    <form method="post" asp-action="update">
+                        <!-- input -->
+                        <div class="mb-3">
+                            <label class="form-label">Email : @user.Email</label>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3 col-lg-7">
+                            <label asp-for="Fullname" class="form-label">Tam ad</label>
+                            <input asp-for="Fullname" class="form-control" value="@user?.FullName" placeholder="Tam ad">
+                            <span class="text-danger" asp-validation-for="Fullname"></span>
+                        </div>
+                        <!-- input -->
+                        <div class="mb-5 col-lg-7">
+                            <label asp-for="PhoneNumber" class="form-label">Əlaqə nömrəsi</label>
+                            <input asp-for="PhoneNumber" class="form-control" value="@user?.PhoneNumber" placeholder="Telefon nömrəsi">
+                            <span class="text-danger" asp-validation-for="PhoneNumber"></span>
+                        </div>
+                        <!-- button -->
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Təsdiqlə</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

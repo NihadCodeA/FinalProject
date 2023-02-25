@@ -1,0 +1,141 @@
+﻿@model AppUser;
+@{
+    var user = ViewData["User"] as AppUser;
+}
+<nav class="navbar-vertical-nav d-none d-xl-block ">
+    <div class="navbar-vertical">
+        <div class="px-4 py-5">
+            <a asp-area="" asp-controller="home" asp-action="index" class="navbar-brand">
+                <img src="~/assets/images/logo/freshcart-logo.svg" alt="">
+            </a>
+        </div>
+        <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column" id="sideNavbar">
+
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Dashboard" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="index">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-house"></i></span>
+                            <span class="nav-link-text">Admin panel</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1" >
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
+                            <span class="nav-link-text">
+                                Mağazalar
+                             </span>
+                        </div>
+                    </a>
+               <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">İstifadəçilər</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">Adminlər</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Settings" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="update" asp-route-Id="@user.Id">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-gear"></i></span>
+                            <span class="nav-link-text">Hesab məlumatları</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="ChangePassword" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="ChangePassword" asp-route-Id="@user.Id">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-gear"></i></span>
+                            <span class="nav-link-text">Şifrəni dəyiş</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " asp-area="" asp-controller="account" asp-action="logout"><i class="feather-icon icon-log-out me-2"></i>Hesabdan çıxış</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
+    <div class="navbar-vertical">
+        <div class="px-4 py-5 d-flex justify-content-between align-items-center">
+            <a asp-area="" asp-controller="home" asp-action="index" class="navbar-brand">
+                <img src="~/assets/images/logo/freshcart-logo.svg" alt="">
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Dashboard" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="index">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-house"></i></span>
+                            <span class="nav-link-text">Admin panel</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
+                            <span class="nav-link-text">
+                                Mağazalar
+                            </span>
+                        </div>
+                    </a>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">İstifadəçilər</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">Adminlər</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Settings" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="update" asp-route-Id="@user.Id">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-gear"></i></span>
+                            <span class="nav-link-text">Hesab məlumatları</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="ChangePassword" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="ChangePassword" asp-route-id="@user.Id">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-gear"></i></span>
+                            <span class="nav-link-text">Şifrəni dəyiş</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " asp-area="" asp-controller="account" asp-action="logout"><i class="feather-icon icon-log-out me-2"></i>Hesabdan çıxış</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+

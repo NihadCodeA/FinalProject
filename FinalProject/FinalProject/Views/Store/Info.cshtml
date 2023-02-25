@@ -79,41 +79,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            if (User.IsInRole("Store") && User.Identity.Name == Model.Email)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
-                                </li>
-                            }
-                        }
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" asp-controller="store" asp-action="info" asp-route-id="@Model.Id"><i class="bi bi-info-circle me-2"></i>Info</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-9 col-md-8">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        if (User.IsInRole("Store") && User.Identity.Name == Model.Email)
-                        {
-                            <div class="d-flex justify-content-between mb-3 align-items-center">
-                                <div>
-                                    <p class="mb-3 mb-md-0 h3">Update store informations</p>
-                                </div>
-                                <div class="d-flex justify-content-md-between align-items-center">
-                                    <a class="btn btn-primary" asp-controller="store"
-                               asp-action="updateinfo" asp-route-id="@Model.Id">
-                                        update
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    }
                     <div class="row g-3">
                         <div class="my-8">
                             <div class="row">

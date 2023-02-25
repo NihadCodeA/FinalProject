@@ -1,0 +1,136 @@
+﻿@model PaginatedList<AppUser>
+@{
+    int count = (Model.Page - 1) * 15;
+}
+
+<!-- main -->
+<main class="main-content-wrapper">
+    <div class="container">
+        <div class="row mb-8">
+            <div class="col-md-12">
+                <!-- page header -->
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <div>
+                        <h2>Adminlər</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row ">
+            <div class="col-xl-12 col-12 mb-5">
+                <!-- card -->
+                <div class="card h-100 card-lg">
+                    <div class="px-6 py-6 ">
+                        <div class="row justify-content-between">
+                            <!-- form -->
+                            <div class="col-lg-4 col-md-6 col-12 mb-2 mb-lg-0">
+                                <form class="d-flex" asp-action="admins" method="get">
+                                    <input class="form-control" type="search" name="adminName" placeholder="axtar" aria-label="Search">
+                                    <button type="submit" class="btn btn-primary ms-2">təsdiqlə</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body p-0">
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>İstifadəçi adı</th>
+                                        <th>Email</th>
+                                        <th>Əlaqə nömrəsi</th>
+                                        <th>Email ilə təsdiqlənmə</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (AppUser admin in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>
+                                                @count
+                                            </td>
+                                            <td>
+                                                @admin.FullName
+                                            </td>
+                                            <td>
+                                                @admin.Email
+                                            </td>
+                                            <td>
+                                                @(admin?.PhoneNumber ?? "yoxdu")
+                                            </td>
+                                            <td>
+                                                @(admin.EmailConfirmed ? "Təsdiqlənib" : "Təsdiqlənmiyib")
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="feather-icon icon-more-vertical fs-5"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" asp-action="delete" asp-route-id="@admin.Id"><i class="bi bi-trash me-3"></i>Sil</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @if (Model.Count == 0)
+                                    {
+                                        <tr>
+                                            <td>
+                                                Axtarışa uyğun admin tapılmadı
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class=" border-top d-md-flex justify-content-between align-items-center px-6 py-6">
+                        <nav class="mt-2 mt-md-0">
+                            <ul class="pagination">
+                                @if (Model.HasPrevious)
+                                {
+                                    <li class="page-item disabled">
+                                        <a class="page-link mx-1 "
+                                       href="#"
+                                       aria-label="əvvəlki">
+                                            <i class="feather-icon icon-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                }
+                                @for (int i = 1; i <= Model.TotalPage; i++)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link mx-1 active" asp-area="manage" asp-controller="dashboard"
+                                       asp-action="stores" asp-route-page="@i">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
+                                @if (Model.HasNext)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link mx-1 text-body"
+                                       href="#"
+                                       aria-label="növbəti">
+                                            <i class="feather-icon icon-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</main>

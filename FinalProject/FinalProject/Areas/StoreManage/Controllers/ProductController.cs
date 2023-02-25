@@ -8,11 +8,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FinalProject.Areas.StoreManage.Controllers
 {
     [Area("StoreManage")]
-    [Authorize(Roles ="Store")]
+    [Authorize(Roles = "Store")]
     public class ProductController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -20,7 +21,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
         public readonly IWebHostEnvironment _env;
         private readonly IStringLocalizer<SharedResource> _localizer;
         private readonly HttpContext _httpContext;
-        public ProductController(UserManager<AppUser> userManager, Database context, IWebHostEnvironment env, 
+        public ProductController(UserManager<AppUser> userManager, Database context, IWebHostEnvironment env,
             IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _userManager = userManager;
@@ -29,7 +30,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
             _localizer = localizer;
             _httpContext = httpContextAccessor.HttpContext;
         }
-        public IActionResult Index(int page = 1)
+        public IActionResult Index(int page = 1,string? productName=null)
         {
             ViewData["PageName"] = "Products";
             ViewData["Localizer"] = _localizer;
@@ -42,6 +43,11 @@ namespace FinalProject.Areas.StoreManage.Controllers
             if (store == null) return NotFound();
             var query = _context.Products.Include(s => s.Store)
                 .Include(pi => pi.ProductImages).Where(x => x.StoreId == store.Id).AsQueryable();
+            if (productName != null)
+            {
+                query = _context.Products.Where(p=>p.Name.Contains(productName)).Include(s => s.Store)
+                .Include(pi => pi.ProductImages).Where(x => x.StoreId == store.Id).AsQueryable();
+            }
             var pagenatedProducts = PaginatedList<Product>.Create(query, 15, page);
 
             return View(pagenatedProducts);
@@ -91,7 +97,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
             string posterImgFileErrMessage = "";
             string imageUploadErrMessage = "";
             string imageSizeErrMessage = "";
-            if (lang=="az")
+            if (lang == "az")
             {
                 ErrMessage = "1-dən kiçik ədəd daxil edə bilmərsiz!";
                 zeroErrMessage = "0-dan kiçik ədəd daxil edə bilmərsiz!";
@@ -110,7 +116,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
             {
                 ErrMessage = "You cannot enter a number less than 1!";
                 zeroErrMessage = "You cannot enter a number less than 0!";
-                StartingDateErrMessage1 = "If there is an end date, it should be on the start date!"; 
+                StartingDateErrMessage1 = "If there is an end date, it should be on the start date!";
                 StartingDateErrMessage2 = "The start date cannot be greater than the end date!";
                 StartingDateErrMessage3 = "The start date cannot be earlier than the current date!";
                 EndingDateErrMessage1 = "If there is a start date, it should be on the end date!";
@@ -132,7 +138,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 ModelState.AddModelError("NetQuantity", ErrMessage);
                 return View();
             }
-            
+
             if (product.SalePrice <= 0)
             {
                 ModelState.AddModelError("SalePrice", ErrMessage);
@@ -145,39 +151,45 @@ namespace FinalProject.Areas.StoreManage.Controllers
             }
             if (product.DiscountPercentage < 0)
             {
-                ModelState.AddModelError("SalePrice", zeroErrMessage);
+                ModelState.AddModelError("DiscountPercentage", zeroErrMessage);
                 return View();
             }
             if (product.DiscountPercentage > 0)
             {
-                if (product.DiscountStartingDate == null && product.DiscountEndingDate != null )
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate != null)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage1);
+                    return View();
                 }
-                if (product.DiscountStartingDate != null && product.DiscountEndingDate == null )
+                if (product.DiscountStartingDate != null && product.DiscountEndingDate == null)
                 {
                     ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage1);
+                    return View();
                 }
-                if (product.DiscountStartingDate == null && product.DiscountEndingDate == null )
+                if (product.DiscountStartingDate == null && product.DiscountEndingDate == null)
                 {
                     ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
                     ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                    return View();
                 }
-                if (product.DiscountStartingDate!=null && product.DiscountEndingDate!=null && product.DiscountStartingDate >= product.DiscountEndingDate)
+                if (product.DiscountStartingDate != null && product.DiscountEndingDate != null &&
+                    product.DiscountStartingDate >= product.DiscountEndingDate)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage2);
+                    return View();
                 }
                 if (product.DiscountStartingDate != null && product.DiscountStartingDate < DateTime.Now)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage3);
+                    return View();
                 }
                 if (product.DiscountEndingDate != null && product.DiscountEndingDate < DateTime.Now)
                 {
                     ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage2);
+                    return View();
                 }
-                return View();
             }
-            else if (product.DiscountPercentage==0 && (product.DiscountStartingDate!=null || product.DiscountEndingDate != null)) 
+            else if (product.DiscountPercentage == 0 && (product.DiscountStartingDate != null || product.DiscountEndingDate != null))
             {
                 ModelState.AddModelError("DiscountStartingDate", DateErrMessage1);
                 ModelState.AddModelError("DiscountEndingDate", DateErrMessage1);
@@ -343,68 +355,76 @@ namespace FinalProject.Areas.StoreManage.Controllers
             if (product.SalePrice <= 0)
             {
                 ModelState.AddModelError("SalePrice", ErrMessage);
-                return View();
+                return View(existProduct);
             }
             if (product.CostPrice <= 0)
             {
                 ModelState.AddModelError("SalePrice", ErrMessage);
-                return View();
+                return View(existProduct);
             }
             if (product.DiscountPercentage < 0)
             {
-                ModelState.AddModelError("SalePrice", zeroErrMessage);
-                return View();
+                ModelState.AddModelError("DiscountPercentage", zeroErrMessage);
+                return View(existProduct);
             }
             if (product.DiscountPercentage > 0)
             {
                 if (product.DiscountStartingDate == null && product.DiscountEndingDate != null)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage1);
+                    return View(existProduct);
                 }
                 if (product.DiscountStartingDate != null && product.DiscountEndingDate == null)
                 {
                     ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage1);
+                    return View(existProduct);
                 }
                 if (product.DiscountStartingDate == null && product.DiscountEndingDate == null)
                 {
                     ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
                     ModelState.AddModelError("DiscountEndingDate", DateErrMessage2);
+                    return View(existProduct);
                 }
                 if (product.DiscountStartingDate != null && product.DiscountEndingDate != null && product.DiscountStartingDate >= product.DiscountEndingDate)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage2);
+                    return View(existProduct);
                 }
-                if (product.DiscountStartingDate != null && product.DiscountStartingDate < DateTime.Now)
+                if (product.DiscountStartingDate != null && product.DiscountStartingDate < product.CreatedTime)
                 {
                     ModelState.AddModelError("DiscountStartingDate", StartingDateErrMessage3);
+                    return View(existProduct);
                 }
-                if (product.DiscountEndingDate != null && product.DiscountEndingDate < DateTime.Now)
+                if (product.DiscountEndingDate != null && product.DiscountEndingDate < product.CreatedTime)
                 {
                     ModelState.AddModelError("DiscountEndingDate", EndingDateErrMessage2);
+                    return View(existProduct);
                 }
-                return View();
             }
             else if (product.DiscountPercentage == 0 && (product.DiscountStartingDate != null || product.DiscountEndingDate != null))
             {
                 ModelState.AddModelError("DiscountStartingDate", DateErrMessage1);
                 ModelState.AddModelError("DiscountEndingDate", DateErrMessage1);
-                return View();
+                return View(existProduct);
             }
             //--------------------------------------------------------------------------
             //--------PRODUCT DATE---------------------------------
             if (product.StartingDate == null && product.EndingDate != null)
             {
                 ModelState.AddModelError("StartingDate", StartingDateErrMessage1);
+                return View(existProduct);
             }
             if (product.StartingDate != null && product.EndingDate == null)
             {
                 ModelState.AddModelError("EndingDate", EndingDateErrMessage1);
+                return View(existProduct);
             }
             if (product.StartingDate != null && product.EndingDate != null && product.StartingDate >= product.EndingDate)
             {
                 ModelState.AddModelError("StartingDate", StartingDateErrMessage2);
+                return View(existProduct);
             }
-            
+
             //------------------------------------------
             if (product.PosterImgFile != null)
             {
@@ -469,16 +489,12 @@ namespace FinalProject.Areas.StoreManage.Controllers
             existProduct.Weight = product.Weight;
             existProduct.NetQuantity = product.NetQuantity;
             existProduct.Brand = product.Brand;
-            existProduct.Width = product.Width;
-            existProduct.Height = product.Height;
-            existProduct.Length = product.Length;
-            existProduct.DimensionType = product.DimensionType;
             existProduct.StartingDate = product.StartingDate;
             existProduct.EndingDate = product.EndingDate;
-            existProduct.DiscountStartingDate=product.DiscountStartingDate;
-            existProduct.DiscountEndingDate=product.DiscountEndingDate;
-            existProduct.ProductCount= product.ProductCount;
-            existProduct.ProductCode=product.ProductCode;
+            existProduct.DiscountStartingDate = product.DiscountStartingDate;
+            existProduct.DiscountEndingDate = product.DiscountEndingDate;
+            existProduct.ProductCount = product.ProductCount;
+            existProduct.ProductCode = product.ProductCode;
             _context.SaveChanges();
             return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }

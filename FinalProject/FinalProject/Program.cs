@@ -35,6 +35,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 }).AddEntityFrameworkStores<Database>().AddDefaultTokenProviders();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddTransient<IMailService, MailService>();
+builder.Services.AddScoped<LangService>();
 //localization
 
 builder.Services.AddLocalization(opt =>

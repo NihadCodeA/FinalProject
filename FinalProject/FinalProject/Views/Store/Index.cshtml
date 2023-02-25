@@ -83,18 +83,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" asp-controller="store" asp-action="index" asp-route-storeId="@Model.Store.Id"><i class="feather-icon icon-shopping-bag me-2"></i>Shop</a>
                         </li>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            if (User.IsInRole("Store") && User.Identity.Name == Model.Store.Email)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="product" asp-action="addproduct"><i class="feather-icon icon-plus me-2"></i>Add product</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" asp-controller="product" asp-action="index"><i class="feather-icon icon-list me-2"></i>Products list</a>
-                                </li>
-                            }
-                        }
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="store" asp-action="info" asp-route-id="@Model.Store.Id"><i class="bi bi-info-circle me-2"></i>Info</a>
                         </li>

@@ -36,10 +36,6 @@ namespace FinalProject.Models
         [Required(ErrorMessage = "Text_Required")]
         public double NetQuantity { get; set; }
         public string? Brand { get; set; }
-        public string? Width { get; set; }
-        public string? Height { get; set; }
-        public string? Length { get; set; }
-        public string? DimensionType { get; set; }
         public DateTime? StartingDate { get; set; }
         public DateTime? EndingDate { get; set; }
         public DateTime? DiscountStartingDate { get; set; }

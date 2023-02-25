@@ -192,6 +192,45 @@
   <data name="Accout_LogOut" xml:space="preserve">
     <value>Log out</value>
   </data>
+  <data name="Add_Product" xml:space="preserve">
+    <value>Add product</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Cost_Price" xml:space="preserve">
+    <value>Cost price</value>
+  </data>
+  <data name="Creation_Time" xml:space="preserve">
+    <value>Creation time</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Disclaimer</value>
+  </data>
+  <data name="Discount_Ending_Date" xml:space="preserve">
+    <value>Discount ending date</value>
+  </data>
+  <data name="Discount_Percentage" xml:space="preserve">
+    <value>Discount percentage</value>
+  </data>
+  <data name="Discount_Starting_Date" xml:space="preserve">
+    <value>Discount starting date</value>
+  </data>
+  <data name="Ending_Date" xml:space="preserve">
+    <value>Expiration date</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="InStock" xml:space="preserve">
+    <value>In stock</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
@@ -203,6 +242,51 @@
   </data>
   <data name="Navbar_Stores" xml:space="preserve">
     <value>Stores</value>
+  </data>
+  <data name="Net_Quantity" xml:space="preserve">
+    <value>Net quantity</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Product_Code" xml:space="preserve">
+    <value>Product code</value>
+  </data>
+  <data name="Product_Count" xml:space="preserve">
+    <value>Product count</value>
+  </data>
+  <data name="Product_Name" xml:space="preserve">
+    <value>Product name</value>
+  </data>
+  <data name="Sale_Price" xml:space="preserve">
+    <value>Sale price</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Shipping" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="Starting_Date" xml:space="preserve">
+    <value>Date of production</value>
+  </data>
+  <data name="Storage_Tip" xml:space="preserve">
+    <value>Storage tip</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Upload_Image" xml:space="preserve">
+    <value>Upload image</value>
+  </data>
+  <data name="Upload_Images" xml:space="preserve">
+    <value>Upload images</value>
   </data>
   <data name="User_Account_Details" xml:space="preserve">
     <value>Account details</value>
@@ -221,5 +305,11 @@
   </data>
   <data name="User_YourOrders" xml:space="preserve">
     <value>Your orders</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="Welcome_Back" xml:space="preserve">
+    <value>Welcome back!</value>
   </data>
 </root>

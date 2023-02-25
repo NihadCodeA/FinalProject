@@ -192,6 +192,45 @@
   <data name="Accout_LogOut" xml:space="preserve">
     <value>Hesabdan çıxış</value>
   </data>
+  <data name="Add_Product" xml:space="preserve">
+    <value>Məhsul əlavə edin</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kateqoriya</value>
+  </data>
+  <data name="Cost_Price" xml:space="preserve">
+    <value>Alış qiyməti</value>
+  </data>
+  <data name="Creation_Time" xml:space="preserve">
+    <value>Yaradılma vaxtı</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Təsvir</value>
+  </data>
+  <data name="Disclaimer" xml:space="preserve">
+    <value>Xəbərdarlıq</value>
+  </data>
+  <data name="Discount_Ending_Date" xml:space="preserve">
+    <value>Endirimin bitmə vaxtı</value>
+  </data>
+  <data name="Discount_Percentage" xml:space="preserve">
+    <value>Endirim faizi</value>
+  </data>
+  <data name="Discount_Starting_Date" xml:space="preserve">
+    <value>Endirimin başlama vaxtı</value>
+  </data>
+  <data name="Ending_Date" xml:space="preserve">
+    <value>Son tarix</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Şəkil</value>
+  </data>
+  <data name="InStock" xml:space="preserve">
+    <value>Anbardadır</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Admin panel</value>
   </data>
@@ -203,6 +242,51 @@
   </data>
   <data name="Navbar_Stores" xml:space="preserve">
     <value>Mağazalar</value>
+  </data>
+  <data name="Net_Quantity" xml:space="preserve">
+    <value>Xalis çəki</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Növbəti</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Əvvəlki</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Məhsullar</value>
+  </data>
+  <data name="Product_Code" xml:space="preserve">
+    <value>Məhsulun kodu</value>
+  </data>
+  <data name="Product_Count" xml:space="preserve">
+    <value>Məhsulun sayı</value>
+  </data>
+  <data name="Product_Name" xml:space="preserve">
+    <value>Məhsulun adı</value>
+  </data>
+  <data name="Sale_Price" xml:space="preserve">
+    <value>Satış qiyməti</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Axtar</value>
+  </data>
+  <data name="Shipping" xml:space="preserve">
+    <value>Çatdırılma</value>
+  </data>
+  <data name="Starting_Date" xml:space="preserve">
+    <value>İstehsal tarixi</value>
+  </data>
+  <data name="Storage_Tip" xml:space="preserve">
+    <value>Saxlama şəraiti</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Düzəliş et</value>
+  </data>
+  <data name="Upload_Image" xml:space="preserve">
+    <value>Şəkil yüklə</value>
+  </data>
+  <data name="Upload_Images" xml:space="preserve">
+    <value>Əlavə şəkilləri yüklə</value>
   </data>
   <data name="User_Account_Details" xml:space="preserve">
     <value>Hesab məlumatları</value>
@@ -221,5 +305,11 @@
   </data>
   <data name="User_YourOrders" xml:space="preserve">
     <value>Sifarişləriniz</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Çəki</value>
+  </data>
+  <data name="Welcome_Back" xml:space="preserve">
+    <value>Xoş gəlmisiniz!</value>
   </data>
 </root>

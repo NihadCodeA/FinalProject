@@ -61,9 +61,6 @@ namespace FinalProject.Migrations
                         .HasMaxLength(1500)
                         .HasColumnType("nvarchar(1500)");
 
-                    b.Property<string>("DimensionType")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Disclaimer")
                         .IsRequired()
                         .HasMaxLength(1500)
@@ -81,14 +78,8 @@ namespace FinalProject.Migrations
                     b.Property<DateTime?>("EndingDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Height")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsAvaible")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Length")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -129,9 +120,6 @@ namespace FinalProject.Migrations
 
                     b.Property<double>("Weight")
                         .HasColumnType("float");
-
-                    b.Property<string>("Width")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
