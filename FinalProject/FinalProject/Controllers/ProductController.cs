@@ -65,14 +65,14 @@ namespace FinalProject.Controllers
             BasketItemViewModel basketItem = null;
             string basketItemsStr = HttpContext.Request.Cookies["BasketItems"];
             Product product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == productId);
-            //AppUser member = null;
-            //if (User.Identity.IsAuthenticated)
-            //{
-            //    member = await _userManager.FindByNameAsync(User.Identity.Name);
-            //}
-            //if (member == null)
-            //{
-            if (basketItemsStr != null)
+            AppUser member = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                member = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (member == null)
+            {
+                if (basketItemsStr != null)
             {
                 basketItems = JsonConvert.DeserializeObject<List<BasketItemViewModel>>(basketItemsStr);
                 basketItem = basketItems.FirstOrDefault(x => x.ProductId == productId);
@@ -108,24 +108,50 @@ namespace FinalProject.Controllers
             }
             basketItemsStr = JsonConvert.SerializeObject(basketItems);
             HttpContext.Response.Cookies.Append("BasketItems", basketItemsStr);
-            //}
-            //else
-            //{
-            //    BasketItem memberBasketItem = _pustokContext.BasketItems.Include(x=>x.Book).FirstOrDefault(x=>x.AppUserId==member.Id && x.Id==bookId);
-            //    if (memberBasketItem != null) memberBasketItem.Count++;
-            //    else
-            //    {
-            //        memberBasketItem = new BasketItem
-            //        {
-            //            Id = bookId,
-            //            AppUserId = member.Id,
-            //            Count = 1
-            //        };
-            //        _pustokContext.BasketItems.Add(memberBasketItem);
-            //    }
-            //_pustokContext.SaveChanges();
-            //}
-            //return PartialView("_BasketItemPartial", basketItems);
+            }
+            else
+            {
+                //BasketItem memberBasketItem = _context.BasketItems.Include(x => x.Product).FirstOrDefault(x => x.AppUserId == member.Id && x.Id == productId);
+                //if (memberBasketItem != null) memberBasketItem.Count++;
+                //else
+                //{
+                //    memberBasketItem = new BasketItem
+                //    {
+                //        Id = productId,
+                //        AppUserId = member.Id,
+                //        Count = 1,
+                //        Price = product.SalePrice,
+                //        Discount = product.DiscountPercentage,
+                //        Name = product.Name,
+                //        Weight = product.Weight,
+                //        Image = product.ProductImages.FirstOrDefault(x => x.IsPoster == true)?.Image
+                //    };
+                //    _context.BasketItems.Add(memberBasketItem);
+                //}
+                BasketItem memberBasketItem = _context.BasketItems.Include(x => x.Product)
+                     .FirstOrDefault(x => x.AppUserId == member.Id && x.Product.Id == productId);
+
+                if (memberBasketItem != null)
+                {
+                    memberBasketItem.Count++;
+                }
+                else
+                {
+                    memberBasketItem = new BasketItem
+                    {
+                        AppUserId = member.Id,
+                        ProductId = productId,
+                        Count = 1,
+                        Price = product.SalePrice,
+                        Discount = product.DiscountPercentage,
+                        Name = product.Name,
+                        Weight = product.Weight,
+                        Image = product.ProductImages.FirstOrDefault(x => x.IsPoster == true)?.Image
+                    };
+                    _context.BasketItems.Add(memberBasketItem);
+                }
+                _context.SaveChanges();
+            }
             return Ok();
         }
     }

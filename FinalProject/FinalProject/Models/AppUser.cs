@@ -10,5 +10,7 @@ namespace FinalProject.Models
         public string? FullName { get; set; }
         public string? Address { get; set; }
 
+        public List<BasketItem>? BasketItems { get; set; }
+
     }
 }

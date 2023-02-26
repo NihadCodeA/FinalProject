@@ -51,5 +51,7 @@ namespace FinalProject.Models
         public List<int>? ProductImageIds { get; set; }
         [NotMapped]
         public List<IFormFile>? ImageFiles { get; set; }
+
+        public List<BasketItem>? BasketItems { get; set; }
     }
 }

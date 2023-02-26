@@ -16,5 +16,6 @@ namespace FinalProject.DAL
         public DbSet<City> Cities { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
     }
 }

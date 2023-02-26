@@ -34,9 +34,9 @@
 <link href="~/assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet">
 <link href="~/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet">
 
-
 <!-- Theme CSS -->
 <link rel="stylesheet" href="~/assets/css/theme.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 
 </head>
@@ -52,6 +52,94 @@
     @await Component.InvokeAsync("Footer")
   <!-- Javascript-->
 
+
+
+    <script>
+        let addToBasketBtns = document.querySelectorAll(".add-to-basket-btn");
+        let deleteBtns = document.querySelectorAll(".cross-btn");
+        //deleteBtns.forEach(btn => btn.addEventListener("click", function (e) {
+        //    e.preventDefault();
+        //    let url = btn.getAttribute("href");
+        //    fetch(url).then(res => {
+        //        //if (res.status == 200) {
+        //        fetch('/book/getbasket')
+        //            .then((response) => response.json())
+        //            .then((data) => {
+        //                for (let i = 0; i < data.length; i++) {
+        //                    console.log(data[i]);
+        //                    let basketItemCount = document.querySelector(".basketItemCount");
+        //                    //if (data[i].count == 0) btn.parentElement.parentElement.remove()
+        //                    //else {
+        //                    basketItemCount.innerHTML = `<span class="qty basketItemCount">${data[i].count} ×</span>`
+        //                    //}
+
+        //                }
+        //            })
+        //        //}
+        //    })
+        //}))
+        //deleteBtns.forEach((btn, i) => btn.addEventListener("click", function (e) {
+        //    e.preventDefault()
+        //    fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
+        //        Toastify({
+        //            text: "Deleted from shopping cart",
+        //            gravity: "bottom",
+        //            duration: 3000,
+        //            style: {
+        //                background: "red"
+        //            }
+        //        }).showToast();
+        //        console.log(response[i])
+        //        if (response[i].count == 0) btn.parentElement.parentElement.remove()
+        //        else {
+        //            btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
+        //        }
+        //    })
+        //}))
+        addToBasketBtns.forEach(btn => btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            url = btn.getAttribute("href")
+            fetch(url).then(res => {
+                if (res.status == 200) {
+                    Toastify({
+                        text: "Added to shopping cart",
+                        gravity: "bottom",
+                        duration: 3000,
+                        style: {
+                            background: "green"
+                        }
+                    }).showToast();
+                    //fetch("/book/getbasket").then(response => response.text())
+                    //    .then((html) => {
+                    //        block = document.querySelector(".single-cart-block")
+                    //        block.innerHTML = html
+                    //        block.querySelectorAll(".btn-deletebook").forEach((btn, i) => btn.addEventListener("click", function (e) {
+                    //            e.preventDefault()
+                    //            fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
+                    //                Toastify({
+                    //                    text: "Deleted from shopping cart",
+                    //                    gravity: "bottom",
+                    //                    duration: 3000,
+                    //                    style: {
+                    //                        background: "red"
+                    //                    }
+                    //                }).showToast();
+                    //                console.log(response)
+                    //                if (response[i].count == 0) btn.parentElement.parentElement.remove()
+                    //                else {
+                    //                    btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
+                    //                }
+                    //            })
+                    //        }))
+                    //    })
+                }
+                else alert("Unknown error")
+            })
+        }))
+
+
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <!-- Libs JS -->
 <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="~/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

@@ -126,7 +126,7 @@
                                         <span class="@(product.DiscountPercentage>0 ? "text-decoration-line-through text-muted" : "text-dark") ">$@(product.SalePrice)</span>
                                     </div>
                                     <div>
-                                        <a href="#!" class="btn btn-primary btn-sm">
+                                        <a asp-controller="product" asp-action="addtobasket" asp-route-productId="@product.Id" class="btn btn-primary btn-sm add-to-basket-btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                              class="feather feather-plus">
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                     <div class="d-grid mt-2">
-                                        <a href="#!" class="btn btn-primary ">
+                                        <a asp-controller="product" asp-action="addtobasket" asp-route-productId="@discountedProduct.Id" class="btn btn-primary add-to-basket-btn">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                              class="feather feather-plus">
