@@ -7,6 +7,7 @@ namespace FinalProject.Models
     {
         public int Id { get; set; } 
         public int? StoreId { get; set; }
+        public int? CategoryId { get; set; }
         [Required(ErrorMessage = "Text_Required"),StringLength(maximumLength:15)]
         public string ProductCode { get; set; }
         [Required(ErrorMessage = "Text_Required")]
@@ -42,7 +43,7 @@ namespace FinalProject.Models
         public DateTime? DiscountEndingDate { get; set; }
 
         public Store? Store { get; set; }
-
+        public Category? Category { get; set; }
         [NotMapped]
         public IFormFile? PosterImgFile { get; set; }
         public List<ProductImages>? ProductImages { get; set; }

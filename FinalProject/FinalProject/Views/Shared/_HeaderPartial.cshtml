@@ -245,30 +245,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light navbar-default py-0 py-lg-4">
         <div class="container px-0 px-md-3">
-            <div class="dropdown me-3 d-none d-lg-block">
-                <button class="btn btn-primary px-6 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                    <span class="me-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                             stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
-                             class="feather feather-grid">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                    </span> All Departments
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Dairy, Bread & Eggs</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Snacks & Munchies</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Fruits & Vegetables</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Cold Drinks & Juices</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Breakfast & Instant Food</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Bakery & Biscuits</a></li>
-                    <li><a class="dropdown-item" href="pages/shop-grid.html">Chicken, Meat & Fish</a></li>
-                </ul>
-            </div>
+         
             <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default">
                 <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
                     <a asp-controller="home" asp-action="index">
@@ -300,34 +277,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="d-block d-lg-none mb-4">
-                    <a class="btn btn-primary w-100 d-flex justify-content-center align-items-center" data-bs-toggle="collapse"
-                       href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <span class="me-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                                 class="feather feather-grid">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </span> All Departments
-                    </a>
-                    <div class="collapse mt-2" id="collapseExample">
-                        <div class="card card-body">
-                            <ul class="mb-0 list-unstyled">
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Dairy, Bread & Eggs</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Snacks & Munchies</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Fruits & Vegetables</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Cold Drinks & Juices</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Breakfast & Instant Food</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Bakery & Biscuits</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Chicken, Meat & Fish</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav align-items-center ">
                         <li class="nav-item dropdown">
@@ -335,79 +285,76 @@
                                 @Model.Localizer["Navbar_Home"]
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                Shop
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Shop Grid - Filter</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="pages/shop-grid-3-column.html">Shop Grid - 3 column</a>
-                                </li>
-                                <li><a class="dropdown-item" href="pages/shop-list.html">Shop List - Filter</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-filter.html">Shop - Filter</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-fullwidth.html">Shop Wide</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-single.html">Shop Single</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="pages/shop-single-2.html">
-                                        Shop Single v2<span class="badge bg-light-info text-dark-info ms-1">New</span>
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="pages/shop-wishlist.html">Shop Wishlist</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-cart.html">Shop Cart</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-checkout.html">Shop Checkout</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item dropdown dropdown-fullwidth">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
-                                Mega menu
+                                @Model.Localizer["Mega_Menu"]
                             </a>
                             <div class=" dropdown-menu pb-0">
                                 <div class="row p-2 p-lg-4">
                                     <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                                        <h6 class="text-primary ps-3">Dairy, Bread & Eggs</h6>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Butter</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Milk Drinks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Curd & Yogurt</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Eggs</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Buns & Bakery</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Cheese</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Condensed Milk</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Dairy Products</a>
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category8 in Model.Categories8)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category8.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category8 in Model.Categories8)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category8.NameEn</a>
+                                            }
+                                        }
                                     </div>
                                     <div class="col-lg-3 col-6 mb-4 mb-lg-0">
-                                        <h6 class="text-primary ps-3">Breakfast & Instant Food</h6>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Breakfast Cereal</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Noodles, Pasta & Soup</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Frozen Veg Snacks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Frozen Non-Veg Snacks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Vermicelli</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Instant Mixes</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Batter</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html"> Fruit and Juices</a>
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category16 in Model.Categories16)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category16.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category16 in Model.Categories16)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category16.NameEn</a>
+                                            }
+                                        }
                                     </div>
                                     <div class="col-lg-3 col-12 mb-4 mb-lg-0">
-                                        <h6 class="text-primary ps-3">Cold Drinks & Juices</h6>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Soft Drinks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Fruit Juices</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Coldpress</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Water & Ice Cubes</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Soda & Mixers</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Health Drinks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Herbal Drinks</a>
-                                        <a class="dropdown-item" href="pages/shop-grid.html">Milk Drinks</a>
-                                    </div>
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category24 in Model.Categories24)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category24.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category24 in Model.Categories24)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category24.NameEn</a>
+                                            }
+                                        }
+                                    </div> 
                                     <div class="col-lg-3 col-12 mb-4 mb-lg-0">
-                                        <div class="card border-0">
-                                            <img src="~/assets/images/banner/menu-banner.jpg" alt="eCommerce HTML Template"
-                                                 class="img-fluid">
-                                            <div class="position-absolute ps-6 mt-8">
-                                                <h5 class=" mb-0 ">Dont miss this <br>offer today.</h5>
-                                                <a href="#" class="btn btn-primary btn-sm mt-3">Shop Now</a>
-                                            </div>
-                                        </div>
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category32 in Model.Categories32)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category32.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category32 in Model.Categories32)
+                                            {
+                                                <a class="dropdown-item" href="pages/shop-grid.html">@category32.NameEn</a>
+                                            }
+                                        }
                                     </div>
                                 </div>
                             </div>
@@ -502,30 +449,7 @@
                                 @Model.Localizer["Navbar_Home"]
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                Shop
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/shop-grid.html">Shop Grid - Filter</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="pages/shop-grid-3-column.html">Shop Grid - 3 column</a>
-                                </li>
-                                <li><a class="dropdown-item" href="pages/shop-list.html">Shop List - Filter</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-filter.html">Shop - Filter</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-fullwidth.html">Shop Wide</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-single.html">Shop Single</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="pages/shop-single-2.html">
-                                        Shop Single v2<span class="badge bg-light-info text-dark-info ms-1">New</span>
-                                    </a>
-                                </li>
-                                <li><a class="dropdown-item" href="pages/shop-wishlist.html">Shop Wishlist</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-cart.html">Shop Cart</a></li>
-                                <li><a class="dropdown-item" href="pages/shop-checkout.html">Shop Checkout</a></li>
-                            </ul>
-                        </li>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link" asp-controller="store" asp-action="storelist">
                                 @Model.Localizer["Navbar_Stores"]
@@ -534,7 +458,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
-                                Mega Menu
+                               @Model.Localizer["Mega_Menu"]
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-submenu ">

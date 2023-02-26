@@ -195,6 +195,9 @@
   <data name="Add_Product" xml:space="preserve">
     <value>Məhsul əlavə edin</value>
   </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kateqoriyalar</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Kateqoriya</value>
   </data>
@@ -203,6 +206,9 @@
   </data>
   <data name="Creation_Time" xml:space="preserve">
     <value>Yaradılma vaxtı</value>
+  </data>
+  <data name="Daily_Best_Sells" xml:space="preserve">
+    <value>Gündəlik  çox satılanlar</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Sil</value>
@@ -231,6 +237,9 @@
   <data name="InStock" xml:space="preserve">
     <value>Anbardadır</value>
   </data>
+  <data name="Mega_Menu" xml:space="preserve">
+    <value>Böyük menyu</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Admin panel</value>
   </data>
@@ -248,6 +257,9 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Növbəti</value>
+  </data>
+  <data name="Popular_Products" xml:space="preserve">
+    <value>Məhşur məhsullar</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Əvvəlki</value>

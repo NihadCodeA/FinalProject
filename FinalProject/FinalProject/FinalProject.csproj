@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\images\flags\" />
+    <Folder Include="wwwroot\uploads\categories\" />
     <Folder Include="wwwroot\uploads\sliders\" />
     <Folder Include="wwwroot\uploads\stores\" />
     <Folder Include="wwwroot\uploads\products\" />

@@ -4,7 +4,9 @@ using FinalProject.Models;
 using FinalProject.ViewModels.HomeViewModels;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
 
 namespace FinalProject.Controllers
 {
@@ -23,9 +25,16 @@ namespace FinalProject.Controllers
         public IActionResult Index()
         {
             ViewData["Dashboard"] = _localizer.GetString("Navbar_Dashboard");
-            List<Slider> sliders= _context.Sliders.OrderBy(x=>x.Order).ToList();
+            List<Slider> sliders = _context.Sliders.OrderBy(x=>x.Order).ToList();
+            List<Category> categories = _context.Categories.ToList();
+            List<Product> products = _context.Products.Include(pi=>pi.ProductImages).Include(c=>c.Category).Take(10).ToList();
+            List<Product> discountedProducts = _context.Products.Include(pi=>pi.ProductImages).Include(c=>c.Category).Where(t=>t.DiscountEndingDate>DateTime.Now).Take(4).ToList();
             HomeViewModel homeVM = new HomeViewModel {
                 Sliders = sliders,
+                Categories = categories,
+                PopularProducts = products,
+                DiscountedProducts = discountedProducts,
+                Localizer =_localizer,
                 Lang = GetCurrentLanguage.CurrentLanguage(_httpContext),
             };
             return View(homeVM);

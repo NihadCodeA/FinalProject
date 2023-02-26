@@ -40,6 +40,11 @@ namespace FinalProject.ViewComponents
                 User = appUser,
                 Language = GetCurrentLanguage.CurrentLanguage(_httpContext),
                 Localizer = _localizer,
+                Categories8 = _context.Categories.Take(8).ToList(),
+                Categories16=_context.Categories.Skip(8).Take(8).ToList(),
+                Categories24=_context.Categories.Skip(16).Take(8).ToList(),
+                Categories32=_context.Categories.Skip(24).Take(8).ToList(),
+                
             };
             return View(await Task.FromResult(headerVM));
         }

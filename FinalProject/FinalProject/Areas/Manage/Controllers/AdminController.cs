@@ -17,12 +17,14 @@ namespace FinalProject.Areas.Manage.Controllers
         private readonly Database _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly IWebHostEnvironment _env;
 
-        public AdminController(Database context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AdminController(Database context, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IWebHostEnvironment env)
         {
             _context = context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _env = env;
         }
         [HttpGet]
         public async Task<IActionResult> CreateAdmin()
@@ -95,6 +97,147 @@ namespace FinalProject.Areas.Manage.Controllers
                 return View();
             }
             return RedirectToAction("Admins", "Dashboard", new { area = "manage" });
+        }
+
+
+        public async Task<IActionResult> Categories(int page=1,string? categoryName=null)
+        {
+            //---------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser superadmin = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                superadmin = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (superadmin == null) return NotFound();
+            ViewData["User"] = superadmin;
+            //-------------------------------
+            var query = _context.Categories.AsQueryable();
+            if (categoryName != null)
+            {
+                query = _context.Categories.Where(c => c.NameAz.Contains(categoryName)).AsQueryable();
+            }
+            var pagenatedCategories = PaginatedList<Category>.Create(query, 5, page);
+            return View(pagenatedCategories);
+        }
+        [HttpGet]
+        public async Task<IActionResult> CreateCategory()
+        {
+            //---------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser superadmin = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                superadmin = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (superadmin == null) return NotFound();
+            ViewData["User"] = superadmin;
+            //-------------------------------
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(Category category)
+        {
+            //---------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser superadmin = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                superadmin = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (superadmin == null) return NotFound();
+            ViewData["User"] = superadmin;
+            //-------------------------------
+            if (!ModelState.IsValid) return View();
+            if (category.ImageFile != null)
+            {
+                if (category.ImageFile.Length > 3145728)
+                {
+                    ModelState.AddModelError("ImageFile", "Şəklin ölçüsü 3mb-dən çox ola bilməz!");
+                    return View();
+                }
+                category.Image = FileManager.SaveFile(_env.WebRootPath, "uploads/categories", category.ImageFile);
+            }
+            else
+            {
+                ModelState.AddModelError("ImageFile", "Şəkil yükləmək məcburidi!");
+                return View();
+            }
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+            return RedirectToAction("Categories") ;
+        }
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            //------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser user = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (user == null) return NotFound();
+            ViewData["User"] = user;
+            //------------------------------
+            Category category = _context.Categories.Find(id);
+            if (category == null) View("Error");
+            return View(category);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(Category category)
+        {
+            //------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser user = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (user == null) return NotFound();
+            ViewData["User"] = user;
+            //------------------------------
+            Category existCategory= _context.Categories.Find(category.Id);
+            if (existCategory == null) View("Error");
+            if (!ModelState.IsValid) return View();
+            if (category.ImageFile != null)
+            {
+                FileManager.DeleteFile(_env.WebRootPath, "uploads/categories", existCategory.Image);
+                if (category.ImageFile.Length > 3145728)
+                {
+                    ModelState.AddModelError("PosterImgFile", "Şəklin ölçüsü 3mb-dən çox ola bilməz!");
+                    return View();
+                }
+                existCategory.Image = FileManager.SaveFile(_env.WebRootPath, "uploads/categories", category.ImageFile);
+            }
+            existCategory.NameAz = category.NameAz;
+            existCategory.NameEn = category.NameEn;
+            _context.SaveChanges();
+            return RedirectToAction("Categories");
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            //------------------------------
+            ViewData["PageName"] = "Categories";
+            AppUser user = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            if (user == null) return NotFound();
+            ViewData["User"] = user;
+            //------------------------------
+
+            Category category = _context.Categories.Find(id);
+            if (category == null) NotFound(); //404
+            if (category.Image != null)
+            {
+                FileManager.DeleteFile(_env.WebRootPath, "uploads/categories", category.Image);
+            }
+            _context.Categories.Remove(category);
+            _context.SaveChanges();
+            return RedirectToAction("Categories");
         }
     }
 }

@@ -15,5 +15,6 @@ namespace FinalProject.DAL
         public DbSet<ProductImages> ProductImages { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

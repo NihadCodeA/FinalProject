@@ -22,6 +22,30 @@ namespace FinalProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("FinalProject.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameAz")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameEn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("FinalProject.Models.City", b =>
                 {
                     b.Property<int>("Id")
@@ -49,6 +73,9 @@ namespace FinalProject.Migrations
 
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
 
                     b.Property<double>("CostPrice")
                         .HasColumnType("float");
@@ -122,6 +149,8 @@ namespace FinalProject.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("StoreId");
 
@@ -489,9 +518,15 @@ namespace FinalProject.Migrations
 
             modelBuilder.Entity("FinalProject.Models.Product", b =>
                 {
+                    b.HasOne("FinalProject.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("FinalProject.Models.Store", "Store")
                         .WithMany("Products")
                         .HasForeignKey("StoreId");
+
+                    b.Navigation("Category");
 
                     b.Navigation("Store");
                 });
@@ -556,6 +591,11 @@ namespace FinalProject.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Product", b =>

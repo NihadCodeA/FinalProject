@@ -2,6 +2,7 @@
 @{
     int count = (Model.Page - 1) * 15;
     var localizer = ViewData["Localizer"] as IStringLocalizer;
+    var language = (string)ViewData["Language"] as string;
 }
 
    <!-- main -->
@@ -76,7 +77,20 @@
                                                 }
                                             </td>
                                             <td>@product.Name</td>
-                                            <td><a href="#" class="text-reset">category</a></td>
+                                            <td>
+                                                @if (product.Category == null)
+                                                {
+                                                    <a href="#" class="text-reset">
+                                                        @(language == "az" ? "kateqoriya yoxdu" : "no category")
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a href="#" class="text-reset">
+                                                        @(language == "az" ? product.Category.NameAz : product.Category.NameEn)
+                                                    </a>
+                                                }
+                                                </td>
 
                                             <td>$@(product.SalePrice)</td>
                                             <td>$@(product.CostPrice)</td>

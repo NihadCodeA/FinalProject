@@ -9,8 +9,8 @@ namespace FinalProject.Models
         public string NameAz { get; set; }
         public string? Image { get; set; }
         [NotMapped]
-        public IFormFile ImageFile { get; set; }
+        public IFormFile? ImageFile { get; set; }
 
-        List<Product> Products { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }

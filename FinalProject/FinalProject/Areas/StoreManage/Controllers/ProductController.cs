@@ -32,6 +32,7 @@ namespace FinalProject.Areas.StoreManage.Controllers
         }
         public IActionResult Index(int page = 1,string? productName=null)
         {
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             ViewData["PageName"] = "Products";
             ViewData["Localizer"] = _localizer;
             Store store = new Store();
@@ -42,11 +43,11 @@ namespace FinalProject.Areas.StoreManage.Controllers
             ViewData["StoreName"] = store.StoreName ?? "";
             if (store == null) return NotFound();
             var query = _context.Products.Include(s => s.Store)
-                .Include(pi => pi.ProductImages).Where(x => x.StoreId == store.Id).AsQueryable();
+                .Include(pi => pi.ProductImages).Include(c=>c.Category).Where(x => x.StoreId == store.Id).AsQueryable();
             if (productName != null)
             {
                 query = _context.Products.Where(p=>p.Name.Contains(productName)).Include(s => s.Store)
-                .Include(pi => pi.ProductImages).Where(x => x.StoreId == store.Id).AsQueryable();
+                .Include(pi => pi.ProductImages).Include(c=>c.Category).Where(x => x.StoreId == store.Id).AsQueryable();
             }
             var pagenatedProducts = PaginatedList<Product>.Create(query, 15, page);
 
@@ -57,6 +58,8 @@ namespace FinalProject.Areas.StoreManage.Controllers
         public IActionResult AddProduct()
         {
             ViewData["Localizer"] = _localizer;
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            ViewBag.Categories = _context.Categories.Include(p => p.Products).ToList();
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
             {
@@ -71,6 +74,8 @@ namespace FinalProject.Areas.StoreManage.Controllers
         [HttpPost]
         public IActionResult AddProduct(Product product)
         {
+            ViewBag.Categories = _context.Categories.Include(p => p.Products).ToList();
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             ViewData["Localizer"] = _localizer;
             if (product == null) return NotFound();
             Store store = new Store();
@@ -268,6 +273,8 @@ namespace FinalProject.Areas.StoreManage.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Categories = _context.Categories.Include(p => p.Products).ToList();
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             ViewData["Localizer"] = _localizer;
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
@@ -279,17 +286,19 @@ namespace FinalProject.Areas.StoreManage.Controllers
             ViewData["StoreName"] = store.StoreName ?? "";
             ViewData["StoreId"] = store.Id.ToString() ?? "1";
 
-            Product product = _context.Products.Include(pi => pi.ProductImages).FirstOrDefault(x => x.Id == id);
+            Product product = _context.Products.Include(pi => pi.ProductImages).Include(c => c.Category).FirstOrDefault(x => x.Id == id);
             if (product == null) return NotFound();
             return View(product);
         }
         [HttpPost]
         public IActionResult Update(Product product)
         {
+            ViewBag.Categories = _context.Categories.Include(p => p.Products).ToList();
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             ViewData["Localizer"] = _localizer;
             if (!ModelState.IsValid) return View();
 
-            Product existProduct = _context.Products.Include(pi => pi.ProductImages).FirstOrDefault(x => x.Id == product.Id);
+            Product existProduct = _context.Products.Include(pi => pi.ProductImages).Include(c=>c.Category).FirstOrDefault(x => x.Id == product.Id);
             if (existProduct == null) return NotFound();
             Store store = new Store();
             if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
@@ -495,6 +504,11 @@ namespace FinalProject.Areas.StoreManage.Controllers
             existProduct.DiscountEndingDate = product.DiscountEndingDate;
             existProduct.ProductCount = product.ProductCount;
             existProduct.ProductCode = product.ProductCode;
+            
+            var categoryId = product.CategoryId;
+            var category = _context.Categories.Find(categoryId);
+            existProduct.Category = category;
+
             _context.SaveChanges();
             return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }

@@ -195,6 +195,9 @@
   <data name="Add_Product" xml:space="preserve">
     <value>Add product</value>
   </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
@@ -203,6 +206,9 @@
   </data>
   <data name="Creation_Time" xml:space="preserve">
     <value>Creation time</value>
+  </data>
+  <data name="Daily_Best_Sells" xml:space="preserve">
+    <value>Daily best sells</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
@@ -231,6 +237,9 @@
   <data name="InStock" xml:space="preserve">
     <value>In stock</value>
   </data>
+  <data name="Mega_Menu" xml:space="preserve">
+    <value>Mega menu</value>
+  </data>
   <data name="Navbar_Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
@@ -248,6 +257,9 @@
   </data>
   <data name="Next" xml:space="preserve">
     <value>Next</value>
+  </data>
+  <data name="Popular_Products" xml:space="preserve">
+    <value>Popular products</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Previous</value>

@@ -27,6 +27,14 @@
                             <span class="nav-link-text">Sliderlar</span>
                         </div>
                     </a>
+                </li> 
+                <li class="nav-item ">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Categories" ? "active" : "") " asp-area="manage" asp-controller="admin" asp-action="categories" asp-route-page="1">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"> <i class="bi bi-task"></i></span>
+                            <span class="nav-link-text">Kateqoriyalar</span>
+                        </div>
+                    </a>
                 </li>
 
                 @if(User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))

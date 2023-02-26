@@ -72,7 +72,7 @@ namespace FinalProject.Areas.Manage.Controllers
             {
                 if (slider.ImageFile.Length > 3145728)
                 {
-                    ModelState.AddModelError("PosterImgFile", "Şəklin ölçüsü 3mb-dən çox ola bilməz!");
+                    ModelState.AddModelError("ImageFile", "Şəklin ölçüsü 3mb-dən çox ola bilməz!");
                     return View();
                 }
             slider.Image = FileManager.SaveFile(_env.WebRootPath, "uploads/sliders", slider.ImageFile);

@@ -16,8 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Admin/Categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Admin/CreateAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXENyZWF0ZUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Admin/CreateCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXENyZWF0ZUNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Admin/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Dashboard/Admins.cshtml]
