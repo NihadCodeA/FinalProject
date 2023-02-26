@@ -1,4 +1,7 @@
 ﻿using FinalProject.DAL;
+using FinalProject.Helpers;
+using FinalProject.Models;
+using FinalProject.ViewModels.HomeViewModels;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -9,16 +12,23 @@ namespace FinalProject.Controllers
     {
         private readonly Database _context ;
         private readonly IStringLocalizer<SharedResource> _localizer;
-        public HomeController(Database context, IStringLocalizer<SharedResource> localizer)
+        private readonly HttpContext _httpContext;
+        public HomeController(Database context, IStringLocalizer<SharedResource> localizer, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
             _localizer = localizer;
+            _httpContext = httpContextAccessor.HttpContext;
         }
 
         public IActionResult Index()
         {
             ViewData["Dashboard"] = _localizer.GetString("Navbar_Dashboard");
-            return View();
+            List<Slider> sliders= _context.Sliders.OrderBy(x=>x.Order).ToList();
+            HomeViewModel homeVM = new HomeViewModel {
+                Sliders = sliders,
+                Lang = GetCurrentLanguage.CurrentLanguage(_httpContext),
+            };
+            return View(homeVM);
         }
 
         public IActionResult ChangeLanguage(string culture)

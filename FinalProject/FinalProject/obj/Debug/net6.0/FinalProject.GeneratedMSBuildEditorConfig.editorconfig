@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nihad\Desktop\FinalProject\FinalProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Admin/CreateAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXENyZWF0ZUFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Dashboard/Admins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxBZG1pbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Shared/Components/AdminHeader/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXEFkbWluSGVhZGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Slider/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Slider/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/Slider/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNsaWRlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/Manage/Views/_ViewImports.cshtml]

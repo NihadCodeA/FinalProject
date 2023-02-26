@@ -39,6 +39,7 @@ namespace FinalProject.Areas.Manage.Controllers
             ViewData["User"]=user;
             return View(user);
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Stores(int page=1,string? storeName=null)
         {
             ViewData["PageName"] = "Stores";
@@ -57,6 +58,7 @@ namespace FinalProject.Areas.Manage.Controllers
             var pagenatedStores = PaginatedList<Store>.Create(query, 15, page);
             return View(pagenatedStores);
         }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Users(int page=1,string? userName=null)
         {
             ViewData["PageName"] = "Users";
@@ -74,7 +76,8 @@ namespace FinalProject.Areas.Manage.Controllers
             }
             var pagenatedUsers = PaginatedList<AppUser>.Create(query, 15, page);
             return View(pagenatedUsers);
-        }   
+        }
+        [Authorize(Roles = "SuperAdmin")]
         public async Task<IActionResult> Admins(int page=1,string? adminName=null)
         {
             ViewData["PageName"] = "Admins";
@@ -93,7 +96,6 @@ namespace FinalProject.Areas.Manage.Controllers
             var pagenatedAdmins = PaginatedList<AppUser>.Create(query, 15, page);
             return View(pagenatedAdmins);
         }
-
 
 
         [HttpGet]

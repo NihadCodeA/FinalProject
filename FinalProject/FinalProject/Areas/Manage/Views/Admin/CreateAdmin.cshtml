@@ -1,0 +1,88 @@
+﻿@model AdminRegisterViewModel
+<style>
+    .password-field i {
+        position: absolute;
+        top: 0.6rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+</style>
+<main class="main-content-wrapper">
+    <div class="container">
+        <div class="row mb-8">
+            <div class="col-12 col-lg-8 mx-auto">
+                <!-- page header -->
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <div>
+                        <h2>Admin əlavə et</h2>
+                    </div>
+                    <div>
+                        <a asp-area="manage" asp-controller="dashboard" asp-action="admins" class="btn btn-light">Geri qayıt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row ">
+            <div class="col-lg-8 col-12 mb-5 mx-auto">
+                <form method="post" asp-action="createadmin">
+                    <div class="row g-3">
+                        <!-- col -->
+                        <div class="col-12">
+                            <label asp-for="Fullname">Tam ad</label>
+                            <input asp-for="Fullname" class="form-control" placeholder="Tam ad">
+                            <span class="text-danger" asp-validation-for="Fullname"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Email">Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="Email">
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="Password">Şifrə</label>
+                            <div class="password-field position-relative">
+                                <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Şifrəni daxil edin">
+                                <span><i id="passwordToggler" class="bi bi-eye-slash"></i></span>
+                            </div>
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="ConfirmPassword">Təsdiqləmə şifrəsi</label>
+                            <div class="password-field position-relative">
+                                <input asp-for="ConfirmPassword" type="password"
+                                       placeholder="Təsdiqləmə şifrəsin daxil edin" id="confirmPassword" class="form-control">
+                                <span><i id="confirmPasswordToggler" class="bi bi-eye-slash"></i></span>
+                            </div>
+                            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                        </div>
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        <!-- btn -->
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-primary">Əlavə et</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    var password = document.getElementById("password"),
+        passwordtoggler = document.getElementById("passwordToggler");
+    showHidePassword = () => {
+        "password" == password.type ? (password.setAttribute("type", "text"),
+            passwordtoggler.classList.add("bi-eye"), passwordtoggler.classList.remove("bi-eye-slash")) :
+            (passwordtoggler.classList.remove("bi-eye"), passwordtoggler.classList.add("bi-eye-slash"),
+                password.setAttribute("type", "password"))
+    }, passwordtoggler.addEventListener("click", showHidePassword);
+
+    var confirmPassword = document.getElementById("confirmPassword"),
+        confirmPasswordtoggler = document.getElementById("confirmPasswordToggler");
+    showHideConfirmPassword = () => {
+        "password" == confirmPassword.type ? (confirmPassword.setAttribute("type", "text"),
+            confirmPasswordtoggler.classList.add("bi-eye"), confirmPasswordtoggler.classList.remove("bi-eye-slash")) :
+            (confirmPasswordtoggler.classList.remove("bi-eye"), confirmPasswordtoggler.classList.add("bi-eye-slash"),
+                confirmPassword.setAttribute("type", "password"))
+    }, confirmPasswordtoggler.addEventListener("click", showHideConfirmPassword);
+</script>

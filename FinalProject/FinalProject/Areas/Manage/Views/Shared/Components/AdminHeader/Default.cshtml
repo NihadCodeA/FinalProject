@@ -21,30 +21,43 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1" >
+                    <a class="nav-link @((string)ViewData["PageName"]=="Sliders" ? "active" : "") " asp-area="manage" asp-controller="slider" asp-action="index" asp-route-page="1">
                         <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
-                            <span class="nav-link-text">
-                                Mağazalar
-                             </span>
-                        </div>
-                    </a>
-               <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
-                            <span class="nav-link-text">İstifadəçilər</span>
+                            <span class="nav-link-icon"> <i class="bi bi-cast"></i></span>
+                            <span class="nav-link-text">Sliderlar</span>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
-                            <span class="nav-link-text">Adminlər</span>
-                        </div>
-                    </a>
-                </li>
+
+                @if(User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
+                {
+                   <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1" >
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
+                                <span class="nav-link-text">
+                                    Mağazalar
+                                 </span>
+                            </div>
+                        </a>
+                    </li>
+                   <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                                <span class="nav-link-text">İstifadəçilər</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                                <span class="nav-link-text">Adminlər</span>
+                            </div>
+                        </a>
+                    </li>
+                }
 
                 <li class="nav-item ">
                     <a class="nav-link @((string)ViewData["PageName"]=="Settings" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="update" asp-route-Id="@user.Id">
@@ -89,30 +102,42 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1">
+                    <a class="nav-link @((string)ViewData["PageName"]=="Sliders" ? "active" : "") " asp-area="manage" asp-controller="slider" asp-action="index" asp-route-page="1">
                         <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
-                            <span class="nav-link-text">
-                                Mağazalar
-                            </span>
-                        </div>
-                    </a>
-                <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
-                            <span class="nav-link-text">İstifadəçilər</span>
+                            <span class="nav-link-icon"> <i class="bi bi-cast"></i></span>
+                            <span class="nav-link-text">Sliderlar</span>
                         </div>
                     </a>
                 </li>
-                <li class="nav-item ">
-                    <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
-                        <div class="d-flex align-items-center">
-                            <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
-                            <span class="nav-link-text">Adminlər</span>
-                        </div>
-                    </a>
-                </li>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
+                {
+                    <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Stores" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="stores" asp-route-page="1">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-shop"></i></span>
+                                <span class="nav-link-text">
+                                    Mağazalar
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Users" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="users" asp-route-page="1">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                                <span class="nav-link-text">İstifadəçilər</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link @((string)ViewData["PageName"]=="Admins" ? "active" : "")" asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="1">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"> <i class="bi bi-people"></i></span>
+                                <span class="nav-link-text">Adminlər</span>
+                            </div>
+                        </a>
+                    </li>
+                }
 
                 <li class="nav-item ">
                     <a class="nav-link @((string)ViewData["PageName"]=="Settings" ? "active" : "") " asp-area="manage" asp-controller="dashboard" asp-action="update" asp-route-Id="@user.Id">

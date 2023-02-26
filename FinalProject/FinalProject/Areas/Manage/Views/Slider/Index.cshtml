@@ -1,0 +1,129 @@
+﻿@model PaginatedList<Slider>
+@{
+    int count = (Model.Page - 1) * 15;
+}
+<style>
+    .text{
+        width:80px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+</style>
+
+<!-- main -->
+<main class="main-content-wrapper">
+    <div class="container">
+        <div class="row mb-8">
+            <div class="col-md-12">
+                <!-- page header -->
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <div>
+                        <h2>Sliderlar</h2>
+                    </div>
+                    <div>
+                        <a asp-area="manage" asp-controller="slider" asp-action="create" class="btn btn-light">Slider əlavə et</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row ">
+            <div class="col-xl-12 col-12 mb-5">
+                <!-- card -->
+                <div class="card h-100 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-0">
+                        <!-- table -->
+                        <div class="table-responsive">
+                            <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Şəkil</th>
+                                        <th>Mesaj</th>
+                                        <th>Başlıq yazısı</th>
+                                        <th>Sıra</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (Slider slider in Model)
+                                    {
+                                        count++;
+                                        <tr>
+                                            <td>
+                                                @count
+                                            </td>
+                                            <td>
+                                                <img src="~/uploads/sliders/@slider.Image" alt="Ecommerce" class="icon-shape icon-xl">
+                                            </td>
+                                            <td class="text">
+                                                @slider.MessageAz
+                                            </td>
+                                            <td class="text">
+                                                @slider.HeaderTextAz
+                                            </td>
+                                            <td>
+                                                @slider.Order
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="feather-icon icon-more-vertical fs-5"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" asp-action="update" asp-route-id="@slider.Id"><i class="bi bi-edit me-3"></i>Düzəliş et</a></li>
+                                                        <li><a class="dropdown-item" asp-action="delete" asp-route-id="@slider.Id"><i class="bi bi-trash me-3"></i>Sil</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class=" border-top d-md-flex justify-content-between align-items-center px-6 py-6">
+                        <nav class="mt-2 mt-md-0">
+                            <ul class="pagination">
+                                @if (Model.HasPrevious)
+                                {
+                                    <li class="page-item disabled">
+                                        <a class="page-link mx-1 "
+                                       asp-area="manage" asp-controller="slider" asp-action="index" asp-route-page="@(Model.Page-1)"
+                                       aria-label="əvvəlki">
+                                            <i class="feather-icon icon-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                }
+                                @for (int i = 1; i <= Model.TotalPage; i++)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link mx-1 active" asp-area="manage" asp-controller="slider"
+                                       asp-action="index" asp-route-page="@i">
+                                            @i
+                                        </a>
+                                    </li>
+                                }
+                                @if (Model.HasNext)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link mx-1 text-body"
+                                       asp-area="manage" asp-controller="slider" asp-action="index" asp-route-page="@(Model.Page+1)"
+                                       aria-label="növbəti">
+                                            <i class="feather-icon icon-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</main>

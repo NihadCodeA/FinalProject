@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IAlINKcAMGLRbzgI6mjN/yvzVQVh+8SZPVyKH97HPjc=",
+  "Hash": "CT7nXd1yim6HHF0Ce3LSNC6dcHapeF7gS9R9KvTggcU=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7988,6 +7988,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\f8b77403-fd2d-4dae-8b38-7c9af95cce8atea-coffee-drinks.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\sliders\\6d2ce17d-b36f-45fc-bc88-200fa8b8ed0dslide-1.jpg",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "uploads/sliders/6d2ce17d-b36f-45fc-bc88-200fa8b8ed0dslide-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\sliders\\6d2ce17d-b36f-45fc-bc88-200fa8b8ed0dslide-1.jpg"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg",

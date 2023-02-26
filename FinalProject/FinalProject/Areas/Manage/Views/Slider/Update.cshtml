@@ -1,0 +1,91 @@
+﻿@model Slider
+<main class="main-content-wrapper">
+    <div class="container">
+        <div class="row mb-8">
+            <div class="col-md-12">
+                <!-- page header -->
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <div>
+                        <h2>Sliderda düzəliş et</h2>
+                    </div>
+                    <div>
+                        <a asp-area="manage" asp-controller="slider" asp-action="index" asp-route-page="1" class="btn btn-light">Geri qayıt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row ">
+            <div class="col-12 mb-5 mx-auto">
+                <form method="post" asp-action="update">
+                    <div class="row g-3">
+                        <!-- col -->
+                        <div class="col-12 col-md-6">
+                            <label asp-for="MessageAz">Mesaj (az)</label>
+                            <input asp-for="MessageAz" class="form-control" placeholder="mesaj (az)">
+                            <span class="text-danger" asp-validation-for="MessageAz"></span>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label asp-for="MessageEn">Mesaj (en)</label>
+                            <input asp-for="MessageEn" class="form-control" placeholder="mesaj (en)">
+                            <span class="text-danger" asp-validation-for="MessageEn"></span>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <label asp-for="HeaderTextAz">Başlıq yazısı (az) <sup class="text-danger">*</sup></label>
+                            <input asp-for="HeaderTextAz" class="form-control" placeholder="başlıq yazısı (az)">
+                            <span class="text-danger" asp-validation-for="HeaderTextAz"></span>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <label asp-for="HeaderTextEn">Başlıq yazısı (en) <sup class="text-danger">*</sup></label>
+                            <input asp-for="HeaderTextEn" class="form-control" placeholder="başlıq yazısı (en)">
+                            <span class="text-danger" asp-validation-for="HeaderTextEn"></span>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <label asp-for="Order">Sıra <sup class="text-danger">*</sup></label>
+                            <input asp-for="Order" class="form-control" placeholder="sıra">
+                            <span class="text-danger" asp-validation-for="Order"></span>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label asp-for="RedirectUrl">Link <sup class="text-danger">*</sup></label>
+                            <input asp-for="RedirectUrl" class="form-control" placeholder="link">
+                            <span class="text-danger" asp-validation-for="RedirectUrl"></span>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label asp-for="RedirectTextAz">Buton yazısı (az)<sup class="text-danger">*</sup></label>
+                            <input asp-for="RedirectTextAz" class="form-control" placeholder="Buton yazısı (az)">
+                            <span class="text-danger" asp-validation-for="RedirectTextAz"></span>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label asp-for="RedirectTextEn">Buton yazısı (en)<sup class="text-danger">*</sup></label>
+                            <input asp-for="RedirectTextEn" class="form-control" placeholder="Buton yazısı (en)">
+                            <span class="text-danger" asp-validation-for="RedirectTextEn"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="DetailAz">Haqqında (az)<sup class="text-danger">*</sup></label>
+                            <textarea asp-for="DetailAz" class="form-control" placeholder="haqqında (az)"></textarea>
+                            <span class="text-danger" asp-validation-for="DetailAz"></span>
+                        </div>
+                        <div class="col-12">
+                            <label asp-for="DetailEn">Haqqında (en) <sup class="text-danger">*</sup></label>
+                            <textarea asp-for="DetailEn" class="form-control" placeholder="haqqında (en)"></textarea>
+                            <span class="text-danger" asp-validation-for="DetailEn"></span>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <label class="form-label" asp-for="ImageFile">Şəkil<sup class="text-danger">*</sup></label>
+                            <input asp-for="ImageFile" type="file"  class="form-control">
+                            <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            @if (Model.Image != null)
+                            {
+                                <img style="max-width:150px;max-height:140px" src="~/uploads/sliders/@Model.Image" />
+                            }
+                        </div>
+                        <!-- btn -->
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-primary">Əlavə et</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

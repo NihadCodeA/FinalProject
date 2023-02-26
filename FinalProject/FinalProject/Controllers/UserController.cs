@@ -33,7 +33,7 @@ namespace FinalProject.Controllers
             AppUser user = await _userManager.FindByIdAsync(Id);
             if (User.Identity.IsAuthenticated)
             {
-                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                if (user == null)
                 {
                     return NotFound();
                 }
@@ -55,7 +55,7 @@ namespace FinalProject.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
-                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                if (user == null)
                 {
                     return NotFound();
                 }
@@ -81,7 +81,7 @@ namespace FinalProject.Controllers
             AppUser user = await _userManager.FindByIdAsync(Id);
             if (User.Identity.IsAuthenticated)
             {
-                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                if (user == null)
                 {
                     return NotFound();
                 }
@@ -98,7 +98,7 @@ namespace FinalProject.Controllers
             if (User.Identity.IsAuthenticated)
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
-                if (user == null || !(await _userManager.IsInRoleAsync(user, "Member")))
+                if (user == null)
                 {
                     return NotFound();
                 }

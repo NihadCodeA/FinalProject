@@ -13,6 +13,9 @@
                     <div>
                         <h2>Adminlər</h2>
                     </div>
+                    <div>
+                        <a asp-area="manage" asp-controller="admin" asp-action="createadmin" class="btn btn-light">Admin əlavə et</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,7 +102,7 @@
                                 {
                                     <li class="page-item disabled">
                                         <a class="page-link mx-1 "
-                                       href="#"
+                                       asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="@(Model.Page-1)"
                                        aria-label="əvvəlki">
                                             <i class="feather-icon icon-chevron-left"></i>
                                         </a>
@@ -109,7 +112,7 @@
                                 {
                                     <li class="page-item">
                                         <a class="page-link mx-1 active" asp-area="manage" asp-controller="dashboard"
-                                       asp-action="stores" asp-route-page="@i">
+                                       asp-action="admins" asp-route-page="@i">
                                             @i
                                         </a>
                                     </li>
@@ -118,7 +121,7 @@
                                 {
                                     <li class="page-item">
                                         <a class="page-link mx-1 text-body"
-                                       href="#"
+                                       asp-area="manage" asp-controller="dashboard" asp-action="admins" asp-route-page="@(Model.Page+1)"
                                        aria-label="növbəti">
                                             <i class="feather-icon icon-chevron-right"></i>
                                         </a>
