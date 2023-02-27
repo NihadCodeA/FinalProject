@@ -152,8 +152,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Product/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Product/ShopCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTaG9wQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Shared/Components/Footer/Default.cshtml]
@@ -162,6 +170,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Shared/_BasketItemVMPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXNrZXRJdGVtVk1QYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Views/Shared/_FooterPartial.cshtml]

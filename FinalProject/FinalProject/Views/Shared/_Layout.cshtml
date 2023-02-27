@@ -57,45 +57,25 @@
     <script>
         let addToBasketBtns = document.querySelectorAll(".add-to-basket-btn");
         let deleteBtns = document.querySelectorAll(".cross-btn");
-        //deleteBtns.forEach(btn => btn.addEventListener("click", function (e) {
-        //    e.preventDefault();
-        //    let url = btn.getAttribute("href");
-        //    fetch(url).then(res => {
-        //        //if (res.status == 200) {
-        //        fetch('/book/getbasket')
-        //            .then((response) => response.json())
-        //            .then((data) => {
-        //                for (let i = 0; i < data.length; i++) {
-        //                    console.log(data[i]);
-        //                    let basketItemCount = document.querySelector(".basketItemCount");
-        //                    //if (data[i].count == 0) btn.parentElement.parentElement.remove()
-        //                    //else {
-        //                    basketItemCount.innerHTML = `<span class="qty basketItemCount">${data[i].count} ×</span>`
-        //                    //}
 
-        //                }
-        //            })
-        //        //}
-        //    })
-        //}))
-        //deleteBtns.forEach((btn, i) => btn.addEventListener("click", function (e) {
-        //    e.preventDefault()
-        //    fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
-        //        Toastify({
-        //            text: "Deleted from shopping cart",
-        //            gravity: "bottom",
-        //            duration: 3000,
-        //            style: {
-        //                background: "red"
-        //            }
-        //        }).showToast();
-        //        console.log(response[i])
-        //        if (response[i].count == 0) btn.parentElement.parentElement.remove()
-        //        else {
-        //            btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
-        //        }
-        //    })
-        //}))
+        deleteBtns.forEach((btn, i) => btn.addEventListener("click", function (e) {
+            e.preventDefault()
+            fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
+                Toastify({
+                    text: "Deleted from shopping cart",
+                    gravity: "bottom",
+                    duration: 3000,
+                    style: {
+                        background: "red"
+                    }
+                }).showToast();
+                console.log(response.Count)
+                if (response[i].count == 0) btn.parentElement.parentElement.parentElement.parentElement.remove()
+                else {
+                    btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
+                }
+            })
+        }))
         addToBasketBtns.forEach(btn => btn.addEventListener("click", function (e) {
             e.preventDefault();
             url = btn.getAttribute("href")
@@ -109,29 +89,29 @@
                             background: "green"
                         }
                     }).showToast();
-                    //fetch("/book/getbasket").then(response => response.text())
-                    //    .then((html) => {
-                    //        block = document.querySelector(".single-cart-block")
-                    //        block.innerHTML = html
-                    //        block.querySelectorAll(".btn-deletebook").forEach((btn, i) => btn.addEventListener("click", function (e) {
-                    //            e.preventDefault()
-                    //            fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
-                    //                Toastify({
-                    //                    text: "Deleted from shopping cart",
-                    //                    gravity: "bottom",
-                    //                    duration: 3000,
-                    //                    style: {
-                    //                        background: "red"
-                    //                    }
-                    //                }).showToast();
-                    //                console.log(response)
-                    //                if (response[i].count == 0) btn.parentElement.parentElement.remove()
-                    //                else {
-                    //                    btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
-                    //                }
-                    //            })
-                    //        }))
-                    //    })
+                    fetch("/product/getbasket").then(response => response.text())
+                        .then((html) => {
+                            block = document.querySelector(".basketContainer")
+                            block.innerHTML = html
+                            block.querySelectorAll(".deleteProduct").forEach((btn, i) => btn.addEventListener("click", function (e) {
+                                e.preventDefault()
+                                fetch(btn.getAttribute("href")).then(response => response.json()).then(response => {
+                                    Toastify({
+                                        text: "Deleted from shopping cart",
+                                        gravity: "bottom",
+                                        duration: 3000,
+                                        style: {
+                                            background: "red"
+                                        }
+                                    }).showToast();
+                                    console.log(response)
+                                    if (response[i].count == 0) btn.parentElement.parentElement.parentElement.parentElement.remove()
+                                    else {
+                                        btn.parentElement.querySelector("#basketItemCount").innerHTML = response[i].count
+                                    }
+                                })
+                            }))
+                        })
                 }
                 else alert("Unknown error")
             })

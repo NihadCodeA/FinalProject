@@ -121,7 +121,7 @@
                                     <div>
                                         @if (product.DiscountPercentage > 0)
                                         {
-                                            <span class="text-dark">@(product.SalePrice * (1 - product.DiscountPercentage / 100))</span>
+                                            <span class="text-dark">@((product.SalePrice * (1 - product.DiscountPercentage / 100)).ToString("0.00"))</span>
                                         }
                                         <span class="@(product.DiscountPercentage>0 ? "text-decoration-line-through text-muted" : "text-dark") ">$@(product.SalePrice)</span>
                                     </div>
@@ -207,7 +207,11 @@
 
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <div>
-                                            <span class="text-dark">$13</span> <span class="text-decoration-line-through text-muted">$18</span>
+                                            @if (discountedProduct.DiscountPercentage > 0)
+                                            {
+                                                <span class="text-dark">@((discountedProduct.SalePrice * (1 - discountedProduct.DiscountPercentage / 100)).ToString("0.00"))</span>
+                                            }
+                                            <span class="@(discountedProduct.DiscountPercentage>0 ? "text-decoration-line-through text-muted" : "text-dark") ">$@(discountedProduct.SalePrice)</span>
                                         </div>
                                         <div>
                                             <small class="text-warning">

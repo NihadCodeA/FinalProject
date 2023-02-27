@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models;
+using FinalProject.ViewModels.ProductViewModels;
 using Microsoft.Extensions.Localization;
 
 namespace FinalProject.ViewModels.HeaderViewModels
@@ -15,5 +16,6 @@ namespace FinalProject.ViewModels.HeaderViewModels
         public List<Category> Categories16 { get; set; }
         public List<Category> Categories24 { get; set; }
         public List<Category> Categories32 { get; set; }
+        public List<BasketItemViewModel> BasketItemViewModels { get; set; }
     }
 }
