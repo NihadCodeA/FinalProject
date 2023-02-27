@@ -138,7 +138,145 @@ namespace FinalProject.Controllers
 
         public async Task<IActionResult> Checkout()
         {
-            return View();
+            AppUser appUser = new AppUser();
+            if (User.Identity.IsAuthenticated)
+            {
+                appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            //------------------------------------------------------------------------------
+            List<ProductCheckoutViewModel> checkoutVMS = new List<ProductCheckoutViewModel>();
+            ProductCheckoutViewModel checkoutVM = null;
+            OrderViewModel orderVM = null;
+            List<BasketItemViewModel> basketItemsVM = new List<BasketItemViewModel>();
+            List<BasketItem> basketItems = new List<BasketItem>();
+            BasketItemViewModel basketItem = null;
+            if (User.Identity.IsAuthenticated == false)
+            {
+                string basketItemStr = HttpContext.Request.Cookies["BasketItems"];
+
+                if (basketItemStr != null)
+                {
+                    basketItemsVM = JsonConvert.DeserializeObject<List<BasketItemViewModel>>(basketItemStr);
+                    foreach (var item in basketItemsVM)
+                    {
+                        checkoutVM = new ProductCheckoutViewModel
+                        {
+                            Product = _context.Products.Include(pi => pi.ProductImages).FirstOrDefault(x => x.Id == item.ProductId),
+                            Count = item.Count,
+
+                        };
+                        checkoutVMS.Add(checkoutVM);
+                    }
+                }
+
+            }
+            else
+            {
+                basketItems = _context.BasketItems.Include(p=>p.Product).Include(pi=>pi.Product.ProductImages).Where(x => x.AppUserId == appUser.Id).ToList();
+                foreach (var item in basketItems)
+                {
+                        checkoutVM = new ProductCheckoutViewModel
+                        {
+                            Product = item.Product,
+                            Count = item.Count,
+                        };
+                    checkoutVMS.Add(checkoutVM);
+                }
+            }
+            //---------------------------------------------------------------------------------
+            orderVM = new OrderViewModel
+            {
+                ChechoutItems = checkoutVMS,
+            };
+            return View(orderVM);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Order(OrderViewModel orderVM)
+        {
+            List<BasketItemViewModel> basketItems = new List<BasketItemViewModel>();
+            List<ProductCheckoutViewModel> checkoutItems = new List<ProductCheckoutViewModel>();
+            OrderItem orderItem = null;
+            List<BasketItem> memberBasketItems = new List<BasketItem>();
+            AppUser member = null;
+            string basketItemStr = HttpContext.Request.Cookies["BasketItems"];
+            double totalPrice = 0;
+            if (User.Identity.IsAuthenticated)
+            {
+                member = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+
+            Order order = new Order
+            {
+                FullName = orderVM.FullName,
+                Email = orderVM.Email,
+                Country = orderVM.Country,
+                City = orderVM.City,
+                Address1 = orderVM.Address1,
+                Address2 = orderVM.Address2,
+                OtherNotes = orderVM.OtherNotes,
+                PhoneNumber = orderVM.PhoneNumber,
+                CreatedTime = DateTime.Now,
+                AppUserId = member?.Id,
+            };
+            StoreOrderItem storeOrder = new StoreOrderItem ();
+            storeOrder.AppUserId = member?.Id;
+            if (member == null)
+            {
+                if (basketItemStr != null)
+                {
+                    basketItems = JsonConvert.DeserializeObject<List<BasketItemViewModel>>(basketItemStr);
+
+                    foreach (var item in basketItems)
+                    {
+                        Product product = _context.Products.Include(s=>s.Store).FirstOrDefault(x => x.Id == item.ProductId);
+                        if (product == null) return NotFound();
+                        orderItem = new OrderItem
+                        {
+                            Product= product,
+                            Store = product.Store,
+                            ProductName = product.Name,
+                            CostPrice = product.CostPrice,
+                            DiscountPercentage = product.DiscountPercentage,
+                            Count = item.Count,
+                            SalePrice = (product.SalePrice * ((1 - product.DiscountPercentage / 100)))
+                        };
+                        totalPrice += orderItem.SalePrice * orderItem.Count;
+                        order.OrderItems.Add(orderItem);
+                        storeOrder.OrderItems.Add(orderItem);
+                        storeOrder.Store = product.Store;
+                        storeOrder.StoreId = (int)product.StoreId;
+                    }
+                }
+            }
+            else
+            {
+                memberBasketItems = _context.BasketItems.Include(x => x.Product).Where(x => x.AppUserId == member.Id).ToList();
+                foreach (var item in memberBasketItems)
+                {
+                    Product product = _context.Products.Include(s => s.Store).FirstOrDefault(x => x.Id == item.ProductId);
+                    if (product == null) return NotFound();
+                    orderItem = new OrderItem
+                    {
+                        Product = product,
+                        Store = product.Store,
+                        ProductName = product.Name,
+                        CostPrice = product.CostPrice,
+                        DiscountPercentage = product.DiscountPercentage,
+                        Count = item.Count,
+                        SalePrice = (product.SalePrice * ((1 - product.DiscountPercentage / 100)))
+                    };
+                    totalPrice += orderItem.SalePrice * orderItem.Count;
+                    order.OrderItems.Add(orderItem);
+                    storeOrder.OrderItems.Add(orderItem);
+                    storeOrder.Store = product.Store;
+                    storeOrder.StoreId = (int)product.StoreId;
+                }
+            }
+            order.TotalPrice = totalPrice;
+            _context.Orders.Add(order);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Checkout));
         }
 
         public async Task<IActionResult> AddToBasket(int productId)

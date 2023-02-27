@@ -31,6 +31,5 @@ namespace FinalProject.Models
         public int? ViewCount { get; set; }
         public bool IsActive { get; set; } = false;
         public bool IsBanned { get; set; } = false;
-
     }
 }
