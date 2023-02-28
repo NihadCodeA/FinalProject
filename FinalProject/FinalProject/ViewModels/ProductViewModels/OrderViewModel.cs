@@ -22,9 +22,9 @@ namespace FinalProject.ViewModels.ProductViewModels
         public string? Address2 { get; set; }
         [StringLength(maximumLength: 1500), Required(ErrorMessage = "Text_Required")]
         public string? OtherNotes { get; set; }
-        public double TotalPrice { get; set; }
-        public DateTime CreatedTime { get; set; }
-        public AppUser AppUser { get; set; }
-        public List<ProductCheckoutViewModel> ChechoutItems { get; set; }
+        public double? TotalPrice { get; set; }
+        public DateTime? CreatedTime { get; set; }
+        public AppUser? AppUser { get; set; }
+        public List<ProductCheckoutViewModel>? ChechoutItems { get; set; }
     }
 }

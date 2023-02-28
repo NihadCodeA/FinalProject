@@ -14,13 +14,7 @@
                 <!-- page header -->
                 <div class="d-md-flex justify-content-between align-items-center">
                     <div>
-                        <h2>@localizer["Products"]</h2>
-                    </div>
-                    <!-- button -->
-                    <div>
-                        <a asp-area="storemanage" asp-controller="product" asp-action="addproduct" class="btn btn-primary">
-                            @localizer["Add_Product"]
-                        </a>
+                        <h2>Orders</h2>
                     </div>
                 </div>
             </div>
@@ -64,7 +58,11 @@
                                             <td>
                                                 @count
                                             </td>
-                                            <td>@order.Id</td>
+                                            <td><a asp-area="storemanage" asp-controller="product" 
+                                                asp-action="orderdetail" asp-route-orderId="@order.Id">
+                                                @order.Id
+                                                </a>
+                                            </td>
                                             <td>@order.FullName</td>
                                             <td>$@(order.TotalPrice)</td>
                                             <td>@order.OrderItems.Count</td>

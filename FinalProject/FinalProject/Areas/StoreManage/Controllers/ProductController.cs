@@ -550,13 +550,16 @@ namespace FinalProject.Areas.StoreManage.Controllers
             }
             ViewData["StoreName"] = store.StoreName ?? "";
             if (store == null) return NotFound();
-            var query = _context.Orders.Include(s => s.AppUser).Include(o=>o.OrderItems.Where(x=>x.StoreId==store.Id)).AsQueryable();
+            //var query = _context.Orders.Include(s => s.AppUser).Include(o => o.OrderItems.Where(x => x.StoreId == store.Id)).AsQueryable();
+            var query = _context.Orders.Include(s => s.AppUser)
+    .Include(o => o.OrderItems.Where(x => x.StoreId == store.Id))
+    .Where(o => o.OrderItems.Any(oi => oi.StoreId == store.Id)).AsQueryable();
             var pagenatedOrders = PaginatedList<Order>.Create(query, 10, page);
 
             return View(pagenatedOrders);
         }
 
-        public IActionResult OrderDetail()
+        public IActionResult OrderDetail(int orderId)
         {
             ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             ViewData["PageName"] = "Orders";
@@ -567,8 +570,10 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
             }
             ViewData["StoreName"] = store.StoreName ?? "";
-            List<OrderItem> storeOrders = _context.OrderItems.Include(o => o.Order).Where(s=>s.StoreId==store.Id).ToList();
-            ViewData["StoreOrder"] = _context.Orders.Include(oi => oi.OrderItems.Where(s=>s.StoreId==store.Id));
+            List<OrderItem> storeOrders = _context.OrderItems.Include(o => o.Order).Include(p=>p.Product)
+                .ThenInclude(pi=>pi.ProductImages).Where(s=>s.StoreId==store.Id && s.OrderId==orderId && s.Count>0).ToList();
+            ViewData["StoreOrder"] = _context.Orders.Include(oi => oi.OrderItems.Where(s=>s.StoreId==store.Id).
+            FirstOrDefault(x=>x.OrderId==orderId));
             return View(storeOrders);
         }
     }

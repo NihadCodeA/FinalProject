@@ -41,7 +41,7 @@
                                     <div class="mb-6">
                                         <h6>Customer Details</h6>
                                         <p class="mb-1 lh-lg">
-                                           <br>
+                                          @storeOrder<br>
                                             anderalex@example.com<br>
                                             +998 99 22123456
                                         </p>
@@ -85,133 +85,37 @@
                                         <tr>
                                             <th>Products</th>
                                             <th>Price</th>
+                                            <th>Discount price</th>
                                             <th>Quantity</th>
                                             <th>Total</th>
                                         </tr>
                                     </thead>
                                     <!-- tbody -->
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img src="../assets/images/products/product-img-1.jpg" alt=""
+                                        @foreach(OrderItem orderItem in Model){
+                                            <tr>
+                                                <td>
+                                                    <a href="#" class="text-inherit">
+                                                        <div class="d-flex align-items-center">
+                                                            <div>
+                                                                <img src="~/uploads/products/@orderItem.Product.ProductImages.FirstOrDefault(x=>x.IsPoster==true).Image" alt=""
                                                                  class="icon-shape icon-lg">
-                                                        </div>
-                                                        <div class="ms-lg-4 mt-2 mt-lg-0">
-                                                            <h5 class="mb-0 h6">
-                                                                Haldiram's Sev Bhujia
-                                                            </h5>
+                                                            </div>
+                                                            <div class="ms-lg-4 mt-2 mt-lg-0">
+                                                                <h5 class="mb-0 h6">
+                                                                    @orderItem.Product.Name
+                                                                </h5>
 
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td><span class="text-body">$18.0</span></td>
-                                            <td>1</td>
-                                            <td>$18.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img src="../assets/images/products/product-img-2.jpg" alt=""
-                                                                 class="icon-shape icon-lg">
-                                                        </div>
-                                                        <div class="ms-lg-4 mt-2 mt-lg-0">
-                                                            <h5 class="mb-0 h6">
-                                                                NutriChoice Digestive
-                                                            </h5>
-
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td><span class="text-body">$24.0</span></td>
-                                            <td>1</td>
-                                            <td>$24.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img src="../assets/images/products/product-img-3.jpg" alt=""
-                                                                 class="icon-shape icon-lg">
-                                                        </div>
-                                                        <div class="ms-lg-4 mt-2 mt-lg-0">
-                                                            <h5 class="mb-0 h6">
-                                                                Cadbury 5 Star Chocolate
-                                                            </h5>
-
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td><span class="text-body">$32.0</span></td>
-                                            <td>1</td>
-                                            <td>$32.0</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="#" class="text-inherit">
-                                                    <div class="d-flex align-items-center">
-                                                        <div>
-                                                            <img src="../assets/images/products/product-img-4.jpg" alt=""
-                                                                 class="icon-shape icon-lg">
-                                                        </div>
-                                                        <div class="ms-lg-4 mt-2 mt-lg-0">
-                                                            <h5 class="mb-0 h6">
-                                                                Onion Flavour Potato
-                                                            </h5>
-
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </td>
-                                            <td><span class="text-body">$3.0</span></td>
-                                            <td>2</td>
-                                            <td>$6.0</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="border-bottom-0 pb-0"></td>
-                                            <td class="border-bottom-0 pb-0"></td>
-                                            <td colspan="1" class="fw-medium text-dark ">
-                                                <!-- text -->
-                                                Sub Total :
-                                            </td>
-                                            <td class="fw-medium text-dark ">
-                                                <!-- text -->
-                                                $80.00
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="border-bottom-0 pb-0"></td>
-                                            <td class="border-bottom-0 pb-0"></td>
-                                            <td colspan="1" class="fw-medium text-dark ">
-                                                <!-- text -->
-                                                Shipping Cost
-                                            </td>
-                                            <td class="fw-medium text-dark  ">
-                                                <!-- text -->
-                                                $10.00
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td colspan="1" class="fw-semi-bold text-dark ">
-                                                <!-- text -->
-                                                Grand Total
-                                            </td>
-                                            <td class="fw-semi-bold text-dark ">
-                                                <!-- text -->
-                                                $90.00
-                                            </td>
-                                        </tr>
+                                                    </a>
+                                                </td>
+                                                <td><span class="text-body">$@(orderItem.Product.SalePrice)</span></td>
+                                                <td><span class="text-body">$@((orderItem.Product.SalePrice-(1-orderItem.Product.DiscountPercentage/100)).ToString("0.00"))</span></td>
+                                                <td>@orderItem.Count</td>
+                                                <td>$@(((orderItem.Product.SalePrice - (1 - orderItem.Product.DiscountPercentage / 100)) * orderItem.Count).ToString("0.00"))</td>
+                                            </tr>
+                                        }
 
                                     </tbody>
                                 </table>
