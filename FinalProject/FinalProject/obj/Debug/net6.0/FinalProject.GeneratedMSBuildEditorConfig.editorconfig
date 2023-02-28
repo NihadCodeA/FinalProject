@@ -100,6 +100,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVNYW5hZ2VcVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/StoreManage/Views/Product/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVNYW5hZ2VcVmlld3NcUHJvZHVjdFxPcmRlckRldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/StoreManage/Views/Product/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVNYW5hZ2VcVmlld3NcUHJvZHVjdFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nihad/Desktop/FinalProject/FinalProject/FinalProject/Areas/StoreManage/Views/Product/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3RvcmVNYW5hZ2VcVmlld3NcUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

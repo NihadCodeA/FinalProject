@@ -538,5 +538,38 @@ namespace FinalProject.Areas.StoreManage.Controllers
             return RedirectToAction("Index", "Product", new { area = "StoreManage", page = 1 });
         }
 
+        public IActionResult Orders(int page = 1)
+        {
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            ViewData["PageName"] = "Orders";
+            ViewData["Localizer"] = _localizer;
+            Store store = new Store();
+            if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
+            {
+                store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
+            }
+            ViewData["StoreName"] = store.StoreName ?? "";
+            if (store == null) return NotFound();
+            var query = _context.Orders.Include(s => s.AppUser).Include(o=>o.OrderItems.Where(x=>x.StoreId==store.Id)).AsQueryable();
+            var pagenatedOrders = PaginatedList<Order>.Create(query, 10, page);
+
+            return View(pagenatedOrders);
+        }
+
+        public IActionResult OrderDetail()
+        {
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            ViewData["PageName"] = "Orders";
+            ViewData["Localizer"] = _localizer;
+            Store store = new Store();
+            if (User.Identity.IsAuthenticated && User.IsInRole("Store"))
+            {
+                store = _context.Stores.FirstOrDefault(x => x.Email == User.Identity.Name);
+            }
+            ViewData["StoreName"] = store.StoreName ?? "";
+            List<OrderItem> storeOrders = _context.OrderItems.Include(o => o.Order).Where(s=>s.StoreId==store.Id).ToList();
+            ViewData["StoreOrder"] = _context.Orders.Include(oi => oi.OrderItems.Where(s=>s.StoreId==store.Id));
+            return View(storeOrders);
+        }
     }
 }

@@ -194,6 +194,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> Order(OrderViewModel orderVM)
         {
+            if (!ModelState.IsValid) return RedirectToAction(nameof(Checkout));
             List<BasketItemViewModel> basketItems = new List<BasketItemViewModel>();
             List<ProductCheckoutViewModel> checkoutItems = new List<ProductCheckoutViewModel>();
             OrderItem orderItem = null;
