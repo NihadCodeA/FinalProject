@@ -149,6 +149,7 @@ namespace FinalProject.Controllers
                 Email = registerVM.Email,
                 UserName = registerVM.Email,
                 Address = registerVM.Address,
+                //EmailConfirmed=
             };
             var passwordResult = await _userManager.CreateAsync(storeAccount, registerVM.Password);
             if (!passwordResult.Succeeded)
@@ -159,6 +160,17 @@ namespace FinalProject.Controllers
                     return View();
                 }
             }
+           
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(storeAccount);
+            var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { token, email = storeAccount.Email }, HttpContext.Request.Scheme);
+            await _mailService.SendEmailAsync(
+                new MailRequestViewModel
+                {
+                    ToEmail = storeAccount.Email,
+                    Subject = "Confirm Email",
+                    Body = $"<a href='{confirmationLink}'>{confirmationLink}</a>"
+                }
+                );
             var roleResult = await _userManager.AddToRoleAsync(storeAccount, "Store");
             foreach (var err in roleResult.Errors)
             {

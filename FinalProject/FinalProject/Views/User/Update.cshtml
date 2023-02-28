@@ -28,7 +28,7 @@
                         <!-- nav item -->
                         <ul class="nav flex-column nav-pills nav-pills-dark">
                             <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="account-orders.html">
+                                <a class="nav-link " aria-current="page" asp-controller="user" asp-action="orders" asp-route-Id="@user.Id" asp-route-page="1">
                                     <i class="feather-icon icon-shopping-bag me-2"></i>
                                     @localizer["User_YourOrders"]
                                 </a>

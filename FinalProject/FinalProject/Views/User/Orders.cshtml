@@ -1,0 +1,145 @@
+﻿@model PaginatedList<Order>
+
+@{
+    int count = (Model.Page - 1) * 5;
+    var localizer = ViewData["Localizer"] as IStringLocalizer;
+    var language = (string)ViewData["Language"] as string;
+    var user = ViewData["User"] as AppUser;
+}
+<main>
+    <!-- section -->
+    <section>
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center d-md-none py-4">
+                        <!-- heading -->
+                        <h3 class="fs-5 mb-0">Orders</h3>
+                        <!-- button -->
+                        <button class="btn btn-outline-gray-400 text-muted d-md-none btn-icon btn-sm ms-3 " type="button"
+                                data-bs-toggle="offcanvas" data-bs-target="#offcanvasAccount" aria-controls="offcanvasAccount">
+                            <i class="bi bi-text-indent-left fs-3"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- col -->
+                <div class="col-lg-3 col-md-4 col-12 border-end  d-none d-md-block">
+                    <div class="pt-10 pe-lg-10">
+                        <!-- nav item -->
+                        <ul class="nav flex-column nav-pills nav-pills-dark">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" asp-controller="user" asp-action="orders" asp-route-Id="@user.Id" asp-route-page="1">
+                                    <i class="feather-icon icon-shopping-bag me-2"></i>
+                                    @localizer["User_YourOrders"]
+                                </a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="user" asp-action="update" asp-route-Id="@user.Id" >
+                                    <i class="feather-icon icon-settings me-2"></i>@localizer["User_Account_Details"]
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="user" asp-action="changepassword" asp-route-Id="@user.Id">
+                                    <i class="feather-icon icon-settings me-2"></i>
+                                    @localizer["User_ChangePassword"]
+                                </a>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <hr>
+                            </li>
+                            <!-- nav item -->
+                            <li class="nav-item">
+                                <a class="nav-link " asp-controller="account" asp-action="logout"><i class="feather-icon icon-log-out me-2"></i>@localizer["Accout_LogOut"]</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-12">
+                    <div class="py-6 p-md-6 p-lg-10">
+                        <div class="card-body p-0">
+                            <!-- table -->
+                            <div class="table-responsive">
+                                <table class="table table-centered table-hover text-nowrap table-borderless mb-0 table-with-checkbox">
+                                    <thead class="bg-light">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>OrderId</th>
+                                            <th>Store</th>
+                                            <th>Qiymet</th>
+                                            <th>Say</th>
+                                            <th>Yaradilma tarixi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (Order order in Model)
+                                        {
+                                            count++;
+                                            <tr>
+                                                <td>
+                                                    @count
+                                                </td>
+                                                <td>
+                                                    <a asp-controller="user"
+                                                   asp-action="orderdetail" asp-route-Id="@user.Id" asp-route-orderId="@order.Id">
+                                                        @order.Id
+                                                    </a>
+                                                </td>
+                                                <td>@order.FullName</td>
+                                                <td>$@(order.TotalPrice.ToString("0.00"))</td>
+                                                <td>@order.OrderItems.Count</td>
+                                                <td>@(DateTime.Parse($"{order.CreatedTime}").ToString("MM/dd/yyyy"))</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class=" border-top d-md-flex justify-content-between align-items-center px-6 py-6">
+                            <nav class="mt-2 mt-md-0">
+                                <ul class="pagination">
+                                    @if (Model.HasPrevious)
+                                    {
+                                        <li class="page-item disabled">
+                                            <a class="page-link mx-1 "
+                                            asp-controller="user" asp-action="orders" 
+                                            asp-route-page="@user.Id" asp-route-page="@(Model.Page-1)"
+                                           aria-label="@localizer["Previous"]">
+                                                <i class="feather-icon icon-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                    }
+                                    @for (int i = 1; i <= Model.TotalPage; i++)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link mx-1 active" asp-controller="user" asp-action="orders" 
+                                       asp-route-page="@user.Id" asp-route-page="@i">
+                                                @i
+                                            </a>
+                                        </li>
+                                    }
+                                    @if (Model.HasNext)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link mx-1 text-body"
+                                           asp-controller="product" asp-action="user" 
+                                           asp-route-page="@user.Id" asp-route-page="@(Model.Page+1)"
+                                           aria-label="@localizer["Next"]">
+                                                <i class="feather-icon icon-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

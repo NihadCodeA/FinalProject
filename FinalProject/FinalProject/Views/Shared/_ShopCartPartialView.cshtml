@@ -1,0 +1,65 @@
+﻿@model List<BasketItemViewModel>
+
+@if (Model.Count > 0)
+{
+    foreach (var item in Model)
+    {
+        if (item.Count > 0)
+        {
+            <li class="list-group-item py-3 ps-0 border-top">
+                <!-- row -->
+                <div class="row align-items-center">
+                    <div class="col-3 col-md-2">
+                        <!-- img --> <img src="~/uploads/products/@item.Image" alt=""
+                              class="img-fluid">
+                    </div>
+                    <div class="col-4 col-md-6 col-lg-5">
+                        <!-- title -->
+                        <a href="#!" class="text-inherit">
+                            <h6 class="mb-0">@item.Name</h6>
+                        </a>
+                        <span><small class="text-muted">@item.Weight g</small></span>
+                        <!-- text -->
+                        @*<div class="mt-2 small lh-1">
+            <a href="#!" class="text-decoration-none text-inherit">
+            <span class="me-1 align-text-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-trash-2 text-success">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+            </path>
+            <line x1="10" y1="11" x2="10" y2="17"></line>
+            <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg>
+            </span><span class="text-muted">Remove</span>
+            </a>
+            </div>*@
+                    </div>
+                    <!-- input group -->
+                    <div class="col-3 col-md-3 col-lg-3">
+                        <!-- input -->
+                        <!-- input -->
+                        <div class="input-group input-spinner  ">
+                            <a asp-controller="product" asp-action="RemoveFromBasket" asp-route-productId="@item.ProductId" class="button-minus btn btn-sm cross-btn deleteProduct">-</a>
+                            <p id="basketItemCount" class="quantity-field form-control-sm form-input">@item.Count </p>
+                            <a  asp-controller="product" asp-action="addtobasket" asp-route-productId="@item.ProductId"
+                                class="button-minus btn btn-sm add-to-basket-btn">+</a>
+                        </div>
+
+                    </div>
+                    <!-- price -->
+                    <!-- price -->
+                    <div class="col-2 text-lg-end text-start text-md-end col-md-2">
+                        @if (item.Discount > 0)
+                        {
+                            <span class="text-dark">@((item.Price * (1 - item.Discount / 100)).ToString("0.00"))</span>
+                        }
+                        <span class="@(item.Discount>0 ? "text-decoration-line-through text-muted" : "text-dark") ">$@(item.Price)</span>
+                    </div>
+                </div>
+
+            </li>
+        }
+    }
+}

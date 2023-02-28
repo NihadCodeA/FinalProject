@@ -50,5 +50,23 @@ namespace FinalProject.Controllers
             string returnUrl = Request.Headers["Referer"].ToString();
             return Redirect(returnUrl);
         }
+
+        public ActionResult SearchProducts(int categoryId,int page=1)
+        {
+            if (_context.Categories.FirstOrDefault(c => c.Id == categoryId) == null)
+            {
+                return NotFound();
+            }
+            var query = _context.Products.Include(pi => pi.ProductImages).Include(c => c.Store)
+                .Where(p => p.CategoryId == categoryId && p.IsAvaible==true).AsQueryable();
+
+            var pagenatedProducts = PaginatedList<Product>.Create(query, 16, page);
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewData["CategoryNameAz"] = _context.Categories.FirstOrDefault(c => c.Id == categoryId).NameAz;
+            ViewData["CategoryNameEn"] = _context.Categories.FirstOrDefault(c => c.Id == categoryId).NameEn;
+            ViewData["productCount"] = query.Count();
+            ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
+            return View(pagenatedProducts);
+        }
     }
 }

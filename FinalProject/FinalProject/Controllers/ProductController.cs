@@ -83,7 +83,7 @@ namespace FinalProject.Controllers
                 User = appUser,
                 Language = GetCurrentLanguage.CurrentLanguage(_httpContext),
                 Localizer = _localizer,
-                RelatedProdcuts = _context.Products.Include(c => c.Category).Where(p => p.CategoryId == product.CategoryId).Take(5).ToList(),
+                RelatedProdcuts = _context.Products.Include(pi=>pi.ProductImages).Include(c => c.Category).Where(p => p.CategoryId == product.CategoryId).OrderByDescending(x=>x.Id).Take(5).ToList(),
                 Categories8 = _context.Categories.Take(8).ToList(),
                 Categories16 = _context.Categories.Skip(8).Take(8).ToList(),
                 Categories24 = _context.Categories.Skip(16).Take(8).ToList(),

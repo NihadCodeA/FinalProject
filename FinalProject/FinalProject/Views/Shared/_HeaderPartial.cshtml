@@ -5,11 +5,18 @@
     <div class="bg-light py-1">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12 text-center text-md-start visibility-invisible">
-                    <span>
-                        Super Value Deals - Save more with
-                        coupons
+                <div class="col-md-6 col-12 text-center text-md-start">
+                    @if (Model.Language == "az"){
+                     <span>
+                     Əlaqə e-poçtu : freshcartcompany@gmail.com
                     </span>
+
+                    }else{
+
+                    <span>
+                      Contact email : freshcartcompany@gmail.com
+                    </span>
+                    }
                 </div>
                 <div class="col-6 text-end d-none d-md-block">
                     <div class="dropdown">
@@ -60,7 +67,7 @@
     </div>
     <div class="py-4 pt-lg-3 pb-lg-0">
         <div class="container">
-            <div class="row w-100 align-items-center gx-lg-2 gx-0">
+            <div class="row w-100 justify-content-lg-between align-items-center gx-lg-2 gx-0">
                 <div class="col-xxl-2 col-lg-3">
                     <a class="navbar-brand d-none d-lg-block" asp-controller="home" asp-action="index">
                         <img src="~/assets/images/logo/freshcart-logo.svg" alt="eCommerce HTML Template">
@@ -114,10 +121,10 @@
                                             <line x1="3" y1="6" x2="21" y2="6"></line>
                                             <path d="M16 10a4 4 0 0 1-8 0"></path>
                                         </svg>
-                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                                       @* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                                             1
                                             <span class="visually-hidden">unread messages</span>
-                                        </span>
+                                        </span>*@
                                     </a>
                                 </div>
                             </div>                                
@@ -136,7 +143,7 @@
                     </div>
 
                 </div>
-                <div class="col-xxl-6 col-lg-5 d-none d-lg-block">
+              @*  <div class="col-xxl-6 col-lg-5 d-none d-lg-block">
 
                     <form action="#">
                         <div class="input-group ">
@@ -154,8 +161,8 @@
                         </div>
 
                     </form>
-                </div>
-                <div class="col-md-2 col-xxl-3 d-none d-lg-block">
+                </div>*@
+                @*<div class="col-md-2 col-xxl-3 d-none d-lg-block">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn  btn-outline-gray-400 text-muted" data-bs-toggle="modal"
                             data-bs-target="#locationModal">
@@ -163,7 +170,7 @@
                     </button>
 
 
-                </div>
+                </div>*@
                 <div class="col-md-2 col-xxl-1 text-end d-none d-lg-block">
 
                     <div class="list-inline">
@@ -175,9 +182,8 @@
                             </a>
                         }
                         else{
-                            <div class="list-inline-item">
-
-                                <a href="pages/shop-wishlist.html" class="text-muted position-relative">
+                            <div class="list-inline-item visibility-invisible">
+                                <a href="#!" class="text-muted position-relative">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -227,10 +233,10 @@
                                     <line x1="3" y1="6" x2="21" y2="6"></line>
                                     <path d="M16 10a4 4 0 0 1-8 0"></path>
                                 </svg>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                               @* <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                                     1
                                     <span class="visually-hidden">unread messages</span>
-                                </span>
+                                </span>*@
                             </a>
 
                         </div>
@@ -255,7 +261,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="d-block d-lg-none my-4">
-                    <form action="#">
+                    @*<form action="#">
                         <div class="input-group ">
                             <input class="form-control rounded" type="search" placeholder="Search for products">
                             <span class="input-group-append">
@@ -269,13 +275,13 @@
                                 </button>
                             </span>
                         </div>
-                    </form>
-                    <div class="mt-2">
+                    </form>*@
+                    @*<div class="mt-2">
                         <button type="button" class="btn  btn-outline-gray-400 text-muted w-100 " data-bs-toggle="modal"
                                 data-bs-target="#locationModal">
                             <i class="feather-icon icon-map-pin me-2"></i>Pick Location
                         </button>
-                    </div>
+                    </div>*@
                 </div>
                 
                 <div class="d-none d-lg-block">
@@ -297,14 +303,14 @@
                                         {
                                             @foreach (Category category8 in Model.Categories8)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category8.NameAz</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category8.Id" asp-route-page="1">@category8.NameAz</a>
                                             }
                                         }
                                         else
                                         {
                                             @foreach (Category category8 in Model.Categories8)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category8.NameEn</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category8.Id" asp-route-page="1">@category8.NameEn</a>
                                             }
                                         }
                                     </div>
@@ -313,14 +319,14 @@
                                         {
                                             @foreach (Category category16 in Model.Categories16)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category16.NameAz</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category16.Id" asp-route-page="1">@category16.NameAz</a>
                                             }
                                         }
                                         else
                                         {
                                             @foreach (Category category16 in Model.Categories16)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category16.NameEn</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category16.Id" asp-route-page="1" >@category16.NameEn</a>
                                             }
                                         }
                                     </div>
@@ -329,14 +335,14 @@
                                         {
                                             @foreach (Category category24 in Model.Categories24)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category24.NameAz</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category24.Id" asp-route-page="1">@category24.NameAz</a>
                                             }
                                         }
                                         else
                                         {
                                             @foreach (Category category24 in Model.Categories24)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category24.NameEn</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category24.Id" asp-route-page="1">@category24.NameEn</a>
                                             }
                                         }
                                     </div> 
@@ -345,14 +351,14 @@
                                         {
                                             @foreach (Category category32 in Model.Categories32)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category32.NameAz</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category32.Id" asp-route-page="1">@category32.NameAz</a>
                                             }
                                         }
                                         else
                                         {
                                             @foreach (Category category32 in Model.Categories32)
                                             {
-                                                <a class="dropdown-item" href="pages/shop-grid.html">@category32.NameEn</a>
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category32.Id" asp-route-page="1">@category32.NameEn</a>
                                             }
                                         }
                                     </div>
@@ -460,7 +466,75 @@
                                aria-expanded="false">
                                @Model.Localizer["Mega_Menu"]
                             </a>
-                            <ul class="dropdown-menu">
+                            <div class=" dropdown-menu pb-0">
+                                <div class="row p-2 p-lg-4">
+                                    <div class="col-lg-3 col-6 mb-4 mb-lg-0">
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category8 in Model.Categories8)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category8.Id" asp-route-page="1">@category8.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category8 in Model.Categories8)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category8.Id" asp-route-page="1">@category8.NameEn</a>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="col-lg-3 col-6 mb-4 mb-lg-0">
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category16 in Model.Categories16)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category16.Id" asp-route-page="1">@category16.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category16 in Model.Categories16)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category16.Id" asp-route-page="1">@category16.NameEn</a>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category24 in Model.Categories24)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category24.Id" asp-route-page="1">@category24.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category24 in Model.Categories24)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category24.Id" asp-route-page="1">@category24.NameEn</a>
+                                            }
+                                        }
+                                    </div>
+                                    <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                                        @if (Model.Language == "az")
+                                        {
+                                            @foreach (Category category32 in Model.Categories32)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category32.Id" asp-route-page="1">@category32.NameAz</a>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            @foreach (Category category32 in Model.Categories32)
+                                            {
+                                                <a class="dropdown-item" asp-controller="home" asp-action="searchproducts" asp-route-categoryId="@category32.Id" asp-route-page="1">@category32.NameEn</a>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        @*    <ul class="dropdown-menu">
                                 <li class="dropdown-submenu ">
                                     <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
                                         Dairy, Bread & Eggs
@@ -501,7 +575,7 @@
                                         <li><a class="dropdown-item" href="pages/shop-grid.html">Herbal Drinks</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul>*@
                         </li>
                         <li class="nav-item dropdown">
                             @if (!User.Identity.IsAuthenticated)

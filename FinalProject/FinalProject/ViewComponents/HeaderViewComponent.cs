@@ -58,16 +58,16 @@ namespace FinalProject.ViewComponents
                  basketItems = _context.BasketItems.Where(x => x.AppUserId == appUser.Id).ToList();
                 foreach(var item in basketItems)
                 {
-                    basketItem = new BasketItemViewModel
-                    {
-                        ProductId=(int)item.ProductId ,
-                        Count =item.Count,
-                        Price = item.Price,
-                        Discount = item.Discount ,
-                        Name = item.Name ,
-                        Weight = item.Weight,
-                        Image = item.Image,
-                    };
+                        basketItem = new BasketItemViewModel
+                        {
+                            ProductId = (int)item.ProductId,
+                            Count = item.Count,
+                            Price = item.Price,
+                            Discount = item.Discount,
+                            Name = item.Name,
+                            Weight = item.Weight,
+                            Image = item.Image,
+                        };
                     basketItemsVM.Add(basketItem);
                 }
             }

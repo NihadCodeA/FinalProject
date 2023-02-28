@@ -47,7 +47,7 @@
                                         <p class="mb-1 lh-lg">
                                             Order ID: <span class="text-dark">#@order.Id</span><br>
                                             Order Date: <span class="text-dark">@(DateTime.Parse($"{order.CreatedTime}").ToString("MMMM dd yyyy HH:mm"))</span><br>
-                                            Order Total: <span class="text-dark">$@(order.TotalPrice)</span>
+                                            Order Total: <span class="text-dark">$@(order.TotalPrice.ToString("0.00"))</span>
                                         </p>
                                     </div>
                                 </div>
@@ -91,7 +91,6 @@
                                         @foreach(OrderItem orderItem in Model){
                                             <tr>
                                                 <td>
-                                                    <a href="#" class="text-inherit">
                                                         <div class="d-flex align-items-center">
                                                             <div>
                                                                 <img src="~/uploads/products/@orderItem.Product.ProductImages.FirstOrDefault(x=>x.IsPoster==true).Image" alt=""
@@ -104,7 +103,6 @@
 
                                                             </div>
                                                         </div>
-                                                    </a>
                                                 </td>
                                                 <td><span class="text-body">$@(orderItem.Product.SalePrice)</span></td>
                                                 <td><span class="text-body">$@((orderItem.Product.SalePrice * (1 - orderItem.Product.DiscountPercentage / 100)).ToString("0.00"))</span></td>

@@ -99,6 +99,20 @@ namespace FinalProject.Areas.Manage.Controllers
             return RedirectToAction("Admins", "Dashboard", new { area = "manage" });
         }
 
+        public async Task<IActionResult> ChangeConfirm(string id)
+        {
+            AppUser user = await _userManager.FindByIdAsync(id);
+            if (user == null) return NotFound();
+            if (user.EmailConfirmed == true)
+            {
+                user.EmailConfirmed =false;
+            }
+            else
+            {
+                user.EmailConfirmed = true;
+            }
+            return RedirectToAction("Stores", "Dashboard",new {area="manage"});
+        }
 
         public async Task<IActionResult> Categories(int page=1,string? categoryName=null)
         {

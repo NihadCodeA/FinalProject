@@ -20,5 +20,16 @@ namespace FinalProject.DAL
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<StoreOrderItem> StoreOrders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<BasketItem>()
+                .HasOne(bi => bi.Product)
+                .WithMany(p => p.BasketItems)
+                .HasForeignKey(bi => bi.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }

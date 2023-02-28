@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "w/YG0w6iSdyIKYRkCcwSL6o11YAmkjTSIhEZp5oy2uI=",
+  "Hash": "uVRslfoKz2vRA+UhSituK/Zh1W6c3fuNwfAEEaec3YI=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7565,23 +7565,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\categories\\d20440fe-91d4-46c3-b34f-120caf2a1460FreshCartLogo.png"
     },
     {
-      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\052c9cac-946c-403d-be42-8d0cf235bcediphone-2.png",
-      "SourceId": "FinalProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
-      "BasePath": "_content/FinalProject",
-      "RelativePath": "uploads/products/052c9cac-946c-403d-be42-8d0cf235bcediphone-2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\052c9cac-946c-403d-be42-8d0cf235bcediphone-2.png"
-    },
-    {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\05417820-2502-4abb-970e-6df1ce40b4d7pet-care.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7735,40 +7718,6 @@
       "OriginalItemSpec": "wwwroot\\uploads\\products\\3217abbe-ecc4-4d84-aec1-cf8459adc1d0pet-care.png"
     },
     {
-      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\39f453cc-a731-4761-888f-aeea1493adf0tea-coffee-drinks.png",
-      "SourceId": "FinalProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
-      "BasePath": "_content/FinalProject",
-      "RelativePath": "uploads/products/39f453cc-a731-4761-888f-aeea1493adf0tea-coffee-drinks.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\39f453cc-a731-4761-888f-aeea1493adf0tea-coffee-drinks.png"
-    },
-    {
-      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\3c1dedbe-c379-4692-b6eb-a4be4c81a458iphone-2.png",
-      "SourceId": "FinalProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
-      "BasePath": "_content/FinalProject",
-      "RelativePath": "uploads/products/3c1dedbe-c379-4692-b6eb-a4be4c81a458iphone-2.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\3c1dedbe-c379-4692-b6eb-a4be4c81a458iphone-2.png"
-    },
-    {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\5b3bd13b-49cc-40c4-afda-2d8f13e37d20product-single-img-4.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7835,23 +7784,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\products\\62b4ac91-baee-4d79-a451-097115e8e228dairy-bread-eggs.png"
-    },
-    {
-      "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\6800a28b-a7f8-4a41-9792-40c06a47e5d7girl-email.png",
-      "SourceId": "FinalProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\",
-      "BasePath": "_content/FinalProject",
-      "RelativePath": "uploads/products/6800a28b-a7f8-4a41-9792-40c06a47e5d7girl-email.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\products\\6800a28b-a7f8-4a41-9792-40c06a47e5d7girl-email.png"
     },
     {
       "Identity": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\72482ddc-5290-4eb2-8d81-5d9bc59569f2product-single-img-2.jpg",

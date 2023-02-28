@@ -49,7 +49,7 @@ namespace FinalProject.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.Property<int?>("ProductId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<double>("Weight")
@@ -705,7 +705,9 @@ namespace FinalProject.Migrations
 
                     b.HasOne("FinalProject.Models.Product", "Product")
                         .WithMany("BasketItems")
-                        .HasForeignKey("ProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AppUser");
 

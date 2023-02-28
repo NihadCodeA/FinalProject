@@ -37,29 +37,35 @@
                             {
                                 <img src="~/assets/images/stores-logo/stores-logo-2.svg"
                                  alt=""
-                                 class="rounded-circle icon-shape icon-xxl" />
+                                 class="rounded-circle icon-shape icon-xxxl" />
                             }
                             else
                             {
                                 <img src="~/uploads/stores/@Model.LogoImage"
                                  alt=""
-                                 class="rounded-circle icon-shape icon-xxl" />
+                                 class="rounded-circle icon-shape icon-xxxl" />
 
                             }
+                            <a href="@ViewBag.QRCodeImage"
+                               target='_blank'
+                               download='@(Model.StoreName +"-QRCode")'
+                               rel='noopener noreferrer'>
+                                <img src="@ViewBag.QRCodeImage" class="icon-shape icon-xxxl" />
+                            </a>
                         </div>
                         <!-- heading -->
                         <div class="mt-4">
                             <h1 class="mb-1 h4">@Model.StoreName</h1>
-                            <div class="small text-muted">
+                            @*<div class="small text-muted">
                                 <span>Everyday store prices </span>
                             </div>
                             <div>
                                 <span>
                                     <small><a href="#!">100% satisfaction guarantee</a></small>
                                 </span>
-                            </div>
+                            </div>*@
                             <!-- rating -->
-                            <div class="mt-2">
+                            @*<div class="mt-2">
                                 <!-- rating -->
                                 <small class="text-warning">
                                     <i class="bi bi-star-fill"></i>
@@ -69,7 +75,7 @@
                                     <i class="bi bi-star-half"></i>
                                 </small><span class="ms-2">5.0</span>
                                 <!-- text --><span class="text-muted ms-1">(3,400 reviews)</span>
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                     <hr />

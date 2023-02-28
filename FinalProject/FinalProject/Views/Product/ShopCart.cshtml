@@ -83,12 +83,14 @@
 
                             </li>*@
                            
-                            @await Html.PartialAsync("_BasketItemVMPartial",Model)
+                            @*@await Html.PartialAsync("_BasketItemVMPartial",Model)*@
+                            @await Html.PartialAsync("_ShopCartPartialView",Model)
+
 
                         </ul>
                         <!-- btn -->
                         <div class="d-flex justify-content-between mt-4">
-                            <a href="#!" class="btn btn-primary">Continue Shopping</a>
+                            <a asp-controller="home" asp-action="index" class="btn btn-primary">Continue Shopping</a>
                             <a href="javascript:location.reload();" class="btn btn-dark">Update Cart</a>
                         </div>
 
@@ -140,15 +142,15 @@
                                 </a>
                             </div>
                             <!-- text -->
-                            <p>
+                            @*<p>
                                 <small>
                                     By placing your order, you agree to be bound by the Freshcart <a href="#!">Terms of Service</a>
                                     and <a href="#!">Privacy Policy.</a>
                                 </small>
-                            </p>
+                            </p>*@
 
                             <!-- heading -->
-                            <div class="mt-8">
+                          @*  <div class="mt-8">
                                 <h2 class="h5 mb-3">Add Promo or Gift Card</h2>
                                 <form>
                                     <div class="mb-2">
@@ -161,7 +163,7 @@
                                     <div class="d-grid"><button type="submit" class="btn btn-outline-dark mb-1">Redeem</button></div>
                                     <p class="text-muted mb-0"> <small>Terms & Conditions apply</small></p>
                                 </form>
-                            </div>
+                            </div>*@
                         </div>
                     </div>
                 </div>
