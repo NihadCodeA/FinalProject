@@ -574,6 +574,11 @@ namespace FinalProject.Areas.StoreManage.Controllers
                 .ThenInclude(pi=>pi.ProductImages).Where(s=>s.StoreId==store.Id && s.OrderId==orderId && s.Count>0).ToList();
             ViewData["StoreOrder"] = _context.Orders.Include(oi => oi.OrderItems.Where(s=>s.StoreId==store.Id).
             FirstOrDefault(x=>x.OrderId==orderId));
+             Order order = _context.Orders
+            .Include(o => o.AppUser)
+            .Include(o => o.OrderItems.Where(oi => oi.StoreId == store.Id))
+            .FirstOrDefault(o => o.Id == orderId);
+            ViewData["Order"] = order;
             return View(storeOrders);
         }
     }

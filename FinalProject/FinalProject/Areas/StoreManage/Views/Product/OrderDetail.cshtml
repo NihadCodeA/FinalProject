@@ -1,6 +1,6 @@
 ﻿@model List<OrderItem>
 @{
-    var storeOrder = ViewData["StoreOrder"];
+    Order order = ViewData["Order"] as Order;
 }
 <main class="main-content-wrapper">
     <!-- container -->
@@ -11,18 +11,11 @@
                 <div class="d-md-flex justify-content-between align-items-center">
                     <div>
                         <!-- page header -->
-                        <h2>Order Single</h2>
-                        <!-- breacrumb -->
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="#" class="text-inherit">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Order Single</li>
-                            </ol>
-                        </nav>
+                        <h2>Order #@order.Id</h2>
                     </div>
                     <!-- button -->
                     <div>
-                        <a href="#" class="btn btn-primary">Back to all orders</a>
+                        <a asp-area="storemanage" asp-controller="product" asp-action="orders" asp-route-page="1" class="btn btn-primary">Back to all orders</a>
                     </div>
 
                 </div>
@@ -41,24 +34,10 @@
                                     <div class="mb-6">
                                         <h6>Customer Details</h6>
                                         <p class="mb-1 lh-lg">
-                                          @storeOrder<br>
-                                            anderalex@example.com<br>
-                                            +998 99 22123456
+                                          @order.FullName<br>
+                                            @order.Email<br>
+                                            @order.PhoneNumber
                                         </p>
-                                        <a href="#">View Profile</a>
-                                    </div>
-                                </div>
-                                <!-- address -->
-                                <div class="col-lg-4 col-md-4 col-12">
-                                    <div class="mb-6">
-                                        <h6>Shipping Address</h6>
-                                        <p class="mb-1 lh-lg">
-                                            Gerg Harvell<br>
-                                            568, Suite Ave.<br>
-                                            Austrlia, 235153 <br>
-                                            Contact No. +91 99999 12345
-                                        </p>
-
                                     </div>
                                 </div>
                                 <!-- address -->
@@ -66,9 +45,26 @@
                                     <div class="mb-6">
                                         <h6>Order Details</h6>
                                         <p class="mb-1 lh-lg">
-                                            Order ID: <span class="text-dark">FC001</span><br>
-                                            Order Date: <span class="text-dark">October 22, 2023</span><br>
-                                            Order Total: <span class="text-dark">$734.28</span>
+                                            Order ID: <span class="text-dark">#@order.Id</span><br>
+                                            Order Date: <span class="text-dark">@(DateTime.Parse($"{order.CreatedTime}").ToString("MMMM dd yyyy HH:mm"))</span><br>
+                                            Order Total: <span class="text-dark">$@(order.TotalPrice)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- address -->
+                                <div class="col-12">
+                                    <div class="mb-6">
+                                        <h6>Shipping Address</h6>
+                                        <p class="mb-1 lh-lg">
+                                            Country : <span class="text-dark">@order.Country</span><br>
+                                            City : <span class="text-dark">@order.City</span><br>
+                                            Address 1 : <span class="text-dark">@order.Address1</span> <br>
+                                            @if(order.Address2 != null)
+                                            {
+                                            <span>Address 2 </span>
+                                            <span class="text-dark">: @order.Address1</span> <br>
+                                            }
+                                            Other notes : <span class="text-dark">@order.OtherNotes</span>
                                         </p>
                                     </div>
                                 </div>
@@ -111,9 +107,9 @@
                                                     </a>
                                                 </td>
                                                 <td><span class="text-body">$@(orderItem.Product.SalePrice)</span></td>
-                                                <td><span class="text-body">$@((orderItem.Product.SalePrice-(1-orderItem.Product.DiscountPercentage/100)).ToString("0.00"))</span></td>
+                                                <td><span class="text-body">$@((orderItem.Product.SalePrice * (1 - orderItem.Product.DiscountPercentage / 100)).ToString("0.00"))</span></td>
                                                 <td>@orderItem.Count</td>
-                                                <td>$@(((orderItem.Product.SalePrice - (1 - orderItem.Product.DiscountPercentage / 100)) * orderItem.Count).ToString("0.00"))</td>
+                                                <td>$@(((orderItem.Product.SalePrice * (1 - orderItem.Product.DiscountPercentage / 100)) * orderItem.Count).ToString("0.00"))</td>
                                             </tr>
                                         }
 
@@ -122,23 +118,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body p-6">
-                        <div class="row">
-                            <div class="col-md-6 mb-4 mb-lg-0">
-                                <h6>Payment Info</h6>
-                                <span>Cash on Delivery</span>
-                            </div>
-                            <div class="col-md-6">
-                                <h5>Notes</h5>
-                                <textarea class="form-control mb-3" rows="3" placeholder="Write note for order"></textarea>
-                                <a href="#" class="btn btn-primary">Save Notes</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
                 </div>
 
             </div>
