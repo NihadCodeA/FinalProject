@@ -31,5 +31,6 @@ namespace FinalProject.DAL
                 .HasForeignKey(bi => bi.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
+
     }
 }

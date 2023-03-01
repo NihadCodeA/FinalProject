@@ -11,7 +11,7 @@
         public double CostPrice { get; set; }
         public double DiscountPercentage { get; set; }
         public int Count { get; set; }
-        public Product? Product { get; set; }
+        public Product Product { get; set; }
         public Store Store { get; set; }
         public Order Order { get; set; }
     }

@@ -1761,6 +1761,18 @@
       "PackagePath": "staticwebassets\\manage\\vendors\\verctorMap\\vector-map.css"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\categories\\4a352527-36eb-4701-be0a-834bd3a1c76aproduct-img-6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\4a352527-36eb-4701-be0a-834bd3a1c76aproduct-img-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\categories\\5f118ff4-f1b8-4bef-965b-4486c27baf34product-img-15.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\5f118ff4-f1b8-4bef-965b-4486c27baf34product-img-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\categories\\63fcac9a-f21a-4b51-9b40-8b84a3dda93bproduct-img-11.jpg",
+      "PackagePath": "staticwebassets\\uploads\\categories\\63fcac9a-f21a-4b51-9b40-8b84a3dda93bproduct-img-11.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\categories\\a03724c3-7c85-40bb-aced-8b4b87a907e7category-chicken-meat-fish.jpg",
       "PackagePath": "staticwebassets\\uploads\\categories\\a03724c3-7c85-40bb-aced-8b4b87a907e7category-chicken-meat-fish.jpg"
     },
@@ -1809,6 +1821,10 @@
       "PackagePath": "staticwebassets\\uploads\\products\\3217abbe-ecc4-4d84-aec1-cf8459adc1d0pet-care.png"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\56b806e3-8de1-4576-835c-d4b88e7ac3f5product-img-15.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\56b806e3-8de1-4576-835c-d4b88e7ac3f5product-img-15.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\5b3bd13b-49cc-40c4-afda-2d8f13e37d20product-single-img-4.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\5b3bd13b-49cc-40c4-afda-2d8f13e37d20product-single-img-4.jpg"
     },
@@ -1823,10 +1839,6 @@
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\62b4ac91-baee-4d79-a451-097115e8e228dairy-bread-eggs.png",
       "PackagePath": "staticwebassets\\uploads\\products\\62b4ac91-baee-4d79-a451-097115e8e228dairy-bread-eggs.png"
-    },
-    {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\64e4b267-fd69-4b9f-bb88-31a1205f6f66product-img-12.jpg",
-      "PackagePath": "staticwebassets\\uploads\\products\\64e4b267-fd69-4b9f-bb88-31a1205f6f66product-img-12.jpg"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\72482ddc-5290-4eb2-8d81-5d9bc59569f2product-single-img-2.jpg",
@@ -1849,8 +1861,20 @@
       "PackagePath": "staticwebassets\\uploads\\products\\899e58ee-3c3d-43f1-b1ea-a10af0c5c319fruits-vegetables.png"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\8b9a8e38-6934-417a-896f-b7f3b73f78caproduct-img-15.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\8b9a8e38-6934-417a-896f-b7f3b73f78caproduct-img-15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\95e23313-aa92-4591-b6fa-4b65887f8c77product-img-16.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\95e23313-aa92-4591-b6fa-4b65887f8c77product-img-16.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png",
       "PackagePath": "staticwebassets\\uploads\\products\\9a3ee695-a8c4-4e47-9d33-44008d8e0ef3chicken-meat-fish.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\a5c3bd70-39d2-4c35-b2ff-b63bc8b7c96aproduct-single-img-1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\a5c3bd70-39d2-4c35-b2ff-b63bc8b7c96aproduct-single-img-1.jpg"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\ab4b4545-84fd-490e-9acf-7146167e0173cold-drinks-juices.png",
@@ -1859,6 +1883,10 @@
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\b40accd9-a2b7-4ab8-a786-e1a97e0465b2baby-care.png",
       "PackagePath": "staticwebassets\\uploads\\products\\b40accd9-a2b7-4ab8-a786-e1a97e0465b2baby-care.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\b8df2ebf-336d-468f-b6a6-97ea95b9f9efproduct-single-img-4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\b8df2ebf-336d-468f-b6a6-97ea95b9f9efproduct-single-img-4.jpg"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\bd12d856-99a1-4a57-a451-c0da02804920tea-coffee-drinks.png",
@@ -1877,12 +1905,20 @@
       "PackagePath": "staticwebassets\\uploads\\products\\d5537cd9-bd74-4f98-8d80-61045c10be2bproduct-single-img-1.jpg"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\d626cfd6-ee95-4e05-925e-c5d57bf1a13eproduct-img-16.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\d626cfd6-ee95-4e05-925e-c5d57bf1a13eproduct-img-16.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\d7e9013a-a00d-4793-a7ad-b359d70f41bfsnack-munchies.png",
       "PackagePath": "staticwebassets\\uploads\\products\\d7e9013a-a00d-4793-a7ad-b359d70f41bfsnack-munchies.png"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\d8ab77b5-a527-4ab4-8b9e-a670ddb7a2a0snack-munchies.png",
       "PackagePath": "staticwebassets\\uploads\\products\\d8ab77b5-a527-4ab4-8b9e-a670ddb7a2a0snack-munchies.png"
+    },
+    {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\d997a123-0238-4787-8884-2371fcfbb361product-img-17.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\d997a123-0238-4787-8884-2371fcfbb361product-img-17.jpg"
     },
     {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\products\\daf83d34-0b54-4dd7-9be4-b1e65d32ab9ftea-coffee-drinks.png",
@@ -1897,12 +1933,16 @@
       "PackagePath": "staticwebassets\\uploads\\sliders\\6d2ce17d-b36f-45fc-bc88-200fa8b8ed0dslide-1.jpg"
     },
     {
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\sliders\\7d20d410-2804-49d2-b6ee-a5d87c9e14c6slider-2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\sliders\\7d20d410-2804-49d2-b6ee-a5d87c9e14c6slider-2.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\sliders\\858aecec-fc61-4c2d-942a-5de026a01134slide-1.jpg",
       "PackagePath": "staticwebassets\\uploads\\sliders\\858aecec-fc61-4c2d-942a-5de026a01134slide-1.jpg"
     },
     {
-      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg",
-      "PackagePath": "staticwebassets\\uploads\\stores\\d5883db9-2dcf-443b-a198-a415fd71df8bavatar-4.jpg"
+      "Id": "C:\\Users\\Nihad\\Desktop\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\uploads\\stores\\f2050ad1-d0db-419a-9231-f67ea7ec99bbproduct-img-12.jpg",
+      "PackagePath": "staticwebassets\\uploads\\stores\\f2050ad1-d0db-419a-9231-f67ea7ec99bbproduct-img-12.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",

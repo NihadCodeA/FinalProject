@@ -208,7 +208,7 @@
     <value>Yaradılma vaxtı</value>
   </data>
   <data name="Daily_Best_Sells" xml:space="preserve">
-    <value>Gündəlik  çox satılanlar</value>
+    <value>Endirimdə olan yeni məhsullar</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Sil</value>
@@ -259,7 +259,7 @@
     <value>Növbəti</value>
   </data>
   <data name="Popular_Products" xml:space="preserve">
-    <value>Məhşur məhsullar</value>
+    <value>Yeni məhsullar</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Əvvəlki</value>

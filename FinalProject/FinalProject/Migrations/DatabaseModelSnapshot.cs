@@ -189,7 +189,7 @@ namespace FinalProject.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("ProductId1")
@@ -733,7 +733,9 @@ namespace FinalProject.Migrations
 
                     b.HasOne("FinalProject.Models.Product", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("FinalProject.Models.Store", "Store")
                         .WithMany()

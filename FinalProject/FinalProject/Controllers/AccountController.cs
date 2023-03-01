@@ -186,7 +186,7 @@ namespace FinalProject.Controllers
             };
             _context.Stores.Add(store);
             _context.SaveChanges();
-            return RedirectToAction("Login");
+            return RedirectToAction(nameof(CheckEmail));
         }
 
         [HttpGet]

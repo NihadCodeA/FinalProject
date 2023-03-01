@@ -50,7 +50,7 @@ namespace FinalProject.Areas.Manage.Controllers
             }
             if (user == null) return NotFound();
             ViewData["User"] = user;
-            var query = _context.Stores.AsQueryable();
+            var query = _context.Stores.OrderByDescending(x=>x.Id).AsQueryable();
             if(storeName!= null)
             {
                 query=_context.Stores.Where(s=>s.StoreName.Contains(storeName)).AsQueryable();

@@ -27,8 +27,8 @@ namespace FinalProject.Controllers
             ViewData["Dashboard"] = _localizer.GetString("Navbar_Dashboard");
             List<Slider> sliders = _context.Sliders.OrderBy(x=>x.Order).ToList();
             List<Category> categories = _context.Categories.ToList();
-            List<Product> products = _context.Products.Include(pi=>pi.ProductImages).Include(c=>c.Category).Take(10).ToList();
-            List<Product> discountedProducts = _context.Products.Include(pi=>pi.ProductImages).Include(c=>c.Category).Where(t=>t.DiscountEndingDate>DateTime.Now).Take(4).ToList();
+            List<Product> products = _context.Products.OrderByDescending(x=>x.Id).Include(pi=>pi.ProductImages).Include(c=>c.Category).Where(x=>x.IsAvaible==true).Take(10).ToList();
+            List<Product> discountedProducts = _context.Products.OrderByDescending(x => x.Id).Include(pi=>pi.ProductImages).Include(c=>c.Category).Where(t=>t.DiscountEndingDate>DateTime.Now && t.IsAvaible==true).Take(4).ToList();
             HomeViewModel homeVM = new HomeViewModel {
                 Sliders = sliders,
                 Categories = categories,

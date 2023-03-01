@@ -202,7 +202,7 @@
                                         <!-- price -->
                                         <div class="d-flex justify-content-between align-items-center mt-3">
                                             <div>
-                                                <span class="text-dark">$@(product.SalePrice * (1 - product.DiscountPercentage / 100))</span>
+                                                <span class="text-dark">$@((product.SalePrice * (1 - product.DiscountPercentage / 100)).ToString("0.00"))</span>
                                                 <span class="text-decoration-line-through text-muted">$@(product.SalePrice)</span>
                                             </div>
                                             <div>

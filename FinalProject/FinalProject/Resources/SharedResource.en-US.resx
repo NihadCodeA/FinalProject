@@ -208,7 +208,7 @@
     <value>Creation time</value>
   </data>
   <data name="Daily_Best_Sells" xml:space="preserve">
-    <value>Daily best sells</value>
+    <value>New products on sale</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
@@ -259,7 +259,7 @@
     <value>Next</value>
   </data>
   <data name="Popular_Products" xml:space="preserve">
-    <value>Popular products</value>
+    <value>New products</value>
   </data>
   <data name="Previous" xml:space="preserve">
     <value>Previous</value>
