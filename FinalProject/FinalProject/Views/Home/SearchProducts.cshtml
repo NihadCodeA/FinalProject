@@ -4,6 +4,7 @@
     string categoryEn = ViewData["CategoryNameEn"] as string;
     int productCount = (int)ViewData["productCount"];
     string language = ViewData["Language"] as string;
+    int categoryId = (int)ViewData["CategoryId"];
     List<Category> categories = ViewBag.Categories as List<Category>;
 }
 <main>
@@ -57,14 +58,31 @@
           </div>
           <div class="mb-8">
             <!-- price -->
-            <h5 class="mb-3">Price</h5>
-            <div>
-              <!-- range -->
-              <div id="priceRange" class="mb-3"></div>
-              <input placeholder="min" class="form-control"/>
-              <input placeholder="max" class="form-control"/>
-            </div>
+                <form method="get" asp-action="SearchProducts" asp-route-categoryId="@categoryId" asp-route-page="1">
+                <h5 class="mb-3">Product name</h5>
+                 <div>
+                     <!-- range -->
+                     <div class="mb-3"></div>
+                     <input name="productName" class="form-control" placeholder="product name" />
+                 </div>
+                @*route values*@
+                 <input type="hidden" name="categoryId" value="@categoryId" />
+                <input type="hidden" name="page" value="1" />
+                @*route values*@
 
+                <h5 class="mb-3 mt-3">Price</h5>
+                <div>
+                    <!-- range -->
+                <div class="mb-3"></div>
+                        <input class="form-control" name="minPrice" placeholder="min price" type="number" />
+                        <input class="form-control" name="maxPrice" placeholder="max price" type="number" />
+                </div>
+               <button type="submit" class="btn btn-primary me-2 mt-2">Search</button>
+               <a class="btn btn-info mt-2" asp-controller="home" asp-action="SearchProducts" 
+               asp-route-categoryId="@categoryId" asp-route-page="1">
+                Reset
+                </a>
+           </form>
 
 
           </div>
@@ -159,6 +177,12 @@
           <div class="card mb-4 bg-light border-0">
             <!-- card body -->
             <div class=" card-body p-9">
+                            @if (categoryAz==null || categoryEn == null)
+                            {
+                                <h2 class="mb-0 fs-1">
+                                    @(language == "az" ? "kateqoriya yoxdu" : "no category")
+                                </h2>
+                            }
                             <h2 class="mb-0 fs-1">@(language == "az" ? categoryAz : categoryEn)</h2>
             </div>
           </div>

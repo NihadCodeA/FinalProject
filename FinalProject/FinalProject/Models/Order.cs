@@ -21,9 +21,9 @@ namespace FinalProject.Models
         public string PhoneNumber { get; set; }
         [StringLength(maximumLength:150), Required(ErrorMessage = "Text_Required")]
         public string Address1 { get; set; }
-        [StringLength(maximumLength:150), Required(ErrorMessage = "Text_Required")]
+        [StringLength(maximumLength: 150), Required(ErrorMessage = "Text_Required")]
         public string? Address2 { get; set; }
-        [StringLength(maximumLength:1500), Required(ErrorMessage = "Text_Required")]
+        [StringLength(maximumLength: 1500), Required(ErrorMessage = "Text_Required")]
         public string? OtherNotes { get; set; }
         public double TotalPrice { get; set; }
         public DateTime CreatedTime { get; set; }

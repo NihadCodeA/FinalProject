@@ -188,6 +188,7 @@ namespace FinalProject.Controllers
             {
                 ChechoutItems = checkoutVMS,
             };
+            if (!orderVM.ChechoutItems.Any(x=>x.Count>0)) return RedirectToAction(nameof(ShopCart));
             return View(orderVM);
         }
 

@@ -51,19 +51,29 @@ namespace FinalProject.Controllers
             return Redirect(returnUrl);
         }
 
-        public ActionResult SearchProducts(int categoryId,int page=1)
+        public ActionResult SearchProducts(int categoryId,int page=1,string? productName=null
+            ,double? minPrice=null,double? maxPrice=null)
         {
             if (_context.Categories.FirstOrDefault(c => c.Id == categoryId) == null)
             {
                 return NotFound();
             }
-            var query = _context.Products.Include(pi => pi.ProductImages).Include(c => c.Store)
-                .Where(p => p.CategoryId == categoryId && p.IsAvaible==true).AsQueryable();
+            var products = _context.Products.AsQueryable();
+
+            if (productName != null) products = products.Where(x => x.Name.ToLower().Contains(productName.ToLower()));
+            
+            if (minPrice != null) products = products.Where(x => x.SalePrice>=minPrice);
+            
+            if (maxPrice != null) products = products.Where(x => x.SalePrice<=maxPrice);
+            
+            var query = products.Include(pi => pi.ProductImages).Include(c => c.Store)
+               .Where(p => p.CategoryId == categoryId && p.IsAvaible==true).AsQueryable();
 
             var pagenatedProducts = PaginatedList<Product>.Create(query, 16, page);
             ViewBag.Categories = _context.Categories.ToList();
             ViewData["CategoryNameAz"] = _context.Categories.FirstOrDefault(c => c.Id == categoryId).NameAz;
             ViewData["CategoryNameEn"] = _context.Categories.FirstOrDefault(c => c.Id == categoryId).NameEn;
+            ViewData["CategoryId"] = _context.Categories.FirstOrDefault(c => c.Id == categoryId).Id;
             ViewData["productCount"] = query.Count();
             ViewData["Language"] = GetCurrentLanguage.CurrentLanguage(_httpContext);
             return View(pagenatedProducts);

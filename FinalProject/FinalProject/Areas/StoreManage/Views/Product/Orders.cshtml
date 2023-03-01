@@ -64,7 +64,7 @@
                                                 </a>
                                             </td>
                                             <td>@order.FullName</td>
-                                            <td>$@(order.TotalPrice)</td>
+                                            <td>$@((order.TotalPrice).ToString("0.00"))</td>
                                             <td>@order.OrderItems.Count</td>
                                             <td>@(DateTime.Parse($"{order.CreatedTime}").ToString("MM/dd/yyyy"))</td>
                                         </tr>

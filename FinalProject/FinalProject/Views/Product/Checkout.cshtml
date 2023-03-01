@@ -35,42 +35,42 @@
           <div class="col-lg-7 col-md-12">
              <form id="formOrder" method="post" asp-action="order" asp-controller="product" class="row">
                   <div class="col-12 col-lg-6 mt-2">
-                    <label asp-for="FullName" class="form-label sr-only">Full name</label>
+                    <label asp-for="FullName" class="form-label sr-only">Full name <sup class="text-danger">*</sup> </label>
                     <input asp-for="FullName" class="form-control" placeholder="Full name">
                    <span class="text-danger" asp-validation-for="FullName"></span>
               </div>
                <div class="col-12 col-lg-6 mt-2">
-                  <label asp-for="PhoneNumber" class="form-label sr-only">PhoneNumber</label>
-                  <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber">
+                                <label asp-for="PhoneNumber" class="form-label sr-only">PhoneNumber <sup class="text-danger">*</sup></label>
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber">
                   <span class="text-danger" asp-validation-for="PhoneNumber"></span>
               </div>
               <div class="col-12 mt-2">
-                    <label asp-for="Email" class="form-label sr-only">Email</label>
+                                <label asp-for="Email" class="form-label sr-only">Email <sup class="text-danger">*</sup></label>
                     <input asp-for="Email" class="form-control" placeholder="Email">
                     <span class="text-danger" asp-validation-for="Email"></span>
               </div>
                             <div class="col-12 col-lg-6 mt-2">
-                    <label asp-for="Country" class="form-label sr-only">Country</label>
+                                <label asp-for="Country" class="form-label sr-only">Country <sup class="text-danger">*</sup></label>
                     <input asp-for="Country" class="form-control" placeholder="Country">
                     <span class="text-danger" asp-validation-for="Country"></span>
               </div>
                             <div class="col-12 col-lg-6 mt-2">
-                    <label asp-for="City" class="form-label sr-only">City</label>
+                                <label asp-for="City" class="form-label sr-only">City <sup class="text-danger">*</sup></label>
                     <input asp-for="City" class="form-control" placeholder="City">
                     <span class="text-danger" asp-validation-for="City"></span>
               </div>
-                            <div class="col-12 mt-2">
-                    <label asp-for="Address1" class="form-label sr-only">Address1</label>
+                    <div class="col-12 mt-2">
+                    <label asp-for="Address1" class="form-label sr-only">Address1 <sup class="text-danger">*</sup></label>
                     <input asp-for="Address1" class="form-control" placeholder="Address1">
                     <span class="text-danger" asp-validation-for="Address1"></span>
               </div>
                             <div class="col-12 mt-2">
-                    <label asp-for="Address2" class="form-label sr-only">Address2</label>
+                                <label asp-for="Address2" class="form-label sr-only">Address2 <sup class="text-danger">*</sup></label>
                     <input asp-for="Address2" class="form-control" placeholder="Address2">
                     <span class="text-danger" asp-validation-for="Address2"></span>
               </div>
                             <div class="col-12 mt-2">
-                    <label asp-for="OtherNotes" class="form-label sr-only">Other notes</label>
+                                <label asp-for="OtherNotes" class="form-label sr-only">Other notes <sup class="text-danger">*</sup></label>
                     <textarea asp-for="OtherNotes" class="form-control" rows="3" placeholder="Write delivery instructions "></textarea>
                     <span class="text-danger" asp-validation-for="OtherNotes"></span>
               </div>

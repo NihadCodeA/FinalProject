@@ -146,7 +146,7 @@ namespace FinalProject.Controllers
             }
             else return NotFound();
             ViewData["User"] = user;
-            var query = _context.Orders.Include(o => o.AppUser).Include(o => o.OrderItems)
+            var query = _context.Orders.OrderByDescending(x=>x.Id).Include(o => o.AppUser).Include(o => o.OrderItems)
                     .ThenInclude(oi => oi.Store).Where(o => o.AppUserId == user.Id).AsQueryable();
             var pagenatedOrders = PaginatedList<Order>.Create(query, 5, page);
 

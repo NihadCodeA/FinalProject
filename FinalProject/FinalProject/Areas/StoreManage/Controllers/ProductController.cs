@@ -42,11 +42,11 @@ namespace FinalProject.Areas.StoreManage.Controllers
             }
             ViewData["StoreName"] = store.StoreName ?? "";
             if (store == null) return NotFound();
-            var query = _context.Products.Include(s => s.Store)
+            var query = _context.Products.OrderByDescending(x => x.Id).Include(s => s.Store)
                 .Include(pi => pi.ProductImages).Include(c=>c.Category).Where(x => x.StoreId == store.Id).AsQueryable();
             if (productName != null)
             {
-                query = _context.Products.Where(p=>p.Name.Contains(productName)).Include(s => s.Store)
+                query = _context.Products.OrderByDescending(x => x.Id).Where(p=>p.Name.Contains(productName)).Include(s => s.Store)
                 .Include(pi => pi.ProductImages).Include(c=>c.Category).Where(x => x.StoreId == store.Id).AsQueryable();
             }
             var pagenatedProducts = PaginatedList<Product>.Create(query, 15, page);
